@@ -1,13 +1,14 @@
 {% assign id = section.id %}
 
 <style>
-.faq-ai-{{ id }} {
+.ai-faq-{{ id }} {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 60px 20px;
 }
 
-.faq-ai-container-{{ id }} {
+.ai-faq-container-{{ id }} {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -15,87 +16,85 @@
 
 /* LEFT */
 
-.faq-ai-left-{{ id }} {
+.ai-faq-left-{{ id }} {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.faq-ai-title-{{ id }} {
+.ai-faq-title-{{ id }} {
   font-size: {{ section.settings.title_size }}px;
+  color: {{ section.settings.title_color }};
   font-weight: 700;
 }
 
 /* ACCORDION */
 
-.faq-ai-accordion-{{ id }} {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.ai-faq-wrapper-{{ id }} {
+  background: {{ section.settings.accordion_wrapper_bg }};
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.faq-ai-item-{{ id }} {
-  border-bottom: 1px solid #e5e5e5;
+.ai-faq-item-{{ id }} {
+  border-bottom: 1px solid {{ section.settings.accordion_border_color }};
 }
 
-.faq-ai-question-{{ id }} {
+.ai-faq-question-{{ id }} {
   width: 100%;
-  background: transparent;
+  background: {{ section.settings.accordion_bg_color }};
   border: none;
-  padding: 15px 0;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
-  font-weight: 600;
   cursor: pointer;
-  text-align: left;
+  font-weight: 600;
 }
 
-.faq-ai-icon-{{ id }} {
-  width: 20px;
+.ai-faq-icon-{{ id }} {
   transition: 0.3s;
+  font-size: 20px;
+}
+
+.ai-faq-item-{{ id }}.active .ai-faq-icon-{{ id }} {
+  transform: rotate(45deg);
 }
 
 /* ANSWER */
 
-.faq-ai-answer-wrapper-{{ id }} {
+.ai-faq-answer-{{ id }} {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: 0.3s;
+  background: {{ section.settings.answer_bg_color }};
 }
 
-.faq-ai-answer-{{ id }} {
-  padding: 0 0 15px;
+.ai-faq-answer-content-{{ id }} {
+  padding: 15px;
+  color: {{ section.settings.answer_color }};
   line-height: 1.6;
-  color: #555;
-}
-
-/* ACTIVE */
-
-.faq-ai-item-{{ id }}.active .faq-ai-icon-{{ id }} {
-  transform: rotate(180deg);
 }
 
 /* IMAGE */
 
-.faq-ai-right-{{ id }} {
+.ai-faq-right-{{ id }} {
   display: flex;
   justify-content: center;
-  align-items: {{ section.settings.image_align }};
+  align-items: {{ section.settings.image_vertical_align }};
 }
 
-.faq-ai-image-{{ id }} {
+.ai-faq-image-{{ id }} {
   width: 100%;
   max-width: 450px;
-  border-radius: 12px;
+  border-radius: {{ section.settings.image_border_radius }}px;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-  .faq-ai-container-{{ id }} {
+  .ai-faq-container-{{ id }} {
     grid-template-columns: 1fr;
   }
 
@@ -103,45 +102,37 @@
 </style>
 
 
-<section class="faq-ai-{{ id }}">
+<section class="ai-faq-{{ id }}">
 
-  <div class="faq-ai-container-{{ id }}">
+  <div class="ai-faq-container-{{ id }}">
 
     <!-- LEFT -->
-    <div class="faq-ai-left-{{ id }}">
+    <div class="ai-faq-left-{{ id }}">
 
       {% if section.settings.title != blank %}
-        <h2 class="faq-ai-title-{{ id }}">
+        <h2 class="ai-faq-title-{{ id }}">
           {{ section.settings.title }}
         </h2>
       {% endif %}
 
-
-      <div class="faq-ai-accordion-{{ id }}">
+      <div class="ai-faq-wrapper-{{ id }}">
 
         {% for block in section.blocks %}
 
-          <div class="faq-ai-item-{{ id }}">
+          <div class="ai-faq-item-{{ id }}">
 
-            <button class="faq-ai-question-{{ id }}">
-              <span>{{ block.settings.question }}</span>
+            <button class="ai-faq-question-{{ id }}">
 
-              <svg class="faq-ai-icon-{{ id }}"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2">
+              {{ block.settings.question }}
 
-                <polyline points="6 9 12 15 18 9"/>
+              <span class="ai-faq-icon-{{ id }}">+</span>
 
-              </svg>
             </button>
 
 
-            <div class="faq-ai-answer-wrapper-{{ id }}">
+            <div class="ai-faq-answer-{{ id }}">
 
-              <div class="faq-ai-answer-{{ id }}">
+              <div class="ai-faq-answer-content-{{ id }}">
                 {{ block.settings.answer }}
               </div>
 
@@ -157,12 +148,12 @@
 
 
     <!-- RIGHT -->
-    <div class="faq-ai-right-{{ id }}">
+    <div class="ai-faq-right-{{ id }}">
 
       {% if section.settings.image %}
         <img
           src="{{ section.settings.image | image_url: width: 1000 }}"
-          class="faq-ai-image-{{ id }}"
+          class="ai-faq-image-{{ id }}"
           loading="lazy"
         >
       {% endif %}
@@ -177,26 +168,28 @@
 <script>
 (function(){
 
-  const section = document.querySelector(".faq-ai-{{ id }}");
-
+  const section = document.querySelector(".ai-faq-{{ id }}");
   if(!section) return;
 
-  const items = section.querySelectorAll(".faq-ai-item-{{ id }}");
+  const items = section.querySelectorAll(".ai-faq-item-{{ id }}");
 
-  items.forEach(item => {
+  items.forEach(item=>{
 
     const btn = item.querySelector("button");
-    const answer = item.querySelector(".faq-ai-answer-wrapper-{{ id }}");
+    const answer = item.querySelector(".ai-faq-answer-{{ id }}");
+    const icon = item.querySelector(".ai-faq-icon-{{ id }}");
 
     btn.addEventListener("click", ()=>{
 
       if(item.classList.contains("active")){
         item.classList.remove("active");
         answer.style.maxHeight = null;
+        icon.textContent = "+";
       }
       else{
         item.classList.add("active");
         answer.style.maxHeight = answer.scrollHeight + "px";
+        icon.textContent = "−";
       }
 
     });
@@ -209,7 +202,7 @@
 
 {% schema %}
 {
-  "name": "FAQ AI Style",
+  "name": "FAQ With Image (Fixed)",
   "settings": [
 
     {
@@ -226,7 +219,50 @@
       "min": 18,
       "max": 50,
       "step": 2,
+      "unit": "px",
       "default": 32
+    },
+
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#111111"
+    },
+
+    {
+      "type": "color",
+      "id": "accordion_wrapper_bg",
+      "label": "Wrapper background",
+      "default": "#f3f3f3"
+    },
+
+    {
+      "type": "color",
+      "id": "accordion_bg_color",
+      "label": "Question background",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "color",
+      "id": "accordion_border_color",
+      "label": "Border color",
+      "default": "#dddddd"
+    },
+
+    {
+      "type": "color",
+      "id": "answer_bg_color",
+      "label": "Answer background",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer text color",
+      "default": "#555555"
     },
 
     {
@@ -237,36 +273,47 @@
 
     {
       "type": "select",
-      "id": "image_align",
-      "label": "Image vertical position",
+      "id": "image_vertical_align",
+      "label": "Image alignment",
       "default": "center",
       "options": [
-        { "value": "flex-start", "label": "Top" },
-        { "value": "center", "label": "Center" },
-        { "value": "flex-end", "label": "Bottom" }
+        { "value":"flex-start","label":"Top"},
+        { "value":"center","label":"Center"},
+        { "value":"flex-end","label":"Bottom"}
       ]
+    },
+
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image border radius",
+      "min":0,
+      "max":40,
+      "step":2,
+      "unit":"px",
+      "default":12
     }
 
   ],
 
 
-  "blocks": [
+  "blocks":[
 
     {
-      "type": "faq",
-      "name": "FAQ",
-      "settings": [
+      "type":"faq",
+      "name":"FAQ Item",
+      "settings":[
 
         {
-          "type": "text",
-          "id": "question",
-          "label": "Question"
+          "type":"text",
+          "id":"question",
+          "label":"Question"
         },
 
         {
-          "type": "richtext",
-          "id": "answer",
-          "label": "Answer"
+          "type":"richtext",
+          "id":"answer",
+          "label":"Answer"
         }
 
       ]
@@ -275,11 +322,12 @@
   ],
 
 
-  "presets": [
+  "presets":[
     {
-      "name": "FAQ AI Style"
+      "name":"FAQ with Image (Working)"
     }
   ]
 }
 {% endschema %}
+
 
