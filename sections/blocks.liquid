@@ -1,0 +1,214 @@
+{% doc %}
+  @prompt
+    Section avec 1 colonne gauche (Titre + FAQ accordéon dynamique) et 2 colonnes à droite (Images).
+    Gestion de l'alignement vertical (Top/Center/Bottom) et des styles (couleurs, espacements).
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-faq-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+  .ai-faq-section__container-{{ ai_gen_id }} {
+    max-width: {{ section.settings.container_width }}px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr; /* 3 colonnes sur desktop */
+    gap: {{ section.settings.column_gap }}px;
+    align-items: {{ section.settings.content_alignment }};
+  }
+
+  .ai-faq-section__left-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.left_content_gap }}px;
+  }
+
+  .ai-faq-section__title-{{ ai_gen_id }} {
+    font-size: {{ section.settings.title_size }}px;
+    color: {{ section.settings.title_color }};
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .ai-faq-section__accordion-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.faq_spacing }}px;
+  }
+
+  .ai-faq-item-{{ ai_gen_id }} {
+    border: 1px solid {{ section.settings.faq_border_color }};
+    border-radius: {{ section.settings.faq_border_radius }}px;
+    overflow: hidden;
+    background-color: {{ section.settings.faq_background }};
+  }
+
+  .ai-faq-item__question-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ section.settings.faq_padding }}px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: {{ section.settings.question_size }}px;
+    color: {{ section.settings.question_color }};
+    font-weight: 600;
+  }
+
+  .ai-faq-item__answer-wrapper-{{ ai_gen_id }} {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .ai-faq-item__answer-{{ ai_gen_id }} {
+    padding: 0 {{ section.settings.faq_padding }}px {{ section.settings.faq_padding }}px;
+    font-size: {{ section.settings.answer_size }}px;
+    color: {{ section.settings.answer_color }};
+    line-height: 1.6;
+  }
+
+  .ai-faq-section__right-col-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    justify-content: {{ section.settings.image_vertical_align }};
+  }
+
+  .ai-faq-section__image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    border-radius: {{ section.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-faq-section__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 990px) {
+    .ai-faq-section__container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+    .ai-faq-section__right-col-{{ ai_gen_id }} {
+        display: none; /* Cache les images sur petit mobile ou ajuster selon besoin */
+    }
+  }
+{% endstyle %}
+
+<faq-accordion-{{ ai_gen_id }} class="ai-faq-section-{{ ai_gen_id }}">
+  <div class="ai-faq-section__container-{{ ai_gen_id }}">
+    
+    <div class="ai-faq-section__left-{{ ai_gen_id }}">
+      {% if section.settings.title != blank %}
+        <h2 class="ai-faq-section__title-{{ ai_gen_id }}">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      <div class="ai-faq-section__accordion-{{ ai_gen_id }}">
+        {% for block in section.blocks %}
+          {% if block.type == 'faq' %}
+            <div class="ai-faq-item-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+              <button class="ai-faq-item__question-{{ ai_gen_id }}" aria-expanded="false" data-faq-button>
+                <span>{{ block.settings.question }}</span>
+                <span class="icon">+</span>
+              </button>
+              <div class="ai-faq-item__answer-wrapper-{{ ai_gen_id }}" data-faq-answer>
+                <div class="ai-faq-item__answer-{{ ai_gen_id }}">
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="ai-faq-section__right-col-{{ ai_gen_id }}">
+      <div class="ai-faq-section__image-wrapper-{{ ai_gen_id }}">
+        {% if section.settings.image_1 %}
+          {{ section.settings.image_1 | image_url: width: 800 | image_tag: class: 'ai-faq-section__image-id' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'ai-faq-section__image-placeholder' }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="ai-faq-section__right-col-{{ ai_gen_id }}">
+      <div class="ai-faq-section__image-wrapper-{{ ai_gen_id }}">
+        {% if section.settings.image_2 %}
+          {{ section.settings.image_2 | image_url: width: 800 | image_tag: class: 'ai-faq-section__image-id' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'ai-faq-section__image-placeholder' }}
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</faq-accordion-{{ ai_gen_id }}>
+
+<script>
+  if (!customElements.get('faq-accordion-{{ ai_gen_id }}')) {
+    customElements.define('faq-accordion-{{ ai_gen_id }}', class extends HTMLElement {
+      connectedCallback() {
+        this.querySelectorAll('[data-faq-button]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const answer = btn.nextElementSibling;
+            btn.setAttribute('aria-expanded', !expanded);
+            answer.style.maxHeight = expanded ? '0' : answer.scrollHeight + 'px';
+          });
+        });
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Triple Col",
+  "settings": [
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "container_width", "label": "Largeur max", "min": 800, "max": 1600, "step": 100, "default": 1200, "unit": "px" },
+    { "type": "select", "id": "content_alignment", "label": "Alignement vertical global", "options": [
+        { "value": "start", "label": "Haut" },
+        { "value": "center", "label": "Centre" },
+        { "value": "end", "label": "Bas" }
+      ], "default": "center" },
+    { "type": "color", "id": "background_color", "label": "Couleur de fond", "default": "#ffffff" },
+    { "type": "header", "content": "Images" },
+    { "type": "image_picker", "id": "image_1", "label": "Image Droite 1" },
+    { "type": "image_picker", "id": "image_2", "label": "Image Droite 2" },
+    { "type": "range", "id": "image_border_radius", "label": "Arrondi images", "min": 0, "max": 50, "default": 10, "unit": "px" },
+    { "type": "header", "content": "Contenu FAQ" },
+    { "type": "text", "id": "title", "label": "Titre", "default": "FAQ" },
+    { "type": "color", "id": "faq_background", "label": "Fond des items", "default": "#f4f4f4" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 100, "default": 50 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 100, "default": 50 },
+    { "type": "range", "id": "padding_horizontal", "label": "Padding Horizontal", "min": 0, "max": 100, "default": 20 }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Question/Réponse",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Votre question ici ?" },
+        { "type": "textarea", "id": "answer", "label": "Réponse", "default": "Votre réponse ici." }
+      ]
+    }
+  ],
+  "presets": [{ "name": "FAQ Triple Col" }]
+}
+{% endschema %}
