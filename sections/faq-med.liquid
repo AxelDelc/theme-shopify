@@ -121,7 +121,7 @@
 
           <div class="ai-faq-item-{{ id }}">
 
-            <button class="ai-faq-question-{{ id }}">
+            <button type="button" class="ai-faq-question-{{ id }}">
 
               {{ block.settings.question }}
 
@@ -150,11 +150,12 @@
     <!-- RIGHT -->
     <div class="ai-faq-right-{{ id }}">
 
-      {% if section.settings.image %}
+      {% if section.settings.image != blank %}
         <img
           src="{{ section.settings.image | image_url: width: 1000 }}"
           class="ai-faq-image-{{ id }}"
           loading="lazy"
+          alt="FAQ"
         >
       {% endif %}
 
@@ -202,20 +203,20 @@
 
 {% schema %}
 {
-  "name": "FAQ With Image (Fixed)",
+  "name": "FAQ avec image",
   "settings": [
 
     {
       "type": "text",
       "id": "title",
-      "label": "Title",
+      "label": "Titre",
       "default": "Vos questions, nos réponses"
     },
 
     {
       "type": "range",
       "id": "title_size",
-      "label": "Title size",
+      "label": "Taille du titre",
       "min": 18,
       "max": 50,
       "step": 2,
@@ -226,42 +227,42 @@
     {
       "type": "color",
       "id": "title_color",
-      "label": "Title color",
+      "label": "Couleur du titre",
       "default": "#111111"
     },
 
     {
       "type": "color",
       "id": "accordion_wrapper_bg",
-      "label": "Wrapper background",
+      "label": "Fond FAQ",
       "default": "#f3f3f3"
     },
 
     {
       "type": "color",
       "id": "accordion_bg_color",
-      "label": "Question background",
+      "label": "Fond questions",
       "default": "#ffffff"
     },
 
     {
       "type": "color",
       "id": "accordion_border_color",
-      "label": "Border color",
+      "label": "Couleur bordure",
       "default": "#dddddd"
     },
 
     {
       "type": "color",
       "id": "answer_bg_color",
-      "label": "Answer background",
+      "label": "Fond réponses",
       "default": "#ffffff"
     },
 
     {
       "type": "color",
       "id": "answer_color",
-      "label": "Answer text color",
+      "label": "Couleur texte réponses",
       "default": "#555555"
     },
 
@@ -274,19 +275,19 @@
     {
       "type": "select",
       "id": "image_vertical_align",
-      "label": "Image alignment",
+      "label": "Alignement image",
       "default": "center",
       "options": [
-        { "value":"flex-start","label":"Top"},
-        { "value":"center","label":"Center"},
-        { "value":"flex-end","label":"Bottom"}
+        { "value":"flex-start","label":"Haut"},
+        { "value":"center","label":"Centre"},
+        { "value":"flex-end","label":"Bas"}
       ]
     },
 
     {
       "type": "range",
       "id": "image_border_radius",
-      "label": "Image border radius",
+      "label": "Arrondi image",
       "min":0,
       "max":40,
       "step":2,
@@ -301,7 +302,7 @@
 
     {
       "type":"faq",
-      "name":"FAQ Item",
+      "name":"Question / Réponse",
       "settings":[
 
         {
@@ -313,7 +314,7 @@
         {
           "type":"richtext",
           "id":"answer",
-          "label":"Answer"
+          "label":"Réponse"
         }
 
       ]
@@ -324,7 +325,7 @@
 
   "presets":[
     {
-      "name":"FAQ with Image (Working)"
+      "name":"FAQ avec image"
     }
   ]
 }
