@@ -1,0 +1,642 @@
+{% doc %}
+  @prompt
+    i need section with 2 column on right to have able to upload image also to center the image top center or bottom
+    
+    On the left side to be able to add title 
+    And after the title in a box to add FAQ accordian list with  headers and titles and content to have + - when open and thats it inside to be able to add what ever content i want maybe button also inside the content and to be able to change the colors background color in the accordion menu
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-faq-section-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-faq-container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .ai-faq-left-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ai-faq-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0;
+  }
+
+  .ai-faq-accordion-wrapper-{{ ai_gen_id }} {
+    background-color: {{ block.settings.accordion_wrapper_bg }};
+    padding: {{ block.settings.accordion_wrapper_padding }}px;
+    border-radius: {{ block.settings.accordion_wrapper_radius }}px;
+  }
+
+  .ai-faq-accordion-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.accordion_gap }}px;
+  }
+
+  .ai-faq-item-{{ ai_gen_id }} {
+    border-bottom: 1px solid {{ block.settings.accordion_border_color }};
+  }
+
+  .ai-faq-item-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-faq-question-{{ ai_gen_id }} {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: {{ block.settings.accordion_item_padding }}px;
+    background-color: {{ block.settings.accordion_bg_color }};
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: {{ block.settings.question_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.question_color }};
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-faq-question-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.accordion_hover_bg }};
+  }
+
+  .ai-faq-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-faq-item-{{ ai_gen_id }}.active .ai-faq-icon-{{ ai_gen_id }} {
+    transform: rotate(45deg);
+  }
+
+  .ai-faq-answer-{{ ai_gen_id }} {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: {{ block.settings.answer_bg_color }};
+  }
+
+  .ai-faq-answer-content-{{ ai_gen_id }} {
+    padding: 0 {{ block.settings.accordion_item_padding }}px {{ block.settings.accordion_item_padding }}px;
+    font-size: {{ block.settings.answer_size }}px;
+    color: {{ block.settings.answer_color }};
+    line-height: 1.6;
+  }
+
+  .ai-faq-right-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-faq-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    display: flex;
+    align-items: {{ block.settings.image_vertical_align }};
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  .ai-faq-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    object-fit: cover;
+  }
+
+  .ai-faq-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-faq-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-faq-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-faq-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .ai-faq-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+
+    .ai-faq-image-wrapper-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+  }
+{% endstyle %}
+
+<faq-section-{{ ai_gen_id }} class="ai-faq-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-faq-container-{{ ai_gen_id }}">
+    <div class="ai-faq-left-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <h2 class="ai-faq-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      {% endif %}
+
+      <div class="ai-faq-accordion-wrapper-{{ ai_gen_id }}">
+        <div class="ai-faq-accordion-{{ ai_gen_id }}">
+          {% for i in (1..10) %}
+            {% liquid
+              assign question_key = 'faq_question_' | append: i
+              assign answer_key = 'faq_answer_' | append: i
+              assign question = block.settings[question_key]
+              assign answer = block.settings[answer_key]
+            %}
+
+            {% if question != blank %}
+              <div class="ai-faq-item-{{ ai_gen_id }}" data-faq-item="{{ i }}">
+                <button
+                  class="ai-faq-question-{{ ai_gen_id }}"
+                  aria-expanded="false"
+                  aria-controls="ai-faq-answer-{{ ai_gen_id }}-{{ i }}"
+                >
+                  <span>{{ question }}</span>
+                  <svg
+                    class="ai-faq-icon-{{ ai_gen_id }}"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+                <div class="ai-faq-answer-{{ ai_gen_id }}" id="ai-faq-answer-{{ ai_gen_id }}-{{ i }}">
+                  <div class="ai-faq-answer-content-{{ ai_gen_id }}">
+                    {{ answer }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-faq-right-{{ ai_gen_id }}">
+      <div class="ai-faq-image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | image_url: width: 1000 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            class="ai-faq-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-faq-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-faq-empty-state-{{ ai_gen_id }}">
+              Add an image
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</faq-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class FaqSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.items = this.querySelectorAll('.ai-faq-item-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.items.forEach((item) => {
+          const button = item.querySelector('.ai-faq-question-{{ ai_gen_id }}');
+          const answer = item.querySelector('.ai-faq-answer-{{ ai_gen_id }}');
+
+          button.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            if (isActive) {
+              item.classList.remove('active');
+              answer.style.maxHeight = null;
+              button.setAttribute('aria-expanded', 'false');
+            } else {
+              item.classList.add('active');
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+              button.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+      }
+    }
+
+    customElements.define('faq-section-{{ ai_gen_id }}', FaqSection{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "FAQ with image",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#212326"
+    },
+    {
+      "type": "header",
+      "content": "Accordion wrapper"
+    },
+    {
+      "type": "color",
+      "id": "accordion_wrapper_bg",
+      "label": "Background color",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "range",
+      "id": "accordion_wrapper_padding",
+      "label": "Padding",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "accordion_wrapper_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Accordion items"
+    },
+    {
+      "type": "range",
+      "id": "accordion_gap",
+      "label": "Gap between items",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "accordion_item_padding",
+      "label": "Item padding",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "accordion_bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "accordion_hover_bg",
+      "label": "Hover background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "accordion_border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Question"
+    },
+    {
+      "type": "range",
+      "id": "question_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Text color",
+      "default": "#212326"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#212326"
+    },
+    {
+      "type": "header",
+      "content": "Answer"
+    },
+    {
+      "type": "color",
+      "id": "answer_bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "answer_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 1"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_1",
+      "label": "Question",
+      "default": "What is your return policy?"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_1",
+      "label": "Answer",
+      "default": "<p>We offer a 30-day return policy on all products. Items must be unused and in original packaging.</p>"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 2"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_2",
+      "label": "Question",
+      "default": "How long does shipping take?"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_2",
+      "label": "Answer",
+      "default": "<p>Standard shipping takes 5-7 business days. Express shipping is available for 2-3 business days.</p>"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 3"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_3",
+      "label": "Question",
+      "default": "Do you ship internationally?"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_3",
+      "label": "Answer",
+      "default": "<p>Yes, we ship to most countries worldwide. Shipping costs and delivery times vary by location.</p>"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 4"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_4",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_4",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 5"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_5",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_5",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 6"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_6",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_6",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 7"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_7",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_7",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 8"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_8",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_8",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 9"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_9",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_9",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "FAQ 10"
+    },
+    {
+      "type": "text",
+      "id": "faq_question_10",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_answer_10",
+      "label": "Answer"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_vertical_align",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ with image"
+    }
+  ]
+}
+{% endschema %}
