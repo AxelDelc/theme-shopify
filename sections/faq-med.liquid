@@ -1,0 +1,275 @@
+{% assign section_id = section.id %}
+
+<style>
+.faq-section-{{ section_id }} {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.faq-container-{{ section_id }} {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.faq-left-{{ section_id }} {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faq-title-{{ section_id }} {
+  font-size: {{ section.settings.title_size }}px;
+  color: {{ section.settings.title_color }};
+}
+
+.faq-wrapper-{{ section_id }} {
+  background: {{ section.settings.wrapper_bg }};
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.faq-item-{{ section_id }} {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question-{{ section_id }} {
+  width: 100%;
+  background: {{ section.settings.item_bg }};
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer-{{ section_id }} {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  background: {{ section.settings.answer_bg }};
+}
+
+.faq-answer-content-{{ section_id }} {
+  padding: 15px;
+}
+
+.faq-icon-{{ section_id }} {
+  transition: 0.3s;
+}
+
+.faq-item-{{ section_id }}.active .faq-icon-{{ section_id }} {
+  transform: rotate(45deg);
+}
+
+/* Image */
+
+.faq-image-wrapper-{{ section_id }} {
+  display: flex;
+  justify-content: center;
+  align-items: {{ section.settings.image_align }};
+}
+
+.faq-image-{{ section_id }} {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media(max-width:768px){
+  .faq-container-{{ section_id }} {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+<div class="faq-section-{{ section_id }}">
+  <div class="faq-container-{{ section_id }}">
+
+    <!-- LEFT -->
+    <div class="faq-left-{{ section_id }}">
+
+      {% if section.settings.title != blank %}
+        <h2 class="faq-title-{{ section_id }}">
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      <div class="faq-wrapper-{{ section_id }}">
+
+        {% for block in section.blocks %}
+          <div class="faq-item-{{ section_id }}">
+
+            <button class="faq-question-{{ section_id }}">
+              {{ block.settings.question }}
+              <span class="faq-icon-{{ section_id }}">+</span>
+            </button>
+
+            <div class="faq-answer-{{ section_id }}">
+              <div class="faq-answer-content-{{ section_id }}">
+                {{ block.settings.answer }}
+              </div>
+            </div>
+
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="faq-image-wrapper-{{ section_id }}">
+
+      {% if section.settings.image %}
+        <img
+          src="{{ section.settings.image | image_url: width: 1000 }}"
+          class="faq-image-{{ section_id }}"
+          loading="lazy"
+        >
+      {% endif %}
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+(function(){
+
+  const items = document.querySelectorAll(
+    ".faq-section-{{ section_id }} .faq-item-{{ section_id }}"
+  );
+
+  items.forEach(item => {
+
+    const btn = item.querySelector("button");
+    const answer = item.querySelector(".faq-answer-{{ section_id }}");
+    const icon = item.querySelector(".faq-icon-{{ section_id }}");
+
+    btn.addEventListener("click", ()=>{
+
+      if(item.classList.contains("active")){
+        item.classList.remove("active");
+        answer.style.maxHeight = null;
+        icon.textContent = "+";
+      }else{
+        item.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        icon.textContent = "−";
+      }
+
+    });
+
+  });
+
+})();
+</script>
+
+
+{% schema %}
+{
+  "name": "FAQ + Image",
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    },
+
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 16,
+      "max": 50,
+      "step": 2,
+      "default": 32
+    },
+
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#111111"
+    },
+
+    {
+      "type": "color",
+      "id": "wrapper_bg",
+      "label": "Accordion background",
+      "default": "#f4f4f4"
+    },
+
+    {
+      "type": "color",
+      "id": "item_bg",
+      "label": "Question background",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "color",
+      "id": "answer_bg",
+      "label": "Answer background",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+
+    {
+      "type": "select",
+      "id": "image_align",
+      "label": "Image vertical position",
+      "default": "center",
+      "options": [
+        { "value": "flex-start", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Bottom" }
+      ]
+    }
+
+  ],
+
+  "blocks": [
+
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+
+      ]
+    }
+
+  ],
+
+  "presets": [
+    {
+      "name": "FAQ with Image"
+    }
+  ]
+}
+{% endschema %}
