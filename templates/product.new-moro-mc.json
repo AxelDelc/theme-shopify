@@ -1005,6 +1005,57 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "blocks_7EwdBj": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e49e4db_8N8cUY": {
+          "type": "ai_gen_block_e49e4db",
+          "disabled": true,
+          "settings": {
+            "container_width": 1400,
+            "section_padding": 60,
+            "gap": 60,
+            "media_width": 40,
+            "vertical_alignment": "center",
+            "background_color": "#ffffff",
+            "media_type": "video",
+            "video": "https://cdn.shopify.com/videos/c/o/v/9a9c9000973e48f99034bebc4a19967b.mp4",
+            "media_border_radius": 0,
+            "content_type": "list",
+            "heading": "Why choose us",
+            "heading_size": 36,
+            "heading_color": "#212326",
+            "content_gap": 30,
+            "list_gap": 25,
+            "number_size": 40,
+            "number_font_size": 18,
+            "number_bg_color": "#7d936d",
+            "number_text_color": "#ffffff",
+            "list_item_1_title": "Premium quality",
+            "list_item_1_description": "Our products are crafted with the finest materials to ensure lasting quality.",
+            "list_item_2_title": "Fast shipping",
+            "list_item_2_description": "Get your order delivered quickly with our express shipping options.",
+            "list_item_3_title": "Expert support",
+            "list_item_3_description": "Our team is here to help you with any questions or concerns.",
+            "list_item_4_title": "",
+            "list_item_4_description": "",
+            "list_item_5_title": "",
+            "list_item_5_description": "",
+            "title_size": 18,
+            "title_color": "#212326",
+            "description_size": 14,
+            "description_color": "#212326",
+            "custom_liquid": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e49e4db_8N8cUY"
+      ],
+      "name": "Media with text",
+      "settings": {}
     }
   },
   "order": [
@@ -1020,6 +1071,7 @@
     "image_with_text_YEwndJ",
     "ss_tableau_h8yrGk",
     "faq_7L8Mc3",
-    "1753183581a2161154"
+    "1753183581a2161154",
+    "blocks_7EwdBj"
   ]
 }
