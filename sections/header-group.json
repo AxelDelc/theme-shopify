@@ -26,6 +26,18 @@
             "highlighted_scribble": "circle"
           }
         },
+        "announcement_3CWX8U": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "Welcome to our store",
+            "link": "",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
         "announcement_rd4Urj": {
           "type": "announcement",
           "settings": {
@@ -41,6 +53,7 @@
       },
       "block_order": [
         "announcement-1",
+        "announcement_3CWX8U",
         "announcement_rd4Urj"
       ],
       "settings": {
