@@ -15,7 +15,7 @@
         "heading_m3qaft": {
           "type": "heading",
           "settings": {
-            "heading": "Naturelle. Puissante. Résultats réels.",
+            "heading": "Science. Concentration. Transformation.",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -25,7 +25,7 @@
         "text_b6CwgB": {
           "type": "text",
           "settings": {
-            "text": "<p>L’équilibre parfait entre science et nature pour mincir. Zéro effort, zéro contrainte — <strong>toute la puissance du Morosil® concentrée dans une seule gélule.</strong></p>",
+            "text": "<p><strong>Morosil® </strong>Haute Dose. La Formule Scientifique Qui Active Votre Minceur Naturelle</p><p></p>",
             "text_size": "subtext-lg",
             "text_max_size": 32,
             "text_font": "body",
@@ -53,7 +53,7 @@
       ],
       "settings": {
         "transparent_header": true,
-        "image": "shopify://shop_images/docteurv-banniere.jpg",
+        "image": "shopify://shop_images/hf_20260212_003538_e2665b5d-ad08-4820-819e-fffd5baa5886.webp",
         "image_height": "600px",
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
