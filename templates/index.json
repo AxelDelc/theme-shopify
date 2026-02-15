@@ -939,7 +939,6 @@
         "criteria_kXPaaU",
         "criteria_Jqy6jE"
       ],
-      "disabled": true,
       "settings": {
         "title": "MORO FIT 400 : un complément minceur hautement dosé",
         "subtitle": "<p>Les avantages de notre cure de MOROSIL<strong>®</strong></p>",
@@ -2074,6 +2073,94 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "featured_product_L3qkWV": {
+      "type": "featured-product",
+      "blocks": {
+        "title_qTzLDt": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "description_HGFiTH": {
+          "type": "description",
+          "settings": {
+            "text_size": "text-base"
+          }
+        },
+        "variant_picker_GGj9za": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons_XhaQfQ": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "pickup_availability_G7hxxx": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "read_more_RdKrN6": {
+          "type": "read_more",
+          "settings": {
+            "button_text": "Cure 2 + 1 offerte, 0,77 par jour  !",
+            "content": ""
+          }
+        },
+        "spinning_text_QLW3by": {
+          "type": "spinning_text",
+          "settings": {
+            "text": "Featured product"
+          }
+        }
+      },
+      "block_order": [
+        "title_qTzLDt",
+        "description_HGFiTH",
+        "variant_picker_GGj9za",
+        "buy_buttons_XhaQfQ",
+        "pickup_availability_G7hxxx",
+        "read_more_RdKrN6",
+        "spinning_text_QLW3by"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
+        "enable_sticky_info": true,
+        "media_size": 66,
+        "gallery_layout": "columns",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "mobile_layout": "partial",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -2083,6 +2170,7 @@
     "custom_liquid_hDf6Mb",
     "hero_6_rbXhKP",
     "video_with_text_dpKQX9",
+    "featured_product_L3qkWV",
     "multicolumn_aeLBhW",
     "faq_x7X86B",
     "ss_feature_13_ga68tn",
