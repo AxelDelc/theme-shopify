@@ -422,6 +422,94 @@
         "parallax_direction": "vertical"
       }
     },
+    "featured_product_L3qkWV": {
+      "type": "featured-product",
+      "blocks": {
+        "title_qTzLDt": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "description_HGFiTH": {
+          "type": "description",
+          "settings": {
+            "text_size": "text-base"
+          }
+        },
+        "variant_picker_GGj9za": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons_XhaQfQ": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "pickup_availability_G7hxxx": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "read_more_RdKrN6": {
+          "type": "read_more",
+          "settings": {
+            "button_text": "Cure 2 + 1 offerte, 0,77 par jour  !",
+            "content": ""
+          }
+        },
+        "spinning_text_QLW3by": {
+          "type": "spinning_text",
+          "settings": {
+            "text": "Featured product"
+          }
+        }
+      },
+      "block_order": [
+        "title_qTzLDt",
+        "description_HGFiTH",
+        "variant_picker_GGj9za",
+        "buy_buttons_XhaQfQ",
+        "pickup_availability_G7hxxx",
+        "read_more_RdKrN6",
+        "spinning_text_QLW3by"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
+        "enable_sticky_info": true,
+        "media_size": 66,
+        "gallery_layout": "columns",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "mobile_layout": "partial",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "multicolumn_aeLBhW": {
       "type": "multicolumn",
       "blocks": {
@@ -957,193 +1045,6 @@
         "button_text_color": "#171717",
         "button_hover_background": "#5d9bd5",
         "button_hover_text_color": "#ffffff"
-      }
-    },
-    "ss_benefices_qxC44Y": {
-      "type": "ss-benefices",
-      "blocks": {
-        "benefit_left_yqdeN6": {
-          "type": "benefit_left",
-          "settings": {
-            "title": "Graisses ciblées",
-            "description": "Le Morosil® est reconnu pour ses propriétés antioxydantes et son action sur la gestion du poids. Des études cliniques ont montré qu’il peut favoriser une réduction significative du poids corporel et du tour de taille, dans le cadre d’un mode de vie sain. Fini les promesses floues : ici, on parle d’une gélule minceur efficace, soutenue par la science et testée cliniquement pour une perte de poids visible"
-          }
-        },
-        "benefit_left_jbtWkD": {
-          "type": "benefit_left",
-          "settings": {
-            "title": "Routine facile",
-            "description": "Pas besoin de 3 comprimés ni de se torturer avec des mélanges compliqués : 1 seule gélule par jour suffit pour enclencher votre cure Morosil."
-          }
-        },
-        "benefit_left_RjHEq6": {
-          "type": "benefit_left",
-          "settings": {
-            "title": "Coup de boost naturel",
-            "description": "Grâce au guarana et à la noix de cola, cette gélule pour mincir vous donne un regain d'énergie naturel pour éviter la fatigue souvent liée aux régimes"
-          }
-        },
-        "benefit_right_6LWHVP": {
-          "type": "benefit_right",
-          "settings": {
-            "title": "Régule la glycémie",
-            "description": "En régulant le taux de sucre dans le sang, le chrome permet d’éviter les pics glycémiques responsables des envies soudaines de sucre. Résultat : moins de fringales, moins d’écarts, et une gestion des repas plus équilibrée, sans sensation de frustration"
-          }
-        },
-        "benefit_right_QYbYip": {
-          "type": "benefit_right",
-          "settings": {
-            "title": "Expertise scientifique",
-            "description": "Pas une simple pilule miracle : notre complément alimentaire pour maigrir a été conçu par des médecins et pharmaciens, dans le respect des normes françaises. Disponible en ligne."
-          }
-        },
-        "benefit_right_BFziwg": {
-          "type": "benefit_right",
-          "settings": {
-            "title": "Résultats visibles",
-            "description": "Des avis sur le MORO FIT 400 montrent une silhouette affinée dès 4 semaines, moins de rétention d’eau, un ventre plus plat. Parfait en complément de votre routine bien-être."
-          }
-        }
-      },
-      "block_order": [
-        "benefit_left_yqdeN6",
-        "benefit_left_jbtWkD",
-        "benefit_left_RjHEq6",
-        "benefit_right_6LWHVP",
-        "benefit_right_QYbYip",
-        "benefit_right_BFziwg"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Bénéfices",
-        "main_image": "shopify://shop_images/Morosil_cure.webp"
-      }
-    },
-    "before_after_image_5_NFxUCc": {
-      "type": "before-after-image-5",
-      "blocks": {
-        "item_m6Ybzd": {
-          "type": "item",
-          "settings": {
-            "icon": "heart",
-            "title": "Des résultats concrets",
-            "text": "Découvrez les avant/après des testeurs de la cure MORO FIT 400",
-            "column": "1"
-          }
-        },
-        "item_dgBaJh": {
-          "type": "item",
-          "settings": {
-            "icon": "plant",
-            "title": "Morosil® + vinaigre de cidre",
-            "text": "Une synergie naturelle pour activer la combustion des graisses.",
-            "column": "1"
-          }
-        },
-        "item_eABTfP": {
-          "type": "item",
-          "settings": {
-            "icon": "chat",
-            "title": "Une approche minceur intelligente.",
-            "text": "Zéro danger, tout est pensé pour respecter votre rythme.",
-            "column": "2"
-          }
-        },
-        "item_LmU9bG": {
-          "type": "item",
-          "settings": {
-            "icon": "people",
-            "title": "Validé par des professionnels de santé",
-            "text": "Une solution sûre, naturelle, et testée dans le cadre de programmes encadrés.",
-            "column": "2"
-          }
-        }
-      },
-      "block_order": [
-        "item_m6Ybzd",
-        "item_dgBaJh",
-        "item_eABTfP",
-        "item_LmU9bG"
-      ],
-      "disabled": true,
-      "settings": {
-        "content_align": "center",
-        "content_align_mobile": "center",
-        "title": "<h2><strong>Avant / Après quand le Morosil® fait la différence</strong></h2>",
-        "title_custom": false,
-        "title_font": "josefin_sans_n4",
-        "title_size": 36,
-        "title_size_mobile": 26,
-        "title_height": 130,
-        "text": "<p><strong>1 gélule par jour. Des résultats visibles. Une méthode validée par la science</strong>.</p>",
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 20,
-        "text_size_mobile": 16,
-        "text_height": 130,
-        "text_margin_top": 20,
-        "text_margin_top_mobile": 16,
-        "body_gap": 100,
-        "body_gap_mobile": 24,
-        "body_margin_top": 50,
-        "body_margin_top_mobile": 30,
-        "items_gap": 30,
-        "items_gap_mobile": 30,
-        "item_content_align": "center",
-        "item_content_align_mobile": "center",
-        "icon_size": 44,
-        "icon_size_mobile": 36,
-        "item_title_custom": false,
-        "item_title_font": "josefin_sans_n4",
-        "item_title_size": 18,
-        "item_title_size_mobile": 14,
-        "item_title_height": 130,
-        "item_title_margin_top": 10,
-        "item_title_margin_top_mobile": 10,
-        "item_text_custom": false,
-        "item_text_font": "josefin_sans_n4",
-        "item_text_size": 17,
-        "item_text_size_mobile": 13,
-        "item_text_height": 150,
-        "item_text_margin_top": 10,
-        "item_text_margin_top_mobile": 10,
-        "left_image": "shopify://shop_images/7243807a-9aec-4ba6-b800-6d3a12036232_1.jpg",
-        "right_image": "shopify://shop_images/7243807a-9aec-4ba6-b800-6d3a12036232.jpg",
-        "image_radius": 140,
-        "image_border_thickness": 0,
-        "image_ratio": "original",
-        "image_ratio_mobile": "square",
-        "btn_size": 46,
-        "btn_size_mobile": 56,
-        "btn_arrow_size": 80,
-        "btn_arrow_size_mobile": 80,
-        "btn_border_thickness": 0,
-        "title_color": "#2e2a39",
-        "text_color": "#625f6b",
-        "icon_color": "#000000",
-        "item_title_color": "#2e2a39",
-        "item_text_color": "#625f6b",
-        "btn_bg_color": "#ffffff",
-        "btn_arrow_color": "#000000",
-        "btn_border_color": "#000000",
-        "line_color": "#ffffff",
-        "image_border_color": "#000000",
-        "background_color": "#fafafa",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 60,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
       }
     },
     "ss_feature_17_WNPCJg": {
@@ -2073,94 +1974,6 @@
         "full_width": false,
         "rounded": false
       }
-    },
-    "featured_product_L3qkWV": {
-      "type": "featured-product",
-      "blocks": {
-        "title_qTzLDt": {
-          "type": "title",
-          "settings": {
-            "title_size": "product-title-md",
-            "title_size_mobile": "product-title-md",
-            "show_price": true,
-            "show_rating": true
-          }
-        },
-        "description_HGFiTH": {
-          "type": "description",
-          "settings": {
-            "text_size": "text-base"
-          }
-        },
-        "variant_picker_GGj9za": {
-          "type": "variant_picker",
-          "settings": {
-            "show_variant_labels": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "color_swatch_type": "color",
-            "size_chart": ""
-          }
-        },
-        "buy_buttons_XhaQfQ": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": false,
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true,
-            "enable_back_in_stock": false,
-            "show_back_in_stock_name": false,
-            "show_back_in_stock_phone": false
-          }
-        },
-        "pickup_availability_G7hxxx": {
-          "type": "pickup_availability",
-          "settings": {}
-        },
-        "read_more_RdKrN6": {
-          "type": "read_more",
-          "settings": {
-            "button_text": "Cure 2 + 1 offerte, 0,77 par jour  !",
-            "content": ""
-          }
-        },
-        "spinning_text_QLW3by": {
-          "type": "spinning_text",
-          "settings": {
-            "text": "Featured product"
-          }
-        }
-      },
-      "block_order": [
-        "title_qTzLDt",
-        "description_HGFiTH",
-        "variant_picker_GGj9za",
-        "buy_buttons_XhaQfQ",
-        "pickup_availability_G7hxxx",
-        "read_more_RdKrN6",
-        "spinning_text_QLW3by"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
-        "enable_sticky_info": true,
-        "media_size": 66,
-        "gallery_layout": "columns",
-        "thumbnail_position": "beside",
-        "image_ratio": "adapt_first",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_autoplay": false,
-        "enable_video_looping": false,
-        "mobile_layout": "partial",
-        "image_ratio_mobile": "adapt_first",
-        "mobile_thumbnail": false,
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
     }
   },
   "order": [
@@ -2177,8 +1990,6 @@
     "ss_about_jLFatp",
     "175319881326c7ce0c",
     "ss_tableau_HG4Pia",
-    "ss_benefices_qxC44Y",
-    "before_after_image_5_NFxUCc",
     "ss_feature_17_WNPCJg",
     "testimonials_banner_CG7YnM",
     "ss_testimonial_16_7UaE8B",
