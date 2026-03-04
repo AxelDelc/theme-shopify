@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-article-banner": {
+      "type": "main-article-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 68,
+            "height_mobile": 0
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-lg tracking-heading",
+            "show_tags": true,
+            "show_date": true,
+            "show_comments": false,
+            "show_author": true
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "title"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "show_image": true,
+        "image": "shopify://shop_images/4.png",
+        "image_height": "750px",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-article": {
+      "type": "main-article-overlay",
+      "blocks": {
+        "next_previous_posts": {
+          "type": "next_previous_posts",
+          "settings": {
+            "show_date": true,
+            "show_comments": false,
+            "show_author": true
+          }
+        }
+      },
+      "block_order": [
+        "next_previous_posts"
+      ],
+      "settings": {
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": true,
+        "rounded": true
+      }
+    },
+    "blocks_xz8tRH": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5781eec_mEqtHC": {
+          "type": "ai_gen_block_5781eec",
+          "settings": {
+            "container_width": 1200,
+            "column_gap": 60,
+            "content_alignment": "center",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "padding_horizontal": 20,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "background_color": "#dff2ff",
+            "title": "Questions fréquentes sur Moro Fit 400",
+            "title_size": 36,
+            "title_color": "#212326",
+            "left_content_gap": 30,
+            "faq_spacing": 10,
+            "faq_padding": 20,
+            "faq_border_radius": 8,
+            "faq_background": "#dff2ff",
+            "faq_hover_background": "#f9f9f9",
+            "faq_border_color": "#e5e5e5",
+            "question_size": 16,
+            "question_color": "#212326",
+            "answer_size": 14,
+            "answer_color": "#666666",
+            "icon_color": "#212326",
+            "image": "shopify://shop_images/4.webp",
+            "image_border_radius": 10,
+            "image_horizontal_align": "center",
+            "image_vertical_align": "center",
+            "mobile_gap": 40,
+            "mobile_image_position": "1",
+            "mobile_content_position": "2",
+            "faq_question_1": "Quel complément alimentaire pour maigrir est le plus efficace ?",
+            "faq_answer_1": "Un complément alimentaire pour maigrir efficace contient généralement des actifs naturels qui agissent sur le métabolisme et la gestion du poids. Les formules à base de Morosil® (extrait d’orange sanguine), thé vert, guarana et chrome sont particulièrement recherchées car elles contribuent à réduire la masse grasse, stimuler le métabolisme et limiter les fringales",
+            "faq_question_2": "Quels ingrédients rechercher dans un complément alimentaire minceur ?",
+            "faq_answer_2": "Les compléments alimentaires minceur efficaces contiennent souvent des ingrédients naturels comme :\n\t1.\tMorosil® pour réduire la masse grasse abdominale\n\t2.\tGuarana pour stimuler le métabolisme grâce à sa caféine naturelle\n\t3.\tThé vert pour soutenir l’oxydation des graisses\n\t4.\tChrome pour réguler la glycémie et limiter les envies de sucre\n\t5.\tVinaigre de cidre pour améliorer la digestion\n\nLa combinaison de ces actifs permet d’agir sur plusieurs mécanismes liés à la perte de poids",
+            "faq_question_3": "Le Morosil est-il efficace pour la perte de poids ?",
+            "faq_answer_3": "Le Morosil®, extrait d’orange sanguine de Sicile (Citrus sinensis), est un actif étudié pour ses effets sur la gestion du poids. Des études montrent qu’une supplémentation de 400 mg par jour peut contribuer à réduire le poids corporel et le tour de taille.\n\nC’est pourquoi certaines formules comme le complément alimentaire Morosil 400 Docteur V￼ utilisent ce dosage précis.",
+            "faq_question_4": "Comment fonctionne un complément alimentaire perte de poids ?",
+            "faq_answer_4": "Un complément alimentaire perte de poids agit généralement sur plusieurs leviers :\n\t1.\tstimulation du métabolisme\n\t2.\tréduction de la masse grasse\n\t3.\trégulation de la glycémie\n\t4.\tdiminution des fringales\n\t5.\tsoutien de la digestion\n\nLes actifs comme guarana, thé vert, Morosil® et chrome permettent d’accompagner la perte de poids de manière progressive.",
+            "faq_question_5": "Combien de temps faut-il pour voir les effets d’un complément minceur ?",
+            "faq_answer_5": "Les effets d’un complément alimentaire minceur apparaissent généralement après quelques semaines d’utilisation. Une cure complète dure souvent 8 à 12 semaines, le temps nécessaire pour agir sur le métabolisme et la gestion des graisses.\n\nUne utilisation régulière associée à une alimentation équilibrée permet d’optimiser les résultats",
+            "faq_question_6": "",
+            "faq_answer_6": "",
+            "faq_question_7": "",
+            "faq_answer_7": "",
+            "faq_question_8": "",
+            "faq_answer_8": "",
+            "faq_question_9": "",
+            "faq_answer_9": "",
+            "faq_question_10": "",
+            "faq_answer_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5781eec_mEqtHC"
+      ],
+      "name": "FAQ with image",
+      "settings": {}
+    },
+    "blocks_BqPUUx": {
+      "type": "_blocks",
+      "name": "FAQ with image",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main-article-banner",
+    "main-article",
+    "blocks_xz8tRH",
+    "blocks_BqPUUx"
+  ]
+}
