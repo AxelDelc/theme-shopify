@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-article-banner": {
+      "type": "main-article-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 68,
+            "height_mobile": 0
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-lg tracking-heading",
+            "show_tags": true,
+            "show_date": true,
+            "show_comments": false,
+            "show_author": true
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "title"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "show_image": true,
+        "image": "shopify://shop_images/4.png",
+        "image_height": "750px",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-article": {
+      "type": "main-article-overlay",
+      "blocks": {
+        "next_previous_posts": {
+          "type": "next_previous_posts",
+          "settings": {
+            "show_date": true,
+            "show_comments": false,
+            "show_author": true
+          }
+        }
+      },
+      "block_order": [
+        "next_previous_posts"
+      ],
+      "settings": {
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": true,
+        "rounded": true
+      }
+    },
+    "blocks_xz8tRH": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5781eec_mEqtHC": {
+          "type": "ai_gen_block_5781eec",
+          "settings": {
+            "container_width": 1200,
+            "column_gap": 60,
+            "content_alignment": "center",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "padding_horizontal": 20,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "background_color": "#dff2ff",
+            "title": "Questions fréquentes sur Moro Fit 400",
+            "title_size": 36,
+            "title_color": "#212326",
+            "left_content_gap": 30,
+            "faq_spacing": 10,
+            "faq_padding": 20,
+            "faq_border_radius": 8,
+            "faq_background": "#dff2ff",
+            "faq_hover_background": "#f9f9f9",
+            "faq_border_color": "#e5e5e5",
+            "question_size": 16,
+            "question_color": "#212326",
+            "answer_size": 14,
+            "answer_color": "#666666",
+            "icon_color": "#212326",
+            "image": "shopify://shop_images/4.webp",
+            "image_border_radius": 10,
+            "image_horizontal_align": "center",
+            "image_vertical_align": "center",
+            "mobile_gap": 40,
+            "mobile_image_position": "1",
+            "mobile_content_position": "2",
+            "faq_question_1": "Quel est le meilleur coupe faim naturel ?",
+            "faq_answer_1": "Les solutions naturelles qui combinent Morosil®, thé vert, guarana et chrome peuvent aider à réduire les fringales et soutenir la perte de poids.",
+            "faq_question_2": "Quels aliments coupent la faim ?",
+            "faq_answer_2": "Les aliments coupe faim les plus efficaces sont les aliments riches en fibres, les protéines et certains légumes peu caloriques.",
+            "faq_question_3": "Comment ne plus avoir faim pendant un régime ?",
+            "faq_answer_3": "Pour réduire son appétit, il est conseillé de privilégier les aliments rassasiants, de boire suffisamment d’eau et de stabiliser la glycémie.",
+            "faq_question_4": "Existe-t-il un coupe faim naturel pour maigrir ?",
+            "faq_answer_4": "Oui, certaines formules naturelles peuvent aider à limiter les fringales et soutenir le métabolisme.",
+            "faq_question_5": "Les compléments coupe faim sont-ils efficaces ?",
+            "faq_answer_5": "Certains compléments alimentaires minceur peuvent soutenir la gestion de l’appétit lorsqu’ils sont utilisés dans le cadre d’une alimentation équilibrée.",
+            "faq_question_6": "",
+            "faq_answer_6": "",
+            "faq_question_7": "",
+            "faq_answer_7": "",
+            "faq_question_8": "",
+            "faq_answer_8": "",
+            "faq_question_9": "",
+            "faq_answer_9": "",
+            "faq_question_10": "",
+            "faq_answer_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5781eec_mEqtHC"
+      ],
+      "name": "FAQ with image",
+      "settings": {}
+    },
+    "blocks_BqPUUx": {
+      "type": "_blocks",
+      "name": "FAQ with image",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main-article-banner",
+    "main-article",
+    "blocks_xz8tRH",
+    "blocks_BqPUUx"
+  ]
+}
