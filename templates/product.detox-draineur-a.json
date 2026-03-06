@@ -509,73 +509,6 @@
       "name": "Media with text",
       "settings": {}
     },
-    "blocks_jyjP3j": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5781eec_xPLacb": {
-          "type": "ai_gen_block_5781eec",
-          "settings": {
-            "container_width": 1200,
-            "column_gap": 60,
-            "content_alignment": "center",
-            "padding_top": 60,
-            "padding_bottom": 60,
-            "padding_horizontal": 20,
-            "margin_top": 0,
-            "margin_bottom": 0,
-            "background_color": "#dff2ff",
-            "title": "Questions fréquentes sur Moro Fit 400",
-            "title_size": 36,
-            "title_color": "#212326",
-            "left_content_gap": 30,
-            "faq_spacing": 10,
-            "faq_padding": 20,
-            "faq_border_radius": 8,
-            "faq_background": "#dff2ff",
-            "faq_hover_background": "#f9f9f9",
-            "faq_border_color": "#e5e5e5",
-            "question_size": 16,
-            "question_color": "#212326",
-            "answer_size": 14,
-            "answer_color": "#666666",
-            "icon_color": "#212326",
-            "image": "shopify://shop_images/4.webp",
-            "image_border_radius": 10,
-            "image_horizontal_align": "center",
-            "image_vertical_align": "center",
-            "mobile_gap": 40,
-            "mobile_image_position": "1",
-            "mobile_content_position": "2",
-            "faq_question_1": "À qui s’adresse le Détox Draineur Slim 3-en-1 ?",
-            "faq_answer_1": "Le Détox Draineur Slim 3-en-1 s’adresse aux personnes qui souhaitent soutenir le drainage naturel du corps, favoriser l’élimination des toxines et accompagner leurs objectifs de légèreté ou de perte de poids dans le cadre d’un mode de vie sain",
-            "faq_question_2": "Quelle posologie et quelle durée d’utilisation ?",
-            "faq_answer_2": "Diluer 35 ml dans une bouteille d’eau à l’aide du doseur.\nLa préparation doit être consommée tout au long de la journée, de préférence pendant les repas.\n\nUn flacon correspond à environ 14 jours d’utilisation.",
-            "faq_question_3": "Comment optimiser les effets du Draineur?",
-            "faq_answer_3": "Pour de meilleurs résultats, il est conseillé :\n\nde maintenir une bonne hydratation\n\nd’adopter une alimentation équilibrée\n\nd’avoir une activité physique régulière\n\nCes habitudes permettent d’accompagner le drainage et l’élimination",
-            "faq_question_4": "Qu’est-ce qu’un détox ?",
-            "faq_answer_4": "Un détox est un complément alimentaire conçu pour soutenir les fonctions naturelles d’élimination de l’organisme.\nIl agit généralement grâce à des plantes drainantes et dépuratives qui favorisent l’élimination des toxines et la sensation de légèreté",
-            "faq_question_5": "Pourquoi associer artichaut et pissenlit ?",
-            "faq_answer_5": "L’artichaut et le pissenlit sont deux plantes traditionnellement utilisées pour soutenir les fonctions d’élimination et le fonctionnement du foie. Leur association permet d’accompagner le drainage naturel de l’organisme",
-            "faq_question_6": "Quel rôle joue le thé vert dans la formule ?",
-            "faq_answer_6": "Le thé vert est riche en polyphénols et en EGCG, des composés antioxydants qui participent à la protection des cellules contre le stress oxydatif et accompagnent les objectifs de minceur et d’équilibre métabolique",
-            "faq_question_7": "À quoi sert la choline dans la formule ?",
-            "faq_answer_7": "La choline contribue au métabolisme normal des lipides et participe au fonctionnement normal du foie",
-            "faq_question_8": "Pourquoi le chrome est-il présent dans la formule ?",
-            "faq_answer_8": "Le chrome contribue au métabolisme normal des macronutriments et participe au maintien d’une glycémie normale",
-            "faq_question_9": "",
-            "faq_answer_9": "",
-            "faq_question_10": "",
-            "faq_answer_10": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5781eec_xPLacb"
-      ],
-      "name": "FAQ with image",
-      "settings": {}
-    },
     "portfolio_Fk8Gcq": {
       "type": "portfolio",
       "blocks": {
@@ -816,7 +749,7 @@
         "heading_kVECkz": {
           "type": "heading",
           "settings": {
-            "heading": "Goût thé pêche rafraîchissant !",
+            "heading": "<strong>Goût thé pêche rafraîchissant !</strong>",
             "heading_size": "title-sm",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -976,6 +909,73 @@
         "button_hover_text_color": "#fafafa"
       }
     },
+    "blocks_jyjP3j": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5781eec_xPLacb": {
+          "type": "ai_gen_block_5781eec",
+          "settings": {
+            "container_width": 1200,
+            "column_gap": 60,
+            "content_alignment": "center",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "padding_horizontal": 20,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "background_color": "#dff2ff",
+            "title": "Tout savoir sur le Draineur Slim 3-en-1",
+            "title_size": 36,
+            "title_color": "#212326",
+            "left_content_gap": 30,
+            "faq_spacing": 10,
+            "faq_padding": 20,
+            "faq_border_radius": 8,
+            "faq_background": "#dff2ff",
+            "faq_hover_background": "#f9f9f9",
+            "faq_border_color": "#e5e5e5",
+            "question_size": 16,
+            "question_color": "#212326",
+            "answer_size": 14,
+            "answer_color": "#666666",
+            "icon_color": "#212326",
+            "image": "shopify://shop_images/4.webp",
+            "image_border_radius": 10,
+            "image_horizontal_align": "center",
+            "image_vertical_align": "center",
+            "mobile_gap": 40,
+            "mobile_image_position": "1",
+            "mobile_content_position": "2",
+            "faq_question_1": "À qui s’adresse le Détox Draineur Slim 3-en-1 ?",
+            "faq_answer_1": "Le Détox Draineur Slim 3-en-1 s’adresse aux personnes qui souhaitent soutenir le drainage naturel du corps, favoriser l’élimination des toxines et accompagner leurs objectifs de légèreté ou de perte de poids dans le cadre d’un mode de vie sain",
+            "faq_question_2": "Quelle posologie et quelle durée d’utilisation ?",
+            "faq_answer_2": "Diluer 35 ml dans une bouteille d’eau à l’aide du doseur.\nLa préparation doit être consommée tout au long de la journée, de préférence pendant les repas.\n\nUn flacon correspond à environ 14 jours d’utilisation.",
+            "faq_question_3": "Comment optimiser les effets du Draineur?",
+            "faq_answer_3": "Pour de meilleurs résultats, il est conseillé :\n\nde maintenir une bonne hydratation\n\nd’adopter une alimentation équilibrée\n\nd’avoir une activité physique régulière\n\nCes habitudes permettent d’accompagner le drainage et l’élimination",
+            "faq_question_4": "Qu’est-ce qu’un détox ?",
+            "faq_answer_4": "Un détox est un complément alimentaire conçu pour soutenir les fonctions naturelles d’élimination de l’organisme.\nIl agit généralement grâce à des plantes drainantes et dépuratives qui favorisent l’élimination des toxines et la sensation de légèreté",
+            "faq_question_5": "Pourquoi associer artichaut et pissenlit ?",
+            "faq_answer_5": "L’artichaut et le pissenlit sont deux plantes traditionnellement utilisées pour soutenir les fonctions d’élimination et le fonctionnement du foie. Leur association permet d’accompagner le drainage naturel de l’organisme",
+            "faq_question_6": "Quel rôle joue le thé vert dans la formule ?",
+            "faq_answer_6": "Le thé vert est riche en polyphénols et en EGCG, des composés antioxydants qui participent à la protection des cellules contre le stress oxydatif et accompagnent les objectifs de minceur et d’équilibre métabolique",
+            "faq_question_7": "À quoi sert la choline dans la formule ?",
+            "faq_answer_7": "La choline contribue au métabolisme normal des lipides et participe au fonctionnement normal du foie",
+            "faq_question_8": "Pourquoi le chrome est-il présent dans la formule ?",
+            "faq_answer_8": "Le chrome contribue au métabolisme normal des macronutriments et participe au maintien d’une glycémie normale",
+            "faq_question_9": "",
+            "faq_answer_9": "",
+            "faq_question_10": "",
+            "faq_answer_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5781eec_xPLacb"
+      ],
+      "name": "FAQ with image",
+      "settings": {}
+    },
     "1753183581a2161154": {
       "type": "apps",
       "blocks": {
@@ -1015,7 +1015,6 @@
     "image_with_text_G78JtR",
     "ss_feature_17_ydiaYa",
     "blocks_7EwdBj",
-    "blocks_jyjP3j",
     "portfolio_Fk8Gcq",
     "custom_liquid_aH38bN",
     "help-drawer",
@@ -1023,6 +1022,7 @@
     "recently-viewed",
     "image_with_text_YEwndJ",
     "ss_tableau_h8yrGk",
+    "blocks_jyjP3j",
     "1753183581a2161154"
   ]
 }
