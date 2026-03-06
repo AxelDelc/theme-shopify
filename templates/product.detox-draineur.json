@@ -9,6 +9,134 @@
  */
 {
   "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_size": "text-base"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_size": "text-base"
+          }
+        },
+        "countdown": {
+          "type": "countdown",
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#e11d48",
+            "color_background": "#fff1f2",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 15,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share",
+            "show_help_desk": true,
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": ""
+          }
+        },
+        "complementary": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs well with",
+            "product_limit": 4,
+            "show_vendor": false,
+            "show_price": true
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "description",
+        "countdown",
+        "variant_picker",
+        "inventory",
+        "buy_buttons",
+        "pickup_availability",
+        "share",
+        "complementary",
+        "sticky_buy_button"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": 66,
+        "gallery_layout": "scroll",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 80,
+        "padding_bottom": 84,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
     "featured_product_bByzp4": {
       "type": "featured-product",
       "blocks": {
@@ -81,12 +209,6 @@
             "liquid": "<div id='ss-delivery'></div>"
           }
         },
-        "liquid_7bqT9U": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div id='ss-trust-badges'></div>"
-          }
-        },
         "liquid_Fy9KQ3": {
           "type": "liquid",
           "settings": {
@@ -135,14 +257,13 @@
         "liquid_8kDdwN",
         "liquid_QYwkit",
         "liquid_jRYak8",
-        "liquid_7bqT9U",
         "liquid_Fy9KQ3",
         "collapsible_tab_beHbEy",
         "collapsible_tab_NJ8cPw",
         "collapsible_tab_aHCx6R"
       ],
       "settings": {
-        "product": "morosil-400",
+        "product": "",
         "enable_sticky_info": true,
         "media_size": 45,
         "gallery_layout": "thumbnail",
@@ -270,67 +391,6 @@
         "icon_size_mobile": 60,
         "mt": 0,
         "mb": 2
-      }
-    },
-    "trust_badge_2_4GWDpq": {
-      "type": "trust-badge-2",
-      "blocks": {
-        "item_rTBbwU": {
-          "type": "item",
-          "settings": {
-            "icon": "truck",
-            "title": "<p>Livraison gratuite en relais à partir de 60 euros d'achat </p>",
-            "subtitle": ""
-          }
-        },
-        "item_zdxRBj": {
-          "type": "item",
-          "settings": {
-            "icon": "return_arrow",
-            "title": "<p>expédition sous 2-3 jours </p>",
-            "subtitle": ""
-          }
-        },
-        "item_bH8mYh": {
-          "type": "item",
-          "settings": {
-            "icon": "payment",
-            "title": "<p>Paiement sécurisé</p>",
-            "subtitle": ""
-          }
-        },
-        "item_DFhM8C": {
-          "type": "item",
-          "settings": {
-            "icon": "time",
-            "title": "<p>Livraison rapide</p>",
-            "subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_rTBbwU",
-        "item_zdxRBj",
-        "item_bH8mYh",
-        "item_DFhM8C"
-      ],
-      "settings": {
-        "trust_position": "below_buy",
-        "template": "boxed",
-        "svg_color": "#000000",
-        "bg_color": "",
-        "bg_color_item": "",
-        "title_color": "#000000",
-        "subtitle_color": "#716969",
-        "icon_size": 30,
-        "title_font_size": 13,
-        "subtitle_font_size": 6,
-        "subtitle_margin_top": 0,
-        "space_items": 7,
-        "pt": 0,
-        "pb": 0,
-        "mt": 0,
-        "mb": 0
       }
     },
     "ss_delivery_timer_e9Tf48": {
@@ -861,6 +921,123 @@
         "lazy": true
       }
     },
+    "blocks_kjQAFN": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e49e4db_TM4aKt": {
+          "type": "ai_gen_block_e49e4db",
+          "settings": {
+            "container_width": 1400,
+            "section_padding": 60,
+            "gap": 60,
+            "media_width": 40,
+            "vertical_alignment": "center",
+            "background_color": "#ffffff",
+            "media_type": "video",
+            "video": "https://cdn.shopify.com/videos/c/o/v/7f22086f79bf45e48dcd89bc87c5ad73.mov",
+            "media_border_radius": 0,
+            "content_type": "list",
+            "heading": "<strong> MORO FIT 400 : la cure minceur qui dégonfle ton ventre nouvelle génération ! Retour Post-Partum </strong>",
+            "heading_size": 34,
+            "heading_color": "#212326",
+            "content_gap": 30,
+            "list_gap": 25,
+            "number_size": 40,
+            "number_font_size": 18,
+            "number_bg_color": "#9ccef0",
+            "number_text_color": "#ffffff",
+            "list_item_1_title": "",
+            "list_item_1_description": "Prends 2 gélules par jour, avec un grand verre d’eau !",
+            "list_item_2_title": "",
+            "list_item_2_description": "Sois régulier(ère) pendant 30 jours pour des résultats visibles si tu as un métabolisme rapide, en cas de métabolisme lent une cure de 12 semaines est recommandée!",
+            "list_item_3_title": "",
+            "list_item_3_description": "Dis adieu aux régimes frustrants et aux produits inutiles 🙌 Pense également à activer ton métabolisme en marchant 10 000 pas par jour !",
+            "list_item_4_title": "",
+            "list_item_4_description": "",
+            "list_item_5_title": "",
+            "list_item_5_description": "",
+            "title_size": 18,
+            "title_color": "#212326",
+            "description_size": 15,
+            "description_color": "#212326",
+            "custom_liquid": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e49e4db_TM4aKt"
+      ],
+      "name": "Media with text",
+      "settings": {}
+    },
+    "blocks_GDVTVw": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5781eec_4THiaT": {
+          "type": "ai_gen_block_5781eec",
+          "settings": {
+            "container_width": 1200,
+            "column_gap": 60,
+            "content_alignment": "center",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "padding_horizontal": 20,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "background_color": "#dff2ff",
+            "title": "Questions fréquentes sur Moro Fit 400",
+            "title_size": 36,
+            "title_color": "#212326",
+            "left_content_gap": 30,
+            "faq_spacing": 10,
+            "faq_padding": 20,
+            "faq_border_radius": 8,
+            "faq_background": "#dff2ff",
+            "faq_hover_background": "#f9f9f9",
+            "faq_border_color": "#e5e5e5",
+            "question_size": 16,
+            "question_color": "#212326",
+            "answer_size": 14,
+            "answer_color": "#666666",
+            "icon_color": "#212326",
+            "image": "shopify://shop_images/4.webp",
+            "image_border_radius": 10,
+            "image_horizontal_align": "center",
+            "image_vertical_align": "center",
+            "mobile_gap": 40,
+            "mobile_image_position": "1",
+            "mobile_content_position": "2",
+            "faq_question_1": "À qui s’adresse le MOROFIT 400 ?",
+            "faq_answer_1": "Le MOROFIT 400 s’adresse aux personnes qui veulent :\n\nAffiner leur silhouette et cibler le tour de taille.\nActiver naturellement leur métabolisme grâce à une formule hautement dosée.\nObtenir un soutien minceur complet grâce au Morosil® 400 mg, au guarana, au vinaigre de cidre, à la noix de cola et au chrome.\nRéduire les fringales, mieux gérer l’appétit et stabiliser la glycémie.\nBooster une routine minceur de 12 semaines avec un complément premium, efficace et synergique.\nRetrouver énergie, légèreté et motivation au quotidien.\nIdéal pour celles et ceux qui veulent un véritable coup de pouce minceur, sans solutions extrêmes ni restrictions difficiles.",
+            "faq_question_2": "Gélules minceur : quelle posologie et quelle durée ?",
+            "faq_answer_2": "Prenez deux gélules par jour, idéalement le matin ou à jeun , pendant trois mois pour respecter les recommandations.",
+            "faq_question_3": "Perte de poids : comment optimiser vos résultats ?",
+            "faq_answer_3": "Associez la cure (12 semaines) à une alimentation équilibrée et à de l’activité physique pour maximiser les effets du complément.",
+            "faq_question_4": "Accélérer le métabolisme et maigrir naturellement : quelles astuces ?",
+            "faq_answer_4": "Buvez beaucoup d’eau, consommez des aliments riches en fibres et pratiquez régulièrement une activité physique pour accompagner votre complément.",
+            "faq_question_5": "Morosil® : qu’est‑ce que c’est ?",
+            "faq_answer_5": "C’est un extrait d’orange sanguine Moro qui aide à réduire poids et tour de taille lorsqu’il est pris à la dose recommandée.",
+            "faq_question_6": "Morosil et vinaigre de cidre : pourquoi cette association ?",
+            "faq_answer_6": "Le mélange combine les bienfaits du Morosil® et l’effet tonique du vinaigre de cidre pour soutenir la silhouette et l’appétit.",
+            "faq_question_7": "Thé vert, EGCG et caféine : utile en minceur ?",
+            "faq_answer_7": "Les catéchines du thé vert et une dose modérée de caféine stimulent légèrement le métabolisme et l’oxydation des graisses.",
+            "faq_question_8": "Chrome et gestion du poids : à quoi sert‑il ?",
+            "faq_answer_8": "Cet oligo‑élément favorise un métabolisme normal des sucres et aide à stabiliser la glycémie, soutenant ainsi la régulation du poids.",
+            "faq_question_9": "",
+            "faq_answer_9": "",
+            "faq_question_10": "",
+            "faq_answer_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5781eec_4THiaT"
+      ],
+      "name": "FAQ with image",
+      "settings": {}
+    },
     "testimonials_banner_8wi98R": {
       "type": "testimonials-banner",
       "disabled": true,
@@ -1110,101 +1287,6 @@
         "lazy": true
       }
     },
-    "ss_small_faq_riH9XB": {
-      "type": "ss-small-faq",
-      "blocks": {
-        "question_eiwC3h": {
-          "type": "question",
-          "settings": {
-            "question": "Quels sont les ingrédients du MORO FIT 400 actifs et leurs bienfaits ?",
-            "answer": "<p>MORO FIT HAUTEMENT DOSÉ combine plusieurs ingrédients naturels reconnus pour leurs vertus :</p><ul><li><strong>Extrait sec d’orange rouge – Morosil® (400 mg)</strong> : Puissant antioxydant, il aide à combattre le stress oxydatif et favorise le contrôle du poids.</li><li><strong>Vinaigre de cidre (52,5 mg)</strong> : Contribue à une meilleure digestion et à la régulation du métabolisme.</li><li><strong>Extrait sec de guarana (30 mg)</strong> avec <strong>3,3 mg de caféine</strong> : Stimule l’énergie, accélère le métabolisme des graisses et aide à la combustion des calories.</li><li><strong>Poudre de noix de cola (40 mg)</strong> apportant également <strong>3,3 mg de caféine</strong> : Favorise l’amincissement par son effet stimulant naturel.</li><li><strong>Chrome (39 µg, 98 % VNR)</strong> : Essentiel pour la régulation du métabolisme des glucides et des lipides, il aide à maintenir une glycémie normale.<br/>Cette synergie d'ingrédients naturels fait de MOROFIT un complément alimentaire minceur de choix pour soutenir efficacement une <strong>cure de perte de poids</strong> et un <strong>métabolisme optimisé</strong>.</li></ul>"
-          }
-        },
-        "question_GBR8xE": {
-          "type": "question",
-          "settings": {
-            "question": "Quelle est la posologie recommandée pour le MORO FIT 400 ?",
-            "answer": "<p>La posologie idéale est <strong>1 gélule par jour</strong>. Il est conseillé de prendre la gélule le matin avec un grand verre d'eau pour favoriser une absorption optimale des principes actifs et démarrer la journée en boostant votre métabolisme.</p>"
-          }
-        },
-        "question_jVa4Ha": {
-          "type": "question",
-          "settings": {
-            "question": "Combien de temps dure une cure avec une boîte de MORO FIT 400 ?",
-            "answer": "<p>Chaque boîte contient <strong>60 gélules</strong>, ce qui correspond à une cure de <strong>2 mois</strong>. Cette durée de cure permet d’observer des résultats progressifs et durables dans le cadre d’un régime équilibré et d’un mode de vie sain.</p>"
-          }
-        },
-        "question_ntEFyx": {
-          "type": "question",
-          "settings": {
-            "question": "Pourquoi choisir MORO FIT 400 HAUTEMENT DOSÉ ?",
-            "answer": "<p>MORO FIT 400 se démarque par sa formule concentrée et ses ingrédients naturels de haute qualité. Voici pourquoi il est le choix idéal pour votre <strong>cure de perte de poids</strong> :</p><ul><li><strong>Simplicité d'utilisation</strong> : 1 gélule par jour, facile à intégrer dans votre routine matinale.</li><li><strong>Efficacité prouvée</strong> : Grâce à des ingrédients ciblés comme le Morosil®, le guarana et le chrome.</li><li><strong>Durée de cure optimale</strong> : 60 gélules pour 2 mois de bienfaits continus.</li><li><strong>Sécurité et qualité</strong> : Formulé dans le respect des normes les plus strictes pour un complément alimentaire naturel et fiable</li></ul>"
-          }
-        },
-        "question_zeYfVD": {
-          "type": "question",
-          "settings": {
-            "question": "Quels engagements prenons-nous pour la satisfaction client ?",
-            "answer": "<p>Nous mettons un point d’honneur à offrir un service client irréprochable et personnalisé. Notre équipe, composée de professionnels expérimentés, est à l’écoute de vos besoins et prête à répondre à toutes vos questions. Nous assurons également un suivi après-vente pour garantir votre entière satisfaction.</p>"
-          }
-        },
-        "question_D4bjcx": {
-          "type": "question",
-          "settings": {
-            "question": "Quels sont les bénéfices de MORO FIT 400 HAUTEMENT DOSÉ pour la perte de poids ?",
-            "answer": "<p>Les principaux bénéfices incluent :</p><ul><li><strong>Stimulation du métabolisme des graisses</strong> grâce à l’action combinée du guarana et de la noix de cola.</li><li><strong>Amélioration de la combustion des calories</strong> et activation de la thermogenèse.</li><li><strong>Régulation de la glycémie</strong> et soutien du métabolisme lipidique grâce au chrome.</li><li><strong>Optimisation de la digestion</strong> avec le vinaigre de cidre.</li></ul><p><strong>Effet antioxydant</strong> de l’extrait d’orange rouge (Morosil®) pour lutter contre le stress oxydatif.Ces effets contribuent à une <strong>perte de poids naturelle</strong> et à une <strong>silhouette harmonieuse</strong>, faisant de MOROFIT une solution de choix pour ceux qui recherchent un <strong>complément alimentaire amincissement</strong> de haute qualité.</p>"
-          }
-        },
-        "question_R6cnj3": {
-          "type": "question",
-          "settings": {
-            "question": "Est-ce que MORO FIT 400 est fabriqué en France ?",
-            "answer": "<p>Absolument ! MORO FIT 400 HAUTEMENT DOSÉ est fabriqué dans un <strong>laboratoire français certifié 🇫🇷</strong>, garantissant un contrôle qualité strict et une production conforme aux normes européennes. Tous les <strong>actifs sont soigneusement sourcés </strong>auprès de fournisseurs reconnus pour leur excellence, assurant ainsi une qualité optimale et une efficacité prouvée pour votre cure minceur. Ce processus de fabrication garantit non seulement la <strong>pureté des ingrédients</strong>, mais aussi la sécurité et la performance du complément alimentaire</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_eiwC3h",
-        "question_GBR8xE",
-        "question_jVa4Ha",
-        "question_ntEFyx",
-        "question_zeYfVD",
-        "question_D4bjcx",
-        "question_R6cnj3"
-      ],
-      "settings": {
-        "title": "Questions fréquentes",
-        "image": "shopify://shop_images/PHOTO-2025-04-19-14-23-14.jpg",
-        "image_bg": "#f8f8f8",
-        "image_shape": "blob",
-        "show_icon": false,
-        "icon_type": "lightbulb",
-        "show_view_all": false,
-        "view_all_text": "Voir la FAQ",
-        "faq_page": "",
-        "title_size": 36,
-        "title_weight": "500",
-        "title_color": "#000000",
-        "view_all_color": "#000000",
-        "view_all_weight": "400",
-        "question_size": 18,
-        "question_weight": "500",
-        "question_color": "#000000",
-        "question_padding": 24,
-        "chevron_color": "#000000",
-        "chevron_active_color": "#000000",
-        "chevron_hover_bg": "#f5f5f5",
-        "answer_color": "#666666",
-        "divider_color": "#5d9bd5",
-        "question_border_radius": 16,
-        "hover_bg_color": "#5d9bd5",
-        "active_bg_color": "#5d9bd5",
-        "hover_indent": 8,
-        "hover_color": "#000000",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -1312,152 +1394,24 @@
         "heading": "Need help?",
         "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
       }
-    },
-    "main-product": {
-      "type": "main-product",
-      "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_size": "text-base"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-            "title_size": "product-title-md",
-            "title_size_mobile": "product-title-md",
-            "show_price": true,
-            "show_rating": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "text_size": "text-base"
-          }
-        },
-        "countdown": {
-          "type": "countdown",
-          "settings": {
-            "heading": "Hurry up!",
-            "subheading": "Sale end in:",
-            "color_text": "#e11d48",
-            "color_background": "#fff1f2",
-            "gradient_background": ""
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "show_variant_labels": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "color_swatch_type": "color",
-            "size_chart": ""
-          }
-        },
-        "inventory": {
-          "type": "inventory",
-          "settings": {
-            "inventory_threshold": 15,
-            "show_inventory_transfer": true,
-            "show_inventory_quantity": "low",
-            "color_scheme": "accent-1"
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": true,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "enable_back_in_stock": false,
-            "show_back_in_stock_name": false,
-            "show_back_in_stock_phone": false
-          }
-        },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "disabled": true,
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share",
-            "show_help_desk": true,
-            "help_label": "Need help?",
-            "help_type": "drawer",
-            "help_page": ""
-          }
-        },
-        "complementary": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs well with",
-            "product_limit": 4,
-            "show_vendor": false,
-            "show_price": true
-          }
-        },
-        "sticky_buy_button": {
-          "type": "sticky_buy_button",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "vendor",
-        "title",
-        "description",
-        "countdown",
-        "variant_picker",
-        "inventory",
-        "buy_buttons",
-        "pickup_availability",
-        "share",
-        "complementary",
-        "sticky_buy_button"
-      ],
-      "disabled": true,
-      "settings": {
-        "enable_sticky_info": true,
-        "media_size": 66,
-        "gallery_layout": "scroll",
-        "thumbnail_position": "beside",
-        "image_ratio": "adapt_first",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_autoplay": true,
-        "enable_video_looping": true,
-        "mobile_layout": "full_width",
-        "image_ratio_mobile": "adapt_first",
-        "mobile_thumbnail": false,
-        "padding_top": 80,
-        "padding_bottom": 84,
-        "divider": false,
-        "full_width": true,
-        "rounded": false
-      }
     }
   },
   "order": [
+    "main-product",
     "featured_product_bByzp4",
     "ss_trust_badge_CnrnPg",
     "ss_payment_icon_7YfLGL",
-    "trust_badge_2_4GWDpq",
     "ss_delivery_timer_e9Tf48",
     "ss_feature_17_NxFLLw",
     "scrolling_logos_E4XiDh",
     "ss_product_video_9diCgg",
     "before_after_image_5_EzEtNw",
+    "blocks_kjQAFN",
+    "blocks_GDVTVw",
     "testimonials_banner_8wi98R",
     "image_with_text_8nDAmT",
     "ss_testimonial_16_TJ7Q9F",
-    "ss_small_faq_riH9XB",
     "product-recommendations",
-    "help-drawer",
-    "main-product"
+    "help-drawer"
   ]
 }
