@@ -1,0 +1,1145 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_erzwhx": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": false
+          }
+        },
+        "liquid_yWAUPW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% if shop.locale == 'fr' %}\n  <div class=\"product-benefits\">\n    <p>\n      🍊 Extrait naturel d’orange rouge de Sicile<br>\n      🌿 Soutient un régime sain<br>\n      ✨ Accompagne vos objectifs bien-être\n    </p>\n  </div>\n{% elsif shop.locale == 'de' %}\n  <div class=\"product-benefits\">\n    <p>\n      🍊 Natürlicher Extrakt aus roten Orangen aus Sizilien<br>\n      🌿 Unterstützt eine gesunde Ernährung<br>\n      ✨ Begleitet Ihre Wohlfühlziele\n    </p>\n  </div>\n{% endif %}\n\n<style>\n  .product-benefits {\n    margin: 10px 0;\n    font-size: 13px;\n    line-height: 1.5;\n  }\n</style>"
+          }
+        },
+        "liquid_hVwKAk": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .product-banner {\n      display: flex;\n      justify-content: space-evenly;\n      align-items: center;\n      background-color: #DFF2FF;\n      color: black;\n      padding: 10px 7px;\n      border-radius: 8px;\n      font-family: montserrat, sans-serif;\n      font-size: 13px;\n      width: 100%;\n      box-sizing: border-box;\n      flex-wrap: nowrap;\n      gap: 10px;\n      text-align: center;\n    }\n    \n    .banner-feature {\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n    \n    .banner-icon {\n      font-size: 15px;\n    }\n    \n    @media (max-width: 600px) { \n      .banner-feature {\n        margin: 5px 0;\n      }\n.vegan-cure-mobile{\ndisplay:none;\n}\n    }\n  </style>\n</head>\n<body>\n  <div class=\"product-banner\">\n    <div class=\"banner-feature\">\n      <span class=\"banner-icon\"></span> {{ 'product_flags.made_in_france' | t }}\n    </div>\n    <div class=\"banner-feature vegan-cure-mobile\">\n      <span class=\"banner-icon\"></span> {{ 'product_flags.vegan_cure' | t }}\n    </div>\n    <div class=\"banner-feature\">\n      <span class=\"banner-icon\"></span> {{ 'product_flags.high_dose' | t }}\n    </div>\n  </div>\n</body>\n</html>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "liquid_mb8bkd": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n/* BAR STORIES */\n.stories-bar{\n  display:flex;\n  gap:16px;\n  padding:15px;\n  overflow-x:auto;\n}\n\n/* CERCLES */\n.story-circle{\n  width:84px;\n  height:84px;\n  border-radius:50%;\n  border:4px solid #1e88e5;\n  overflow:hidden;\n  cursor:pointer;\n  background:#000;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  transition:.2s;\n  flex-shrink:0;\n}\n\n.story-circle:hover{\n  transform:scale(1.08);\n}\n\n.story-circle img{\n  width:100%;\n  height:100%;\n  object-fit:cover;\n}\n\n/* POPUP */\n.story-popup{\n  position:fixed;\n  inset:0;\n  background:transparent;\n  display:none;\n  align-items:center;\n  justify-content:center;\n  z-index:999999;\n}\n\n/* BOX */\n.story-box{\n  width:360px;\n  max-width:90vw;\n  aspect-ratio:9/16;\n  background:#000;\n  position:relative;\n  border-radius:22px;\n  overflow:hidden;\n  box-shadow:0 25px 60px rgba(0,0,0,.45);\n}\n\n/* VIDEO */\n.story-box video{\n  width:100%;\n  height:100%;\n  object-fit:contain;\n}\n\n/* CONTROLS */\n.story-controls{\n  position:absolute;\n  bottom:70px;\n  left:0;\n  right:0;\n  display:flex;\n  justify-content:center;\n  gap:22px;\n  z-index:20;\n}\n\n.control-btn{\n  min-width:70px;\n  padding:10px 16px;\n  border-radius:25px;\n  background:rgba(0,0,0,.75);\n  color:#fff;\n  font-size:14px;\n  font-weight:600;\n  border:1px solid rgba(255,255,255,.3);\n  cursor:pointer;\n  backdrop-filter: blur(4px);\n  transition:.2s;\n}\n\n.control-btn:hover{\n  background:rgba(30,136,229,.8);\n}\n\n/* CLOSE */\n.story-close{\n  position:absolute;\n  top:10px;\n  right:12px;\n  background:transparent;\n  color:#fff;\n  font-size:28px;\n  cursor:pointer;\n  z-index:30;\n}\n\n/* ARROWS */\n.story-nav{\n  position:absolute;\n  top:50%;\n  transform:translateY(-50%);\n  color:#fff;\n  font-size:38px;\n  font-weight:700;\n  cursor:pointer;\n  z-index:30;\n  user-select:none;\n  padding:6px;\n}\n\n.story-prev{ left:6px; }\n.story-next{ right:6px; }\n</style>\n\n\n<!-- STORIES BAR -->\n<div class=\"stories-bar\">\n\n  <div class=\"story-circle\" data-index=\"0\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0923/6761/8397/files/pic_1.png?v=1769185427\">\n  </div>\n\n  <div class=\"story-circle\" data-index=\"1\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0923/6761/8397/files/pic_2.png?v=1769185445\">\n  </div>\n\n  <div class=\"story-circle\" data-index=\"2\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0923/6761/8397/files/pic_3.png?v=1769185459\">\n  </div>\n\n  <div class=\"story-circle\" data-index=\"3\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0923/6761/8397/files/pic_4.png?v=1769185472\">\n  </div>\n\n</div>\n\n\n<!-- POPUP -->\n<div class=\"story-popup\" id=\"storyPopup\">\n\n  <div class=\"story-box\">\n\n    <div class=\"story-close\" id=\"closeStory\">✕</div>\n\n    <div class=\"story-nav story-prev\" id=\"prevStory\">‹</div>\n    <div class=\"story-nav story-next\" id=\"nextStory\">›</div>\n\n    <video id=\"storyVideo\" playsinline></video>\n\n    <div class=\"story-controls\">\n\n      <button class=\"control-btn\" id=\"playPause\">⏸</button>\n      <button class=\"control-btn\" id=\"muteBtn\">🔊</button>\n\n    </div>\n\n  </div>\n\n</div>\n\n\n<script>\nconst videos = [\n \"https://cdn.shopify.com/videos/c/o/v/57231e33532046b492411a8e8451f587.mp4\",\n \"https://cdn.shopify.com/videos/c/o/v/b1e0c984e0c143b3a2f61d8c50136ee7.mov\",\n \"https://cdn.shopify.com/videos/c/o/v/c6016b240fa246e093a8c9238e712979.mov\",\n \"https://cdn.shopify.com/videos/c/o/v/3ba7d62681b04341acf2091dd8884beb.mov\"\n];\n\nlet current = 0;\n\nconst popup = document.getElementById(\"storyPopup\");\nconst video = document.getElementById(\"storyVideo\");\n\nconst playBtn = document.getElementById(\"playPause\");\nconst muteBtn = document.getElementById(\"muteBtn\");\n\n/* OPEN */\ndocument.querySelectorAll(\".story-circle\").forEach(story => {\n\n  story.addEventListener(\"click\", () => {\n\n    current = parseInt(story.dataset.index);\n    openStory(current);\n\n  });\n\n});\n\nfunction openStory(i){\n\n  current = (i + videos.length) % videos.length;\n\n  video.src = videos[current];\n  video.currentTime = 0;\n  video.muted = false;\n  video.play();\n\n  playBtn.textContent = \"⏸\";\n  muteBtn.textContent = \"🔊\";\n\n  popup.style.display = \"flex\";\n}\n\n/* PLAY */\nplayBtn.onclick = ()=>{\n\n  if(video.paused){\n    video.play();\n    playBtn.textContent = \"⏸\";\n  }else{\n    video.pause();\n    playBtn.textContent = \"⏯\";\n  }\n};\n\n/* SOUND */\nmuteBtn.onclick = ()=>{\n\n  video.muted = !video.muted;\n  muteBtn.textContent = video.muted ? \"🔇\" : \"🔊\";\n};\n\n/* NAV */\ndocument.getElementById(\"prevStory\").onclick = ()=> openStory(current-1);\ndocument.getElementById(\"nextStory\").onclick = ()=> openStory(current+1);\n\n/* CLOSE */\ndocument.getElementById(\"closeStory\").onclick = closeStory;\n\nfunction closeStory(){\n\n  video.pause();\n  video.src = \"\";\n  popup.style.display = \"none\";\n}\n\n/* CLICK OUTSIDE */\npopup.onclick = e=>{\n  if(e.target === popup) closeStory();\n};\n\n/* KEYBOARD */\ndocument.addEventListener(\"keydown\", e=>{\n\n  if(popup.style.display !== \"flex\") return;\n\n  if(e.key===\"Escape\") closeStory();\n  if(e.key===\"ArrowLeft\") openStory(current-1);\n  if(e.key===\"ArrowRight\") openStory(current+1);\n\n});\n\n/* SWIPE MOBILE */\nlet startX = 0;\n\ndocument.querySelector(\".story-box\").addEventListener(\"touchstart\", e=>{\n  startX = e.touches[0].clientX;\n});\n\ndocument.querySelector(\".story-box\").addEventListener(\"touchend\", e=>{\n\n  let endX = e.changedTouches[0].clientX;\n  let diff = endX - startX;\n\n  if(Math.abs(diff) > 50){\n\n    if(diff > 0) openStory(current-1);\n    else openStory(current+1);\n\n  }\n\n});\n</script>"
+          }
+        },
+        "liquid_RkxPdz": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"stock-alert\">\n  <span class=\"dot\"></span>\n  <span class=\"stock-text\" id=\"variant-stock-msg\">En stock • Flux intense, envoi sous 3 jours</span>\n</div>\n\n<style>\n  .stock-alert {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    margin: 0 0;\n    font-weight: 500;\n    color: #1a1a1a;\n    font-size: 14px;\n  }\n\n  .stock-alert .dot {\n    height: 10px;\n    width: 10px;\n    background-color: limegreen;\n    border-radius: 50%;\n    animation: pulse 1s infinite;\n    box-shadow: 0 0 5px limegreen;\n    flex: 0 0 auto;\n  }\n\n  @keyframes pulse {\n    0% { opacity: 1; }\n    50% { opacity: 0.2; }\n    100% { opacity: 1; }\n  }\n</style>"
+          }
+        },
+        "reelup_shoppable_videos_reels_reelup_product_slider_T9RqQV": {
+          "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup_product_slider/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+          "settings": {}
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_tab_bmPf6Q": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Pourquoi choisir Moro Fit 400 ?",
+            "content": "<p><strong>MORO FIT 400 – Complément alimentaire perte de poids efficace, naturel et sans effet yoyo</strong></p><p><strong>Tu veux mincir sans frustration, sans effet rebond, et sans mettre ta santé en danger ?<br/>La cure MORO FIT 400 est la solution naturelle qu’il te faut.</strong></p><ul><li><strong>Hautement dosé en actifs</strong> avec <strong>400 mg de Morosil®</strong> par gélule – <strong>dosage cliniquement validé</strong></li><li><strong>Ingrédients 100 % d’origine naturelle</strong> (vegan, sans sucre ajouté, sans gluten)</li><li><strong>Fabriqué en France, selon les normes pharmaceutiques strictes</strong></li></ul><p><strong>Ce complément alimentaire perte de poids agit sur plusieurs fronts :</strong></p><ul><li><strong>Réduction de la masse grasse abdominale</strong>, même sans régime ! Idéal pour le post-partum</li><li><strong>Limitation de l’effet yoyo</strong>, souvent observé après un régime</li><li><strong>Régulation de la glycémie</strong> et<strong> diminution des fringales</strong></li><li><strong>Stimulation du métabolisme</strong> grâce au guarana et au cola</li><li><strong>Amélioration de la digestion</strong>, en synergie avec le vinaigre de cidre</li></ul><p><strong>Qu’est-ce que le Morosil® ?</strong></p><p>Le Morosil™ est un <strong>extrait breveté d’orange sanguine de Sicile</strong> (Citrus Sinensis). Riche en actifs, il est cliniquement reconnu pour :</p><ul><li><strong>Réduire la masse grasse</strong></li><li><strong>Favoriser la perte de poids sans danger</strong></li><li><strong>Agir même sans changement drastique de ton alimentation</strong></li></ul><p><strong>Idéal pour le post-partum, </strong></p><p></p><ul><li>90 ou 180  gélules minceur</li><li>2 gélule par jour suffit pour des résultats visibles dès la 4ᵉ semaine*</li></ul><p>*Étude interne : 90 % des utilisatrices ont constaté une réduction de leur tour de taille après 30 jours d'utilisation.</p><p><strong>Post-Partum</strong></p><p><strong>La cure Docteur V est parfaitement adaptée à la période post-partum (hors allaitement), grâce à sa formulation :</strong></p><ul><li>100% d’origine naturelle</li></ul><p></p><ul><li>Avec un dosage précis de 400 mg de Morosil®, un actif étudié pour réduire la masse grasse abdominale et limiter l’effet “yoyo”<strong><br/></strong></li></ul><p><strong>Puis-je l’utiliser pendant l’allaitement ?</strong></p><p>Non, par précaution, nous ne recommandons pas la prise de la cure pendant l’allaitement.<br/>Nos formules sont conçues pour être efficaces et sûres dès la fin de cette période, en respectant les besoins physiologiques du corps.</p><p><strong>Et après ?</strong></p><p><strong>Dès la fin de l’allaitement, la cure peut t’accompagner :</strong></p><ul><li>Pour aider ton corps à éliminer la rétention d’eau<br/></li><li>Pour réactiver ton métabolisme naturellement<br/></li><li>Pour retrouver une silhouette plus tonique, à ton rythme</li></ul>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "collapsible_tab_Kg73yD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Bénéfices & Perte de poids",
+            "content": "<p><strong>MORO FIT 400 – Complément alimentaire perte de poids efficace, naturel et sans effet yoyo</strong></p><p><strong>Tu veux mincir sans frustration, sans effet rebond, et sans mettre ta santé en danger ?<br/>La cure MORO FIT 400 est la solution naturelle qu’il te faut.</strong></p><ul><li><strong>Hautement dosé en actifs</strong> avec <strong>400 mg de Morosil®</strong> par gélule – <strong>dosage cliniquement validé</strong></li><li><strong>Ingrédients 100 % d’origine naturelle</strong> (vegan, sans sucre ajouté, sans gluten)</li><li><strong>Fabriqué en France, selon les normes pharmaceutiques strictes</strong></li></ul><p><strong>Ce complément alimentaire perte de poids agit sur plusieurs fronts :</strong></p><ul><li><strong>Réduction de la masse grasse abdominale</strong>, même sans régime ! Idéal pour le post-partum</li><li><strong>Limitation de l’effet yoyo</strong>, souvent observé après un régime</li><li><strong>Régulation de la glycémie</strong> et<strong> diminution des fringales</strong></li><li><strong>Stimulation du métabolisme</strong> grâce au guarana et au cola</li><li><strong>Amélioration de la digestion</strong>, en synergie avec le vinaigre de cidre</li></ul><p><strong>Qu’est-ce que le Morosil® ?</strong></p><p>Le Morosil™ est un <strong>extrait breveté d’orange sanguine de Sicile</strong> (Citrus Sinensis). Riche en actifs, il est cliniquement reconnu pour :</p><ul><li><strong>Réduire la masse grasse</strong></li><li><strong>Favoriser la perte de poids sans danger</strong></li><li><strong>Agir même sans changement drastique de ton alimentation</strong></li></ul><p><strong>Idéal pour le post-partum, </strong></p><p></p><ul><li>90 ou 180  gélules minceur</li><li>2 gélule par jour suffit pour des résultats visibles dès la 4ᵉ semaine*</li></ul><p>*Étude interne : 90 % des utilisatrices ont constaté une réduction de leur tour de taille après 30 jours d'utilisation.</p><p><strong>Post-Partum</strong></p><p><strong>La cure Docteur V est parfaitement adaptée à la période post-partum (hors allaitement), grâce à sa formulation :</strong></p><ul><li>100% d’origine naturelle</li></ul><p></p><ul><li>Avec un dosage précis de 400 mg de Morosil®, un actif étudié pour réduire la masse grasse abdominale et limiter l’effet “yoyo”<strong><br/></strong></li></ul><p><strong>Puis-je l’utiliser pendant l’allaitement ?</strong></p><p>Non, par précaution, nous ne recommandons pas la prise de la cure pendant l’allaitement.<br/>Nos formules sont conçues pour être efficaces et sûres dès la fin de cette période, en respectant les besoins physiologiques du corps.</p><p><strong>Et après ?</strong></p><p><strong>Dès la fin de l’allaitement, la cure peut t’accompagner :</strong></p><ul><li>Pour aider ton corps à éliminer la rétention d’eau<br/></li><li>Pour réactiver ton métabolisme naturellement<br/></li><li>Pour retrouver une silhouette plus tonique, à ton rythme</li></ul>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "collapsible_tab_J9UcmR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Extraits cliniquement brevetés",
+            "content": "<p><strong>Morosil® – Extrait d’orange rouge Moro (Citrus sinensis var. Moro)</strong></p><ol><li><strong>Marini A. et al., 2016 – Journal of Cosmetic Dermatology</strong><br/><em>Randomized, double-blind, placebo-controlled clinical trial</em><br/>Étude menée sur 60 adultes en surpoids ayant reçu 400 mg/j de Morosil® pendant 12 semaines.<br/>→ Diminution significative du poids corporel, de l’IMC et du tour de taille par rapport au placebo.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/25588369/?utm_source=chatgpt.com\">https://pubmed.ncbi.nlm.nih.gov/25588369/</a></li><li><strong>Caruso et al., 2022 – Nutrients</strong><br/><em>Clinical and mechanistic evaluation of Moro blood orange extract in overweight adults</em><br/>Essai clinique confirmant la réduction du poids et du tour de taille à 400 mg/j pendant 12 semaines, avec amélioration du métabolisme lipidique.<br/>🔗 <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC8838101/?utm_source=chatgpt.com\">https://pmc.ncbi.nlm.nih.gov/articles/PMC8838101/</a></li></ol><p><strong>Thé vert (catéchines/EGCG) & Caféine</strong></p><ol><li><strong>Zhang et al., 2024 – Frontiers in Nutrition</strong><br/><em>Méta-analyse d’essais randomisés sur les extraits de thé vert et la composition corporelle</em><br/>Les extraits riches en EGCG réduisent le poids corporel, l’IMC et la masse grasse, tout en améliorant le métabolisme.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/38031409/?utm_source=chatgpt.com\">https://pubmed.ncbi.nlm.nih.gov/38031409/</a></li><li><strong>Hursel & Westerterp-Plantenga, 2010 – Obesity Reviews</strong><br/><em>Green tea catechin plus caffeine supplementation and body-weight regulation</em><br/>La combinaison caféine + catéchines augmente la dépense énergétique et favorise l’oxydation des graisses.<br/>🔗 <a>https://pubmed.ncbi.nlm.nih.gov/20070395/</a></li><li><strong>EFSA Panel, 2018 – Safety of green tea catechins</strong><br/>Avis scientifique concluant que les extraits de thé vert sont sûrs jusqu’à 800 mg d’EGCG par jour.<br/>🔗 <a href=\"https://www.efsa.europa.eu/en/efsajournal/pub/5239?utm_source=chatgpt.com\">https://www.efsa.europa.eu/en/efsajournal/pub/5239</a></li></ol><p><strong>Chrome (chlorure de chrome)</strong></p><ol><li><strong>Hua Y. et al., 2020 – Nutrition Reviews</strong><br/><em>Méta-analyse sur l’effet du chrome sur le métabolisme du glucose et le poids corporel</em><br/>Doses entre 200 et 400 µg/j : amélioration de la glycémie à jeun et de la sensibilité à l’insuline.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/31751416/\">https://pubmed.ncbi.nlm.nih.gov/31751416/</a></li><li><strong>Tian et al., 2019 – Biological Trace Element Research</strong><br/><em>Méta-analyse sur le chrome et la composition corporelle</em><br/>Effets modérés observés sur la masse grasse et le tour de taille à des doses ≤400 µg/j.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/31115179/?utm_source=chatgpt.com\">https://pubmed.ncbi.nlm.nih.gov/31115179/</a></li></ol>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "collapsible_tab_8k3HWN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Ingrédients & Dosage",
+            "content": "<h3><strong>Nouvelle formule du complément alimentaire DOCTEUR V</strong></h3><p><strong>Extrait sec d’orange rouge – Morosil® : 400 mg</strong><br/>Issu de la variété Moro (<em>Citrus sinensis (L.) Osbeck</em>), cet extrait breveté est reconnu pour ses vertus antioxydantes et ses effets bénéfiques sur la gestion du poids. Des études cliniques ont montré qu’une supplémentation de 400 mg/jour contribue à la réduction du poids corporel et du tour de taille.</p><p><strong>Vinaigre de cidre : 105 mg</strong><br/>Riche en acide acétique, le vinaigre de cidre soutient la digestion et participe à l’équilibre du métabolisme énergétique.</p><p><strong>Extrait sec de guarana : 150 mg</strong><br/>Dont 16,5 mg de caféine. Le guarana est traditionnellement utilisé pour stimuler la vigilance, soutenir le métabolisme et aider à la mobilisation des graisses.</p><p><strong>Extrait sec de noix de kola : 40 mg</strong><br/>Dont 4,8 mg de caféine. Source naturelle de caféine, la noix de kola favorise la vitalité et contribue au tonus physique et mental.</p><p><strong>Extrait sec de thé vert : 115,5 mg</strong><br/>Dont 25,4 mg d’EGCG (catéchines) et 13,9 mg de caféine. Le thé vert aide à protéger les cellules contre le stress oxydatif et soutient le métabolisme des graisses.</p><p><strong>Chrome : 250 µg (625 % VNR*)</strong><br/>Le chrome contribue au maintien d’une glycémie normale et participe au métabolisme normal des macronutriments.</p><p><strong>Silice colloïdale : 10,6 mg</strong><br/>Oligo-élément essentiel, la silice participe à la structure des tissus et soutient le bien-être global.</p><p><strong>Gomme d’acacia : support de formulation</strong></p><p><strong>Teneur totale en caféine : environ 35,2 mg par jour.</strong></p><p>*VNR : Valeurs Nutritionnelles de Référence.</p><p><strong>Formule 100 % naturelle – Fabriquée en France – Gélules végétales sans additifs controversés.</strong><br/>💊 Convient aux régimes végétariens et véganes.</p>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "collapsible_tab_cQV9C7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Conseils d'utilisation",
+            "content": "<ul><li>Prendre 2 gélules par jour à jeun, 30 minutes avant le petit-déjeuner ou le premier repas de la journée, avec un grand verre d’eau.</li><li>Suivre la cure pendant 12 semaines.</li><li>Associer idéalement à une alimentation équilibrée et un grand verre d’eau</li><li>Ne pas dépasser la dose recommandée.</li><li>Déconseillé aux femmes enceintes ou allaitantes sans avis médical.</li></ul><h5><strong>Précautions : </strong></h5><p>Déconseillé en cas d’ulcère gastro-duodénal, de troubles cardiaques ou d’hyperthiroïdie. En cas de traitements, demandez conseil à votre pharmacien. Ne pas dépasser la zone journalière recommandée</p><p>Un complément alimentaire ne doit pas se substituer à une alimentation variée et équilibrée et à un mode de vie sain. </p>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "complementary": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Votre pilulier",
+            "product_limit": 4,
+            "show_vendor": false,
+            "show_price": true
+          }
+        },
+        "liquid_KggQWV": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"product-ingredients\">\n  <p class=\"ingredients-title\">{{ 'ingredients.title' | t }}</p>\n  <div class=\"ingredients-list\">\n    <span class=\"ingredient\">{{ 'ingredients.morosil' | t }}</span>\n    <span class=\"ingredient\">{{ 'ingredients.cider_vinegar' | t }}</span>\n    <span class=\"ingredient\">{{ 'ingredients.guarana' | t }}</span>\n    <span class=\"ingredient\">{{ 'ingredients.kola_nut' | t }}</span>\n  </div>\n</div>\n\n<style>\n  .product-ingredients {\n    padding-left: 0;\n    margin: 15px 0;\n    font-size: 12px;\n    line-height: 1.4;\n  }\n\n  .ingredients-title {\n    font-weight: bold;\n    margin-bottom: 5px;\n  }\n\n  .ingredients-list {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 5px;\n  }\n\n  .ingredient {\n    display: inline-block;\n    padding: 3px 8px;\n    border: 2px solid #5D9BD5;\n    border-radius: 8px;\n    font-size: 10px;\n    color: #5D9BD5;\n    font-weight: bold;\n  }\n</style>"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_erzwhx",
+        "title",
+        "liquid_yWAUPW",
+        "liquid_hVwKAk",
+        "variant_picker",
+        "buy_buttons",
+        "liquid_mb8bkd",
+        "liquid_RkxPdz",
+        "reelup_shoppable_videos_reels_reelup_product_slider_T9RqQV",
+        "sticky_buy_button",
+        "pickup_availability",
+        "collapsible_tab_bmPf6Q",
+        "collapsible_tab_Kg73yD",
+        "collapsible_tab_J9UcmR",
+        "collapsible_tab_8k3HWN",
+        "collapsible_tab_cQV9C7",
+        "complementary",
+        "liquid_KggQWV"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": 60,
+        "gallery_layout": "columns",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": true,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "scrolling_logos_fcBPiQ": {
+      "type": "scrolling-logos",
+      "blocks": {
+        "slide_rQX9re": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/VOGUE_revista_-_logo.png",
+            "link": ""
+          }
+        },
+        "slide_RX8JTY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Marie_Claire_Magazine_logo_svg.png",
+            "link": ""
+          }
+        },
+        "slide_fbxYzF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ELLE_Magazine_Logo.svg",
+            "link": ""
+          }
+        },
+        "slide_j7i4gp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Cosmetique_Mag_pages-to-jpg-0001-removebg-preview_7df60eff-56d9-4b97-ae59-6334e9841d99.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_rQX9re",
+        "slide_RX8JTY",
+        "slide_fbxYzF",
+        "slide_j7i4gp"
+      ],
+      "disabled": true,
+      "settings": {
+        "ss-title": "",
+        "heading_custom": false,
+        "heading_font": "assistant_n4",
+        "header_size": 30,
+        "header_align": "center",
+        "scrolling_velocity": 10,
+        "pause_hover": false,
+        "shadow": false,
+        "sliders_mt": 16,
+        "logo_padding_top": 0,
+        "logo_padding_bottom": 0,
+        "slider_gap": 64,
+        "slider_gap_mobile": 30,
+        "slider_direction": "left",
+        "icon_width": 100,
+        "header_color": "#121212",
+        "border_color": "#ffffff",
+        "background-color": "#fafafa",
+        "slider-background-color": "#fafafa",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "image_with_text_G78JtR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WVxpHx": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"Je n'ai même pas encore fini la boîte !\"",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_mpqXQa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>\"Je suis choquée 😱</strong><br/>J’ai tout essayé… mais là, c’est la première fois que je vois un vrai changement aussi vite !<br/>Je suis à peine à <strong>45 jours de cure</strong> (et j’ai même <strong>pas encore fini la boîte</strong>) et <strong>les résultats sont déjà là</strong> 🔥Mon ventre a dégonflé, ma silhouette s’est affinée, <strong>aucune douleur, aucun effet secondaire</strong>…<br/>Juste une gélule par jour, facile à prendre et zéro contrainte ! <strong>Merci Docteur V 💖</strong><br/>C’est clairement devenu mon indispensable 😍\"</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_iKNmC7": {
+          "type": "button",
+          "settings": {
+            "button_label": "VITE,  MA CURE DE 2 MOIS AVANT L'ÉTÉ !",
+            "button_link": "shopify://products/morosil-400",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_WVxpHx",
+        "text_mpqXQa",
+        "button_iKNmC7"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/post_avantapres_docteur_v-2.png",
+        "image_height": "adapt",
+        "image_width": "small",
+        "layout": "image_first",
+        "text_alignment": "center",
+        "content_position": "align-self-center",
+        "image_height_mobile": "200px",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "ss_feature_17_ydiaYa": {
+      "type": "ss-feature-17",
+      "blocks": {
+        "heading_Nct9F3": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 28,
+            "heading_size_mobile": 18,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_align": "left",
+            "heading_align_mobile": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "text_FYet6P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grâce à sa formule naturelle à base de Morosil<strong>®</strong>, ce complément alimentaire perte de poids a aidé des centaines d’utilisateurs à perdre du poids efficacement et éviter l’effet yoyo, en seulement quelques semaines.</p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 16,
+            "text_size_mobile": 15,
+            "text_height": 150,
+            "text_mt": 24,
+            "text_mt_mobile": 24,
+            "text_color": "#000000"
+          }
+        },
+        "item_heR48y": {
+          "type": "item",
+          "settings": {
+            "percent": 90,
+            "text": "des utilisateurs ont constaté une perte de poids visible et une réduction du tour de taille dès 4 semaines grâce à leur cure Morosil®."
+          }
+        },
+        "item_c8CMqP": {
+          "type": "item",
+          "settings": {
+            "percent": 95,
+            "text": "des utilisateurs trouvent cette gélule minceur facile à intégrer à leur quotidien : 1 gélule pour mincir par jour suffit pour démarrer une cure minceur efficace."
+          }
+        },
+        "item_JjfjMN": {
+          "type": "item",
+          "settings": {
+            "percent": 86,
+            "text": "des utilisateurs déclarent se sentir plus légers, plus énergiques, avec moins de fringales et une meilleure régulation de leur glycémie, tout en conservant une silhouette affinée grâce au brûleur de graisse naturel MORO FIT 400"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Nct9F3",
+        "text_FYet6P",
+        "item_heR48y",
+        "item_c8CMqP",
+        "item_JjfjMN"
+      ],
+      "disabled": true,
+      "settings": {
+        "body_gap": 64,
+        "body_gap_mobile": 32,
+        "content_horizontal_align": "center",
+        "content_horizontal_align_mobile": "center",
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 38,
+        "heading_size_mobile": 28,
+        "heading_height": 130,
+        "items_mt": 16,
+        "items_mt_mobile": 16,
+        "item_padding_vertical": 10,
+        "item_padding_vertical_mobile": 10,
+        "item_gap": 16,
+        "item_gap_mobile": 16,
+        "item_border_thickness": 2,
+        "circle_size": 70,
+        "circle_size_mobile": 70,
+        "percent_custom": false,
+        "percent_font": "josefin_sans_n4",
+        "percent_size": 18,
+        "percent_size_mobile": 19,
+        "percent_height": 130,
+        "item_text_custom": false,
+        "item_text_font": "josefin_sans_n4",
+        "item_text_size": 16,
+        "item_text_size_mobile": 14,
+        "item_text_height": 150,
+        "bottom_text": "<p>Résultats issus d’un sondage interne réalisé auprès de 28 utilisateurs ayant suivi une <strong>cure MORO FIT 400</strong> sur 90 jours (2 gélules minceur par jour)</p>",
+        "bottom_text_custom": false,
+        "bottom_text_font": "josefin_sans_n4",
+        "bottom_text_size": 12,
+        "bottom_text_size_mobile": 12,
+        "bottom_text_height": 130,
+        "bottom_text_mt": 16,
+        "bottom_text_mt_mobile": 16,
+        "bottom_text_align": "left",
+        "bottom_text_align_mobile": "left",
+        "item_border_color": "#f3f3f3",
+        "circle_bg_color": "#ffffff",
+        "circle_progress": "#5d9bd5",
+        "percent_color": "#5d9bd5",
+        "item_text_color": "#000000",
+        "heading_color": "#000000",
+        "bottom_text_color": "#000000",
+        "background_color": "#fafafa",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 4,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "blocks_7EwdBj": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e49e4db_8N8cUY": {
+          "type": "ai_gen_block_e49e4db",
+          "settings": {
+            "container_width": 1400,
+            "section_padding": 60,
+            "gap": 60,
+            "media_width": 40,
+            "vertical_alignment": "center",
+            "background_color": "#ffffff",
+            "media_type": "video",
+            "video": "https://cdn.shopify.com/videos/c/o/v/7f22086f79bf45e48dcd89bc87c5ad73.mov",
+            "media_border_radius": 0,
+            "content_type": "list",
+            "heading": "<strong> MORO FIT 400 : la cure minceur qui dégonfle ton ventre nouvelle génération ! Retour Post-Partum </strong>",
+            "heading_size": 34,
+            "heading_color": "#212326",
+            "content_gap": 30,
+            "list_gap": 25,
+            "number_size": 40,
+            "number_font_size": 18,
+            "number_bg_color": "#9ccef0",
+            "number_text_color": "#ffffff",
+            "list_item_1_title": "",
+            "list_item_1_description": "Prends 2 gélules par jour, avec un grand verre d’eau !",
+            "list_item_2_title": "",
+            "list_item_2_description": "Sois régulier(ère) pendant 30 jours pour des résultats visibles si tu as un métabolisme rapide, en cas de métabolisme lent une cure de 12 semaines est recommandée!",
+            "list_item_3_title": "",
+            "list_item_3_description": "Dis adieu aux régimes frustrants et aux produits inutiles 🙌 Pense également à activer ton métabolisme en marchant 10 000 pas par jour !",
+            "list_item_4_title": "",
+            "list_item_4_description": "",
+            "list_item_5_title": "",
+            "list_item_5_description": "",
+            "title_size": 18,
+            "title_color": "#212326",
+            "description_size": 15,
+            "description_color": "#212326",
+            "custom_liquid": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e49e4db_8N8cUY"
+      ],
+      "name": "Media with text",
+      "settings": {}
+    },
+    "blocks_jyjP3j": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5781eec_xPLacb": {
+          "type": "ai_gen_block_5781eec",
+          "settings": {
+            "container_width": 1200,
+            "column_gap": 60,
+            "content_alignment": "center",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "padding_horizontal": 20,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "background_color": "#dff2ff",
+            "title": "Questions fréquentes sur Moro Fit 400",
+            "title_size": 36,
+            "title_color": "#212326",
+            "left_content_gap": 30,
+            "faq_spacing": 10,
+            "faq_padding": 20,
+            "faq_border_radius": 8,
+            "faq_background": "#dff2ff",
+            "faq_hover_background": "#f9f9f9",
+            "faq_border_color": "#e5e5e5",
+            "question_size": 16,
+            "question_color": "#212326",
+            "answer_size": 14,
+            "answer_color": "#666666",
+            "icon_color": "#212326",
+            "image": "shopify://shop_images/4.webp",
+            "image_border_radius": 10,
+            "image_horizontal_align": "center",
+            "image_vertical_align": "center",
+            "mobile_gap": 40,
+            "mobile_image_position": "1",
+            "mobile_content_position": "2",
+            "faq_question_1": "À qui s’adresse le MOROFIT 400 ?",
+            "faq_answer_1": "Le MOROFIT 400 s’adresse aux personnes qui veulent :\n\nAffiner leur silhouette et cibler le tour de taille.\nActiver naturellement leur métabolisme grâce à une formule hautement dosée.\nObtenir un soutien minceur complet grâce au Morosil® 400 mg, au guarana, au vinaigre de cidre, à la noix de cola et au chrome.\nRéduire les fringales, mieux gérer l’appétit et stabiliser la glycémie.\nBooster une routine minceur de 12 semaines avec un complément premium, efficace et synergique.\nRetrouver énergie, légèreté et motivation au quotidien.\nIdéal pour celles et ceux qui veulent un véritable coup de pouce minceur, sans solutions extrêmes ni restrictions difficiles.",
+            "faq_question_2": "Gélules minceur : quelle posologie et quelle durée ?",
+            "faq_answer_2": "Prenez deux gélules par jour, idéalement le matin ou à jeun , pendant trois mois pour respecter les recommandations.",
+            "faq_question_3": "Perte de poids : comment optimiser vos résultats ?",
+            "faq_answer_3": "Associez la cure (12 semaines) à une alimentation équilibrée et à de l’activité physique pour maximiser les effets du complément.",
+            "faq_question_4": "Accélérer le métabolisme et maigrir naturellement : quelles astuces ?",
+            "faq_answer_4": "Buvez beaucoup d’eau, consommez des aliments riches en fibres et pratiquez régulièrement une activité physique pour accompagner votre complément.",
+            "faq_question_5": "Morosil® : qu’est‑ce que c’est ?",
+            "faq_answer_5": "C’est un extrait d’orange sanguine Moro qui aide à réduire poids et tour de taille lorsqu’il est pris à la dose recommandée.",
+            "faq_question_6": "Morosil et vinaigre de cidre : pourquoi cette association ?",
+            "faq_answer_6": "Le mélange combine les bienfaits du Morosil® et l’effet tonique du vinaigre de cidre pour soutenir la silhouette et l’appétit.",
+            "faq_question_7": "Thé vert, EGCG et caféine : utile en minceur ?",
+            "faq_answer_7": "Les catéchines du thé vert et une dose modérée de caféine stimulent légèrement le métabolisme et l’oxydation des graisses.",
+            "faq_question_8": "Chrome et gestion du poids : à quoi sert‑il ?",
+            "faq_answer_8": "Cet oligo‑élément favorise un métabolisme normal des sucres et aide à stabiliser la glycémie, soutenant ainsi la régulation du poids.",
+            "faq_question_9": "",
+            "faq_answer_9": "",
+            "faq_question_10": "",
+            "faq_answer_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5781eec_xPLacb"
+      ],
+      "name": "FAQ with image",
+      "settings": {}
+    },
+    "portfolio_Fk8Gcq": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_Qymd6q": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/204342a9-5e84-41a1-a3a6-77fb925043d2.jpg",
+            "heading": "Minceur cliniquement prouvée",
+            "text": "<p><strong>Marini et al., 2016 – Clinical Trial (12 semaines, 400 mg/j)</strong><br/><br/>→ Réduction significative : poids, IMC, tour de taille.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/25588369/\">https://pubmed.ncbi.nlm.nih.gov/25588369/</a></p><p><strong>Caruso et al., 2022 – Clinical & Mechanistic Study</strong><br/><br/>→ Confirme perte de poids + affinement de la taille + amélioration du métabolisme lipidique.<br/>🔗 <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC8838101/\">https://pmc.ncbi.nlm.nih.gov/articles/PMC8838101/</a></p>",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_XbqUtp": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/64f6d360-e433-461c-ab07-c080c7877f97.jpg",
+            "heading": "Brûle-graisse métabolique validé",
+            "text": "<p><strong>Zhang et al., 2024 – Méta-analyse (EGCG)</strong><br/><br/>→ Réduction du poids, IMC, masse grasse + métabolisme amélioré.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/38031409/\">https://pubmed.ncbi.nlm.nih.gov/38031409/</a></p><p><strong>Hursel & Westerterp-Plantenga, 2010 – Clinical Review</strong><br/><br/>→ Catéchines + caféine = dépense énergétique accrue + meilleure oxydation des graisses.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/20070395/\">https://pubmed.ncbi.nlm.nih.gov/20070395/</a></p>",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_JGq9hT": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/avis_morosil.webp",
+            "heading": "Régulation glycémique validée",
+            "text": "<p><strong>Hua et al., 2020 – Méta-analyse</strong><br/><br/>→ 200–400 µg/j = amélioration glycémie + meilleure sensibilité à l’insuline.<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/31751416/\">https://pubmed.ncbi.nlm.nih.gov/31751416/</a></p><p><strong>Tian et al., 2019 – Méta-analyse</strong><br/><br/>→ Effet positif modéré : masse grasse + tour de taille (≤400 µg/j).<br/>🔗 <a href=\"https://pubmed.ncbi.nlm.nih.gov/31115179/\">https://pubmed.ncbi.nlm.nih.gov/31115179/</a></p>",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_Qymd6q",
+        "profile_XbqUtp",
+        "profile_JGq9hT"
+      ],
+      "name": "t:sections.portfolio.presets.name",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "portrait",
+        "image_ratio_mobile": "portrait",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Etudes scientifiques",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center justify-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "custom_liquid_aH38bN": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "liquid": "<style>\n  .usage-carousel {\n    display: flex;\n    overflow-x: auto;\n    gap: 1.5rem;\n    scroll-snap-type: x mandatory;\n    padding: 2rem 1rem;\n    -ms-overflow-style: none;\n    scrollbar-width: none;\n  }\n\n  .usage-carousel::-webkit-scrollbar {\n    display: none;\n  }\n\n  .usage-step {\n    flex: 0 0 80%;\n    max-width: 330px;\n    background: #fff;\n    border-radius: 16px;\n    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);\n    scroll-snap-align: start;\n    padding-bottom: 1rem;\n  }\n\n  .usage-step img {\n    width: 100%;\n    border-top-left-radius: 16px;\n    border-top-right-radius: 16px;\n    object-fit: cover;\n    height: 220px;\n  }\n\n  .usage-step-content {\n    padding: 1.4rem;\n  }\n\n  .usage-step h3 {\n    margin: 0 0 0.8rem;\n    font-size: 18px;\n    font-weight: 700;\n  }\n\n  .usage-step p {\n    font-size: 16px;\n    line-height: 1.6;\n    color: #333;\n    margin-bottom: 0;\n  }\n\n  .usage-section-title {\n    text-align: center;\n    font-size: 26px;\n    font-weight: 700;\n    margin-top: 2rem;\n  }\n\n  @media (min-width: 992px) {\n    .usage-carousel {\n      justify-content: center;\n      overflow-x: hidden;\n      flex-wrap: nowrap;\n    }\n\n    .usage-step {\n      flex: 0 0 22%;\n      max-width: none;\n    }\n  }\n</style>\n\n<h2 class=\"usage-section-title\">Comment utiliser l’Accelerator Oil</h2>\n\n<div class=\"usage-carousel\">\n  <div class=\"usage-step\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0632/4787/6189/files/IMG_0972.webp?v=1749049771\" alt=\"Application\">\n    <div class=\"usage-step-content\">\n      <h3>💧 Application</h3>\n      <p>Déposez quelques gouttes sur un cuir chevelu propre et sec. Un gommage capillaire 2 fois par mois est recommandé.</p>\n    </div>\n  </div>\n\n  <div class=\"usage-step\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0632/4787/6189/files/IMG_0973.webp?v=1749049781\" alt=\"Massage crânien\">\n    <div class=\"usage-step-content\">\n      <h3>🤲 Massage</h3>\n      <p>Massez délicatement pour activer la microcirculation et optimiser la pénétration des actifs naturels.</p>\n    </div>\n  </div>\n\n  <div class=\"usage-step\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0632/4787/6189/files/IMG_0975.webp?v=1749049785\" alt=\"Temps de pose huile\">\n    <div class=\"usage-step-content\">\n      <h3>⏳ Temps de pose</h3>\n      <p>Laissez poser entre 3 et 5 heures pour une action renforcée sur la pousse et la structure du cheveu. Puis place au shampoing à pH 5 </p>\n    </div>\n  </div>\n\n  <div class=\"usage-step\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0632/4787/6189/files/IMG_0974.webp?v=1749049795\" alt=\"Rinçage doux\">\n    <div class=\"usage-step-content\">\n      <h3>🫧 Rinçage</h3>\n      <p>Rincez à l’aide d’un shampoing doux. Une petite quantité suffit pour des résultats visibles dès les premières semaines.</p>\n    </div>\n  </div>\n</div>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "help-drawer": {
+      "type": "help-drawer",
+      "blocks": {
+        "content-1": {
+          "type": "content",
+          "settings": {
+            "icon": "rocket",
+            "heading": "Shipping Information",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#b45309",
+            "color_background": "#fffbeb",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-2": {
+          "type": "content",
+          "settings": {
+            "icon": "headphone",
+            "heading": "Customer Support",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#0369a1",
+            "color_background": "#f0f9ff",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-3": {
+          "type": "content",
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "FAQ’s",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#be123c",
+            "color_background": "#fff1f2",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-4": {
+          "type": "content",
+          "settings": {
+            "icon": "phone",
+            "heading": "Contact Us",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#4d7c0f",
+            "color_background": "#f7fee7",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        }
+      },
+      "block_order": [
+        "content-1",
+        "content-2",
+        "content-3",
+        "content-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Need help?",
+        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Vous aimerez aussi",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_YEwndJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kVECkz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Deux gélules par jour à jeun !",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_bNYnXx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>30 minutes avant le petit déjeuner ou le premier repas de la journée </p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kVECkz",
+        "text_bNYnXx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/PHOTO-2025-09-13-13-44-06_4.jpg",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "ss_tableau_h8yrGk": {
+      "type": "ss-tableau",
+      "blocks": {
+        "brand_3fCyPH": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "DOCTEUR  V",
+            "highlight_column": true,
+            "column_background_color": "#dff2ff",
+            "brand_name_color": "#000000"
+          }
+        },
+        "brand_EqrGRm": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "AUTRES",
+            "highlight_column": false,
+            "column_background_color": "#fafafa",
+            "brand_name_color": "#000000"
+          }
+        },
+        "criteria_eafm4C": {
+          "type": "criteria",
+          "settings": {
+            "criteria_name": "Composition",
+            "value_1": "Hautement dosé",
+            "value_1_type": "positive",
+            "value_2": "Produits chimiques",
+            "value_2_type": "negative",
+            "value_3": "Synthétique",
+            "value_3_type": "negative",
+            "value_4": "Non spécifié",
+            "value_4_type": "positive"
+          }
+        },
+        "criteria_dtKjnR": {
+          "type": "criteria",
+          "settings": {
+            "criteria_name": "Efficacité",
+            "value_1": "Résultats visibles, perte de gras",
+            "value_1_type": "positive",
+            "value_2": "Résultats moyens",
+            "value_2_type": "neutral",
+            "value_3": "Résultats faibles",
+            "value_3_type": "negative",
+            "value_4": "Non spécifié",
+            "value_4_type": "positive"
+          }
+        },
+        "criteria_VmVze7": {
+          "type": "criteria",
+          "settings": {
+            "criteria_name": "Durée et prix",
+            "value_1": "Cure de 2 mois par boite",
+            "value_1_type": "positive",
+            "value_2": "Prix élevé",
+            "value_2_type": "negative",
+            "value_3": "Abordable mais peu efficace",
+            "value_3_type": "neutral",
+            "value_4": "Non spécifié",
+            "value_4_type": "positive"
+          }
+        },
+        "criteria_jVm8bw": {
+          "type": "criteria",
+          "settings": {
+            "criteria_name": "Durabilité",
+            "value_1": "Écologique",
+            "value_1_type": "positive",
+            "value_2": "Non durable",
+            "value_2_type": "negative",
+            "value_3": "Partiellement écologique",
+            "value_3_type": "neutral",
+            "value_4": "Non spécifié",
+            "value_4_type": "positive"
+          }
+        }
+      },
+      "block_order": [
+        "brand_3fCyPH",
+        "brand_EqrGRm",
+        "criteria_eafm4C",
+        "criteria_dtKjnR",
+        "criteria_VmVze7",
+        "criteria_jVm8bw"
+      ],
+      "name": "Tableau comparatif",
+      "settings": {
+        "title": "MORO FIT 400 : un complément minceur hautement dosé",
+        "subtitle": "<p>Les avantages de notre cure de MOROSIL<strong>®</strong></p>",
+        "button_text": "Je commence ma cure de 2 mois",
+        "button_link": "shopify://products/morosil-400",
+        "button_border_radius": 26,
+        "background_color": "#fafafa",
+        "title_color": "#000000",
+        "subtitle_color": "#4a4a4a",
+        "criteria_text_color": "#333333",
+        "feature_text_color": "#333333",
+        "positive_icon_color": "#4caf50",
+        "negative_icon_color": "#f44336",
+        "neutral_icon_color": "#9e9e9e",
+        "button_background": "#dff2ff",
+        "button_text_color": "#171717",
+        "button_hover_background": "#5d9bd5",
+        "button_hover_text_color": "#fafafa"
+      }
+    },
+    "faq_7L8Mc3": {
+      "type": "faq",
+      "blocks": {
+        "question_jkjKpG": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>À qui s’adresse le MOROFIT 400 ?</strong>",
+            "text": "<p>Le <strong>MOROFIT 400</strong> s’adresse aux personnes qui veulent :</p><ul><li><strong>Affiner leur silhouette</strong> et cibler le tour de taille.<br/></li><li><strong>Activer naturellement leur métabolisme</strong> grâce à une formule hautement dosée.<br/></li><li>Obtenir un <strong>soutien minceur complet</strong> grâce au Morosil® 400 mg, au guarana, au vinaigre de cidre, à la noix de cola et au chrome.<br/></li><li><strong>Réduire les fringales</strong>, mieux gérer l’appétit et stabiliser la glycémie.<br/></li><li>Booster une <strong>routine minceur de 12 semaines</strong> avec un complément premium, efficace et synergique.<br/></li><li>Retrouver énergie, légèreté et motivation au quotidien.<br/></li></ul><p>Idéal pour celles et ceux qui veulent un <strong>véritable coup de pouce minceur</strong>, sans solutions extrêmes ni restrictions difficiles.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_MpnRWh": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Gélules minceur : quelle posologie et quelle durée ?</strong>",
+            "text": "<p>Prenez deux gélules par jour, idéalement le matin ou à midi, pendant trois mois pour respecter les recommandations.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_hbjEzc": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Perte de poids : comment optimiser vos résultats ?</strong>",
+            "text": "<p>Associez la cure (12 semaines) à une alimentation équilibrée et à de l’activité physique pour maximiser les effets du complément.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_VyC3gj": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Accélérer le métabolisme et maigrir naturellement : quelles astuces ?</strong>",
+            "text": "<p>Buvez beaucoup d’eau, consommez des aliments riches en fibres et pratiquez régulièrement une activité physique pour accompagner votre complément.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_FxNhrP": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Morosil® : qu’est‑ce que c’est ?</strong>",
+            "text": "<p>C’est un extrait d’orange sanguine Moro qui aide à réduire poids et tour de taille lorsqu’il est pris à la dose recommandée.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_3EL9HV": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Morosil et vinaigre de cidre : pourquoi cette association ?</strong>",
+            "text": "<p>Le mélange combine les bienfaits du Morosil® et l’effet tonique du vinaigre de cidre pour soutenir la silhouette et l’appétit.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_GNaBkM": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Thé vert, EGCG et caféine : utile en minceur ?</strong>",
+            "text": "<p>Les catéchines du thé vert et une dose modérée de caféine stimulent légèrement le métabolisme et l’oxydation des graisses.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_gyQQwL": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Chrome et gestion du poids : à quoi sert‑il ?</strong>",
+            "text": "<p>Cet oligo‑élément favorise un métabolisme normal des sucres et aide à stabiliser la glycémie, soutenant ainsi la régulation du poids.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_jkjKpG",
+        "question_MpnRWh",
+        "question_hbjEzc",
+        "question_VyC3gj",
+        "question_FxNhrP",
+        "question_3EL9HV",
+        "question_GNaBkM",
+        "question_gyQQwL"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "Questions fréquentes sur Moro Fit 400",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "1753183581a2161154": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_4NdL3k": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_4NdL3k"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "scrolling_logos_fcBPiQ",
+    "image_with_text_G78JtR",
+    "ss_feature_17_ydiaYa",
+    "blocks_7EwdBj",
+    "blocks_jyjP3j",
+    "portfolio_Fk8Gcq",
+    "custom_liquid_aH38bN",
+    "help-drawer",
+    "product-recommendations",
+    "recently-viewed",
+    "image_with_text_YEwndJ",
+    "ss_tableau_h8yrGk",
+    "faq_7L8Mc3",
+    "1753183581a2161154"
+  ]
+}
