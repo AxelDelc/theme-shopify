@@ -422,6 +422,69 @@
         "parallax_direction": "vertical"
       }
     },
+    "shop_the_look_NWQh9Q": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_cqLgUG": {
+          "type": "product",
+          "settings": {
+            "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
+            "color_text": "#ffffff",
+            "vertical": 25,
+            "horizontal": 25,
+            "vertical_mobile": 25,
+            "horizontal_mobile": 25
+          }
+        },
+        "product_k6cfiA": {
+          "type": "product",
+          "settings": {
+            "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
+            "color_text": "#ffffff",
+            "vertical": 75,
+            "horizontal": 65,
+            "vertical_mobile": 75,
+            "horizontal_mobile": 65
+          }
+        }
+      },
+      "block_order": [
+        "product_cqLgUG",
+        "product_k6cfiA"
+      ],
+      "name": "t:sections.shop-the-look.name",
+      "settings": {
+        "image": "shopify://shop_images/7_0d41297c-5dea-48b2-b20b-384197955925.webp",
+        "image_mobile": "shopify://shop_images/BIOLOGIST-001.jpg",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "featured_product_L3qkWV": {
       "type": "featured-product",
       "blocks": {
@@ -1983,6 +2046,7 @@
     "custom_liquid_hDf6Mb",
     "hero_6_rbXhKP",
     "video_with_text_dpKQX9",
+    "shop_the_look_NWQh9Q",
     "featured_product_L3qkWV",
     "multicolumn_aeLBhW",
     "faq_x7X86B",
