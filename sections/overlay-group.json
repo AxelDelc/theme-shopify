@@ -394,7 +394,7 @@
       "settings": {
         "image": "shopify://shop_images/Format_Banniere_-2.png",
         "image_mobile": "shopify://shop_images/Banniere_mobile-7.png",
-        "image_position": "center center",
+        "image_position": "bottom center",
         "overlay_opacity": "0.75",
         "hero_height": 700,
         "hero_height_mobile": 740,
