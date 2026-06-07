@@ -154,6 +154,50 @@
         "p2_cta": "Je veux maigrir"
       }
     },
+    "dv_avis_CzrciM": {
+      "type": "dv-avis",
+      "name": "Avis Avant Apres",
+      "settings": {
+        "bg_color": "#dff2ff",
+        "accent_color": "#5d9bd5",
+        "titre_color": "#ffffff",
+        "sub_color": "#6b8099",
+        "filtre_border": "#2a4a6a",
+        "filtre_text": "#6b8099",
+        "card_bg": "#ffffff",
+        "card_titre_color": "#0d1b2a",
+        "card_meta_color": "#6b8099",
+        "card_text_color": "#1a2e42",
+        "stars_color": "#f4a82e",
+        "verifie_color": "#388e3c",
+        "tag": "Avant / Après verifies",
+        "titre": "Elles croient en elles !",
+        "titre_accent": "Regarde les resultats.",
+        "sous_titre": "Photos verifiées · Achats confirmés",
+        "filtre_toutes": "Toutes",
+        "filtre_poids": "Perte de poids",
+        "filtre_retention": "Retention d eau",
+        "filtre_postpartum": "Post-partum",
+        "a1_image": "shopify://shop_images/11_197004f1-1659-4644-844f-e5802d9dbc7a.png",
+        "a1_cat": "postpartum",
+        "a1_nom": "Yasmine M., 25 ans",
+        "a1_meta": "Prise de poids · Cure Detox Draineur",
+        "a1_texte": "Je ne reconnaissais plus mon ventre. En 14 jours avec le Detox Draineur, la retention a disparu. Je me sens enfin legere et je rentre dans mes jeans d avant grossesse !",
+        "a1_resultats": "semaine 2",
+        "a2_image": "shopify://shop_images/12_17e80af0-9566-46a0-8925-03d73a08bbc2.png",
+        "a2_cat": "retention",
+        "a2_nom": "Camnour L., 23 ans",
+        "a2_meta": "Retention d'eau · Cure Detox Draineur",
+        "a2_texte": "Mon ventre etait toujours gonfle, peu importe ce que je mangeais. Des la premiere semaine j ai senti la difference. Moins de ballonnements, moins de lourdeur. Je recommande a 100%.",
+        "a2_resultats": "semaine 1",
+        "a3_image": "shopify://shop_images/10_2e0f7551-b27b-4ac8-8607-100b57444396.png",
+        "a3_cat": "poids",
+        "a3_nom": "Lydie R., 35 ans",
+        "a3_meta": "Perte de poids · Cure Moro Fit 400",
+        "a3_texte": "J ai perdu 5 kg en 2 mois sans regime drastique. Le Moro Fit 400 a vraiment freine mes envies de sucre et j ai plus d'énergie. Je continue la cure !",
+        "a3_resultats": "semaine 3"
+      }
+    },
     "video_with_text_dpKQX9": {
       "type": "video-with-text",
       "blocks": {
@@ -1505,50 +1549,6 @@
         "full_width": false,
         "rounded": false
       }
-    },
-    "dv_avis_CzrciM": {
-      "type": "dv-avis",
-      "name": "Avis Avant Apres",
-      "settings": {
-        "bg_color": "#dff2ff",
-        "accent_color": "#5d9bd5",
-        "titre_color": "#ffffff",
-        "sub_color": "#6b8099",
-        "filtre_border": "#2a4a6a",
-        "filtre_text": "#6b8099",
-        "card_bg": "#ffffff",
-        "card_titre_color": "#0d1b2a",
-        "card_meta_color": "#6b8099",
-        "card_text_color": "#1a2e42",
-        "stars_color": "#f4a82e",
-        "verifie_color": "#388e3c",
-        "tag": "Avant / Apres verifies",
-        "titre": "Elles croient en elles !",
-        "titre_accent": "Regarde les resultats.",
-        "sous_titre": "Photos verifiees · Achats confirmes",
-        "filtre_toutes": "Toutes",
-        "filtre_poids": "Perte de poids",
-        "filtre_retention": "Retention d eau",
-        "filtre_postpartum": "Post-partum",
-        "a1_image": "shopify://shop_images/11_197004f1-1659-4644-844f-e5802d9dbc7a.png",
-        "a1_cat": "postpartum",
-        "a1_nom": "Yasmine M., 25 ans",
-        "a1_meta": "Prise de poids · Cure Detox Draineur",
-        "a1_texte": "Je ne reconnaissais plus mon ventre. En 14 jours avec le Detox Draineur, la retention a disparu. Je me sens enfin legere et je rentre dans mes jeans d avant grossesse !",
-        "a1_resultats": "semaine 2",
-        "a2_image": "shopify://shop_images/12_17e80af0-9566-46a0-8925-03d73a08bbc2.png",
-        "a2_cat": "retention",
-        "a2_nom": "Camnour L., 23 ans",
-        "a2_meta": "Retention d'eau · Cure Detox Draineur",
-        "a2_texte": "Mon ventre etait toujours gonfle, peu importe ce que je mangeais. Des la premiere semaine j ai senti la difference. Moins de ballonnements, moins de lourdeur. Je recommande a 100%.",
-        "a2_resultats": "semaine 1",
-        "a3_image": "shopify://shop_images/10_2e0f7551-b27b-4ac8-8607-100b57444396.png",
-        "a3_cat": "poids",
-        "a3_nom": "Lydie R., 35 ans",
-        "a3_meta": "Perte de poids · Cure Moro Fit 400",
-        "a3_texte": "J ai perdu 5 kg en 2 mois sans regime drastique. Le Moro Fit 400 a vraiment freine mes envies de sucre et j ai plus d'énergie. Je continue la cure !",
-        "a3_resultats": "semaine 3"
-      }
     }
   },
   "order": [
@@ -1556,6 +1556,7 @@
     "image_with_text_overlay_ALrkJP",
     "custom_liquid_EzpVYy",
     "dv_gamme_VyirAn",
+    "dv_avis_CzrciM",
     "video_with_text_dpKQX9",
     "shop_the_look_NWQh9Q",
     "multicolumn_aeLBhW",
@@ -1570,7 +1571,6 @@
     "17463566359eaf5607",
     "ss_trust_badge_DDtKK8",
     "portfolio_g7mbz6",
-    "multicolumn_with_icons_p4hztc",
-    "dv_avis_CzrciM"
+    "multicolumn_with_icons_p4hztc"
   ]
 }
