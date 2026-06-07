@@ -387,6 +387,33 @@
         "heading": "Need help?",
         "description": ""
       }
+    },
+    "dv_hero_mAhkQw": {
+      "type": "dv-hero",
+      "disabled": true,
+      "name": "Hero Docteur V",
+      "settings": {
+        "image": "shopify://shop_images/Format_Banniere.png",
+        "image_mobile": "shopify://shop_images/Banniere_mobile-6.png",
+        "image_position": "center center",
+        "hero_height": 580,
+        "hero_height_mobile": 680,
+        "bg_color": "#0d1b2a",
+        "accent_color": "#5d9bd5",
+        "titre_ligne1": "Draine",
+        "titre_ligne2": "Elimine",
+        "titre_ligne3_accent": "Recommence.",
+        "sous_titre": "Deux formules pour se completer. Le Moro Fit 400 brule. Le Detox Draineur elimine.",
+        "badge_text": "Nouveaute disponible",
+        "pill1": "Cliniquement valide",
+        "pill2": "100% naturel",
+        "pill3": "Fabrique en France",
+        "cta1_texte": "Decouvrir la cure complete",
+        "cta1_lien": "shopify://products/detox-draineur",
+        "cta2_texte": "Voir les produits",
+        "cta2_lien": "",
+        "nouveaute_titre": "Detox 3-en-1"
+      }
     }
   },
   "order": [
@@ -396,6 +423,7 @@
     "age-verifier",
     "cookie-banner",
     "mobile-dock",
-    "help_drawer_gqghtX"
+    "help_drawer_gqghtX",
+    "dv_hero_mAhkQw"
   ]
 }
