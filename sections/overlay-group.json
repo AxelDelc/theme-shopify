@@ -390,7 +390,6 @@
     },
     "dv_hero_mAhkQw": {
       "type": "dv-hero",
-      "disabled": true,
       "name": "Hero Docteur V",
       "settings": {
         "image": "shopify://shop_images/Format_Banniere_-2.png",
