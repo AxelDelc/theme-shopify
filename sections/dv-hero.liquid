@@ -9,8 +9,6 @@
   overflow: hidden;
   font-family: 'DM Sans', sans-serif;
   background: {{ section.settings.bg_color }};
-  margin-top: -66px;
-  padding-top: 66px;
 }
 .dv-hero__bg {
   position: absolute;
@@ -145,8 +143,6 @@
   .dv-hero {
     min-height: {{ section.settings.hero_height_mobile }}px;
     align-items: flex-end;
-    margin-top: -60px;
-    padding-top: 60px;
   }
   .dv-hero__bg .dv-desktop { display: none; }
   .dv-hero__bg .dv-mobile { display: block; }
@@ -162,37 +158,13 @@
     max-width: 100%;
     width: 100%;
   }
-  .dv-hero__badge {
-    font-size: 10px;
-    padding: 6px 14px;
-    margin-bottom: 16px;
-  }
-  .dv-hero__title {
-    font-size: {{ section.settings.titre_size_mobile }}px;
-    line-height: 1.1;
-    margin-bottom: 12px;
-  }
-  .dv-hero__sub {
-    font-size: 14px;
-    max-width: 100%;
-    margin-bottom: 20px;
-    color: rgba(255,255,255,0.7);
-  }
-  .dv-hero__pills {
-    gap: 8px;
-    margin-bottom: 24px;
-  }
-  .dv-hero__pill {
-    font-size: 11px;
-    padding: 5px 12px;
-  }
-  .dv-hero__ctas {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  .dv-btn-primary,
-  .dv-btn-secondary {
+  .dv-hero__badge { font-size: 10px; padding: 6px 14px; margin-bottom: 16px; }
+  .dv-hero__title { font-size: {{ section.settings.titre_size_mobile }}px; line-height: 1.1; margin-bottom: 12px; }
+  .dv-hero__sub { font-size: 14px; max-width: 100%; margin-bottom: 20px; color: rgba(255,255,255,0.7); }
+  .dv-hero__pills { gap: 8px; margin-bottom: 24px; }
+  .dv-hero__pill { font-size: 11px; padding: 5px 12px; }
+  .dv-hero__ctas { flex-direction: column; gap: 10px; width: 100%; }
+  .dv-btn-primary, .dv-btn-secondary {
     width: 100%;
     justify-content: center;
     padding: 14px 20px;
@@ -202,24 +174,15 @@
 }
 </style>
 
-<section class="dv-hero">
+<section class="dv-hero" id="dv-hero-{{ section.id }}">
   <div class="dv-hero__bg">
     {% if section.settings.image != blank %}
-      <img class="dv-desktop"
-           src="{{ section.settings.image | img_url: '2000x' }}"
-           alt="Hero Docteur V"
-           loading="eager">
+      <img class="dv-desktop" src="{{ section.settings.image | img_url: '2000x' }}" alt="Hero Docteur V" loading="eager">
     {% endif %}
     {% if section.settings.image_mobile != blank %}
-      <img class="dv-mobile"
-           src="{{ section.settings.image_mobile | img_url: '800x' }}"
-           alt="Hero Docteur V mobile"
-           loading="eager">
+      <img class="dv-mobile" src="{{ section.settings.image_mobile | img_url: '800x' }}" alt="Hero mobile" loading="eager">
     {% elsif section.settings.image != blank %}
-      <img class="dv-mobile"
-           src="{{ section.settings.image | img_url: '800x' }}"
-           alt="Hero Docteur V mobile"
-           loading="eager">
+      <img class="dv-mobile" src="{{ section.settings.image | img_url: '800x' }}" alt="Hero mobile" loading="eager">
     {% endif %}
   </div>
 
@@ -265,6 +228,18 @@
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var hero = document.getElementById('dv-hero-{{ section.id }}');
+  var header = document.querySelector('header, .header, #shopify-section-header, [class*="site-header"], [class*="header-wrapper"]');
+  if (hero && header) {
+    var h = header.offsetHeight;
+    hero.style.marginTop = '-' + h + 'px';
+    hero.style.paddingTop = h + 'px';
+  }
+});
+</script>
 
 {% schema %}
 {
@@ -316,7 +291,7 @@
     { "type": "header", "content": "Sous-titre" },
     { "type": "range", "id": "sub_size", "label": "Taille (px)", "min": 12, "max": 20, "step": 1, "default": 16 },
     { "type": "color", "id": "sub_color", "label": "Couleur", "default": "#aabbcc" },
-    { "type": "textarea", "id": "sous_titre", "label": "Texte", "default": "Deux formules pour se completer. Le Moro Fit 400 brule. Le Detox Draineur elimine." },
+    { "type": "textarea", "id": "sous_titre", "label": "Texte", "default": "Deux formules pour se completer." },
     { "type": "header", "content": "Badge" },
     { "type": "text", "id": "badge_text", "label": "Texte badge", "default": "Nouveaute disponible" },
     { "type": "color", "id": "badge_bg_color", "label": "Fond", "default": "#0d2035" },
