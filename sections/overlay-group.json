@@ -394,7 +394,7 @@
       "name": "Hero Docteur V",
       "settings": {
         "image": "shopify://shop_images/Format_Banniere.png",
-        "image_mobile": "shopify://shop_images/Banniere_mobile-6.png",
+        "image_mobile": "shopify://shop_images/Banniere_mobile-7.png",
         "image_position": "center center",
         "overlay_opacity": "0.75",
         "hero_height": 580,
@@ -412,7 +412,7 @@
         "sub_size": 16,
         "sub_color": "#999999",
         "sous_titre": "Deux formules pour se completer. Le Moro Fit 400 brule. Le Detox Draineur elimine.",
-        "badge_text": "Nouveaute disponible",
+        "badge_text": "",
         "badge_bg_color": "#1a3a52",
         "badge_border_color": "#5d9bd5",
         "badge_text_color": "#7dbde8",
