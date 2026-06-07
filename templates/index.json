@@ -51,6 +51,7 @@
         "text_b6CwgB",
         "button_LG8DyB"
       ],
+      "disabled": true,
       "settings": {
         "transparent_header": true,
         "image": "shopify://shop_images/Format_Banniere.png",
