@@ -381,7 +381,7 @@
         "text_qJh7QD": {
           "type": "text",
           "settings": {
-            "text": "<p>Développé par des <strong>professionnels de santé</strong>, le <strong>Moro Fit 400</strong> associe des actifs rigoureusement sélectionnés pour <strong>favoriser une perte de poids saine et durable</strong>.</p><p>Chaque boîte contient une <strong>cure de 2 mois</strong>, avec <strong>400 mg de Morosil®</strong> par jour — un ingrédient <strong>cliniquement reconnu</strong> pour réduire la masse graisseuse et affiner la silhouette.</p><p>Une formule innovante, <strong>naturelle et respectueuse de ton corps.</strong></p>",
+            "text": "<p>Développé par des <strong>professionnels de santé</strong>, le <strong>Moro Fit 400</strong> associe des actifs rigoureusement sélectionnés pour <strong>favoriser une perte de poids saine et durable</strong>.</p><p>Chaque boîte contient une <strong>cure de 2 mois</strong>, avec <strong>400 mg de Morosil®</strong> par jour , un ingrédient <strong>cliniquement reconnu</strong> pour réduire la masse graisseuse et affiner la silhouette.</p><p>Une formule innovante, <strong>naturelle et respectueuse de ton corps.</strong></p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
