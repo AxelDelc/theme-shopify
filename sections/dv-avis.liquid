@@ -1,6 +1,6 @@
 <style>
 .dv-avis {
-  background: #0d1b2a;
+  background: {{ section.settings.bg_color }};
   padding: 80px 64px;
   font-family: 'DM Sans', sans-serif;
 }
@@ -11,7 +11,7 @@
 .dv-avis__tag {
   font-size: 11px;
   font-weight: 700;
-  color: #5d9bd5;
+  color: {{ section.settings.accent_color }};
   letter-spacing: .14em;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -19,17 +19,17 @@
 .dv-avis__titre {
   font-size: clamp(26px, 3.5vw, 40px);
   font-weight: 800;
-  color: #ffffff;
+  color: {{ section.settings.titre_color }};
   line-height: 1.1;
   margin-bottom: 8px;
 }
 .dv-avis__titre em {
-  color: #5d9bd5;
+  color: {{ section.settings.accent_color }};
   font-style: normal;
 }
 .dv-avis__sub {
   font-size: 14px;
-  color: rgba(255,255,255,.4);
+  color: {{ section.settings.sub_color }};
   font-weight: 300;
 }
 .dv-avis__filtres {
@@ -45,19 +45,19 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  border: 1px solid rgba(93,155,213,.3);
+  border: 1px solid {{ section.settings.filtre_border }};
   background: transparent;
-  color: rgba(255,255,255,.5);
+  color: {{ section.settings.filtre_text }};
   font-family: 'DM Sans', sans-serif;
   transition: all .2s;
 }
 .dv-filtre:hover {
-  border-color: #5d9bd5;
-  color: #fff;
+  border-color: {{ section.settings.accent_color }};
+  color: {{ section.settings.titre_color }};
 }
 .dv-filtre.active {
-  background: #5d9bd5;
-  border-color: #5d9bd5;
+  background: {{ section.settings.accent_color }};
+  border-color: {{ section.settings.accent_color }};
   color: #ffffff;
 }
 .dv-avis__liste {
@@ -68,30 +68,23 @@
   margin: 0 auto;
 }
 .dv-avis-card {
-  background: #ffffff;
+  background: {{ section.settings.card_bg }};
   border-radius: 16px;
   padding: 24px;
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  display: none;
+  gap: 28px;
+  align-items: center;
   transition: transform .2s;
 }
 .dv-avis-card:hover { transform: translateY(-2px); }
-.dv-avis-card[data-cat] { display: none; }
 .dv-avis-card.visible { display: flex; }
-.dv-avis__photos {
-  display: flex;
-  gap: 6px;
-  flex-shrink: 0;
-}
 .dv-avis__photo-wrap {
-  position: relative;
-  width: 110px;
-  height: 140px;
-  border-radius: 10px;
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
   overflow: hidden;
-  background: #e8f3fb;
   flex-shrink: 0;
+  background: #e8f3fb;
 }
 .dv-avis__photo-wrap img {
   width: 100%;
@@ -99,36 +92,20 @@
   object-fit: cover;
   display: block;
 }
-.dv-avis__photo-label {
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
-  background: #0d1b2a;
-  color: #fff;
-  font-size: 9px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-}
-.dv-avis__photo-label.apres {
-  background: #5d9bd5;
-}
 .dv-avis__body { flex: 1; }
 .dv-avis__nom {
   font-size: 16px;
   font-weight: 800;
-  color: #0d1b2a;
+  color: {{ section.settings.card_titre_color }};
   margin-bottom: 3px;
 }
 .dv-avis__meta {
   font-size: 12px;
-  color: #6b8099;
+  color: {{ section.settings.card_meta_color }};
   margin-bottom: 10px;
 }
 .dv-avis__stars {
-  color: #f4a82e;
+  color: {{ section.settings.stars_color }};
   font-size: 14px;
   margin-bottom: 4px;
   display: flex;
@@ -137,7 +114,7 @@
 }
 .dv-avis__verifie {
   font-size: 11px;
-  color: #388e3c;
+  color: {{ section.settings.verifie_color }};
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -145,124 +122,84 @@
 }
 .dv-avis__texte {
   font-size: 14px;
-  color: #1a2e42;
+  color: {{ section.settings.card_text_color }};
   line-height: 1.7;
   font-style: italic;
   margin: 12px 0;
 }
 .dv-avis__resultats {
   font-size: 12px;
-  color: #6b8099;
+  color: {{ section.settings.card_meta_color }};
   font-weight: 500;
 }
 .dv-avis__resultats span {
-  color: #5d9bd5;
+  color: {{ section.settings.accent_color }};
   font-weight: 700;
 }
 
 @media screen and (max-width: 749px) {
   .dv-avis { padding: 48px 20px; }
   .dv-avis-card { flex-direction: column; }
-  .dv-avis__photo-wrap { width: 90px; height: 115px; }
-  .dv-avis__photos { justify-content: center; }
+  .dv-avis__photo-wrap { width: 100%; height: 260px; }
 }
 </style>
 
 <section class="dv-avis">
   <div class="dv-avis__header">
-    <div class="dv-avis__tag">Avant / Après vérifiés</div>
-    <div class="dv-avis__titre">Elles ont osé.<br><em>Regarde les résultats.</em></div>
-    <div class="dv-avis__sub">Photos vérifiées · Achats confirmés</div>
+    <div class="dv-avis__tag">{{ section.settings.tag }}</div>
+    <div class="dv-avis__titre">{{ section.settings.titre }} <em>{{ section.settings.titre_accent }}</em></div>
+    <div class="dv-avis__sub">{{ section.settings.sous_titre }}</div>
   </div>
 
   <div class="dv-avis__filtres">
-    <button class="dv-filtre active" data-filtre="toutes">Toutes</button>
-    <button class="dv-filtre" data-filtre="poids">Perte de poids</button>
-    <button class="dv-filtre" data-filtre="retention">Rétention d'eau</button>
-    <button class="dv-filtre" data-filtre="postpartum">Post-partum</button>
+    <button class="dv-filtre active" data-filtre="toutes">{{ section.settings.filtre_toutes }}</button>
+    <button class="dv-filtre" data-filtre="poids">{{ section.settings.filtre_poids }}</button>
+    <button class="dv-filtre" data-filtre="retention">{{ section.settings.filtre_retention }}</button>
+    <button class="dv-filtre" data-filtre="postpartum">{{ section.settings.filtre_postpartum }}</button>
   </div>
 
   <div class="dv-avis__liste">
 
-    <!-- AVIS 1 -->
-    <div class="dv-avis-card visible" data-cat="postpartum">
-      <div class="dv-avis__photos">
-        {% if section.settings.a1_avant != blank %}
-          <div class="dv-avis__photo-wrap">
-            <img src="{{ section.settings.a1_avant | img_url: '300x' }}" alt="Avant">
-            <div class="dv-avis__photo-label">Avant</div>
-          </div>
-        {% endif %}
-        {% if section.settings.a1_apres != blank %}
-          <div class="dv-avis__photo-wrap">
-            <img src="{{ section.settings.a1_apres | img_url: '300x' }}" alt="Après">
-            <div class="dv-avis__photo-label apres">Après {{ section.settings.a1_duree }}</div>
-          </div>
-        {% endif %}
-      </div>
+    <div class="dv-avis-card visible" data-cat="{{ section.settings.a1_cat }}">
+      {% if section.settings.a1_image != blank %}
+        <div class="dv-avis__photo-wrap">
+          <img src="{{ section.settings.a1_image | img_url: '500x500', crop: 'center' }}" alt="{{ section.settings.a1_nom }}">
+        </div>
+      {% endif %}
       <div class="dv-avis__body">
         <div class="dv-avis__nom">{{ section.settings.a1_nom }}</div>
         <div class="dv-avis__meta">{{ section.settings.a1_meta }}</div>
-        <div class="dv-avis__stars">
-          ★★★★★
-          <span class="dv-avis__verifie">✓ Vérifié</span>
-        </div>
+        <div class="dv-avis__stars">★★★★★ <span class="dv-avis__verifie">✓ Vérifié</span></div>
         <div class="dv-avis__texte">« {{ section.settings.a1_texte }} »</div>
         <div class="dv-avis__resultats">Premiers résultats : <span>{{ section.settings.a1_resultats }}</span></div>
       </div>
     </div>
 
-    <!-- AVIS 2 -->
-    <div class="dv-avis-card visible" data-cat="retention">
-      <div class="dv-avis__photos">
-        {% if section.settings.a2_avant != blank %}
-          <div class="dv-avis__photo-wrap">
-            <img src="{{ section.settings.a2_avant | img_url: '300x' }}" alt="Avant">
-            <div class="dv-avis__photo-label">Avant</div>
-          </div>
-        {% endif %}
-        {% if section.settings.a2_apres != blank %}
-          <div class="dv-avis__photo-wrap">
-            <img src="{{ section.settings.a2_apres | img_url: '300x' }}" alt="Après">
-            <div class="dv-avis__photo-label apres">Après {{ section.settings.a2_duree }}</div>
-          </div>
-        {% endif %}
-      </div>
+    <div class="dv-avis-card visible" data-cat="{{ section.settings.a2_cat }}">
+      {% if section.settings.a2_image != blank %}
+        <div class="dv-avis__photo-wrap">
+          <img src="{{ section.settings.a2_image | img_url: '500x500', crop: 'center' }}" alt="{{ section.settings.a2_nom }}">
+        </div>
+      {% endif %}
       <div class="dv-avis__body">
         <div class="dv-avis__nom">{{ section.settings.a2_nom }}</div>
         <div class="dv-avis__meta">{{ section.settings.a2_meta }}</div>
-        <div class="dv-avis__stars">
-          ★★★★★
-          <span class="dv-avis__verifie">✓ Vérifié</span>
-        </div>
+        <div class="dv-avis__stars">★★★★★ <span class="dv-avis__verifie">✓ Vérifié</span></div>
         <div class="dv-avis__texte">« {{ section.settings.a2_texte }} »</div>
         <div class="dv-avis__resultats">Premiers résultats : <span>{{ section.settings.a2_resultats }}</span></div>
       </div>
     </div>
 
-    <!-- AVIS 3 -->
-    <div class="dv-avis-card visible" data-cat="poids">
-      <div class="dv-avis__photos">
-        {% if section.settings.a3_avant != blank %}
-          <div class="dv-avis__photo-wrap">
-            <img src="{{ section.settings.a3_avant | img_url: '300x' }}" alt="Avant">
-            <div class="dv-avis__photo-label">Avant</div>
-          </div>
-        {% endif %}
-        {% if section.settings.a3_apres != blank %}
-          <div class="dv-avis__photo-wrap">
-            <img src="{{ section.settings.a3_apres | img_url: '300x' }}" alt="Après">
-            <div class="dv-avis__photo-label apres">Après {{ section.settings.a3_duree }}</div>
-          </div>
-        {% endif %}
-      </div>
+    <div class="dv-avis-card visible" data-cat="{{ section.settings.a3_cat }}">
+      {% if section.settings.a3_image != blank %}
+        <div class="dv-avis__photo-wrap">
+          <img src="{{ section.settings.a3_image | img_url: '500x500', crop: 'center' }}" alt="{{ section.settings.a3_nom }}">
+        </div>
+      {% endif %}
       <div class="dv-avis__body">
         <div class="dv-avis__nom">{{ section.settings.a3_nom }}</div>
         <div class="dv-avis__meta">{{ section.settings.a3_meta }}</div>
-        <div class="dv-avis__stars">
-          ★★★★★
-          <span class="dv-avis__verifie">✓ Vérifié</span>
-        </div>
+        <div class="dv-avis__stars">★★★★★ <span class="dv-avis__verifie">✓ Vérifié</span></div>
         <div class="dv-avis__texte">« {{ section.settings.a3_texte }} »</div>
         <div class="dv-avis__resultats">Premiers résultats : <span>{{ section.settings.a3_resultats }}</span></div>
       </div>
@@ -272,15 +209,12 @@
 </section>
 
 <script>
-const filtres = document.querySelectorAll('.dv-filtre');
-const cards = document.querySelectorAll('.dv-avis-card');
-
-filtres.forEach(btn => {
+document.querySelectorAll('.dv-filtre').forEach(btn => {
   btn.addEventListener('click', () => {
-    filtres.forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.dv-filtre').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filtre = btn.dataset.filtre;
-    cards.forEach(card => {
+    document.querySelectorAll('.dv-avis-card').forEach(card => {
       if (filtre === 'toutes' || card.dataset.cat === filtre) {
         card.classList.add('visible');
       } else {
@@ -296,29 +230,63 @@ filtres.forEach(btn => {
   "name": "Avis Avant Apres",
   "tag": "section",
   "settings": [
-    { "type": "header", "content": "Avis 1 - Post-partum" },
-    { "type": "image_picker", "id": "a1_avant", "label": "Photo avant" },
-    { "type": "image_picker", "id": "a1_apres", "label": "Photo apres" },
-    { "type": "text", "id": "a1_duree", "label": "Duree (ex: 1 mois)", "default": "1 mois" },
+    { "type": "header", "content": "Couleurs section" },
+    { "type": "color", "id": "bg_color", "label": "Fond section", "default": "#0d1b2a" },
+    { "type": "color", "id": "accent_color", "label": "Couleur accent", "default": "#5d9bd5" },
+    { "type": "color", "id": "titre_color", "label": "Couleur titre", "default": "#ffffff" },
+    { "type": "color", "id": "sub_color", "label": "Couleur sous-titre", "default": "#6b8099" },
+    { "type": "header", "content": "Couleurs filtres" },
+    { "type": "color", "id": "filtre_border", "label": "Bordure filtres", "default": "#2a4a6a" },
+    { "type": "color", "id": "filtre_text", "label": "Texte filtres", "default": "#6b8099" },
+    { "type": "header", "content": "Couleurs cards" },
+    { "type": "color", "id": "card_bg", "label": "Fond card", "default": "#ffffff" },
+    { "type": "color", "id": "card_titre_color", "label": "Couleur nom", "default": "#0d1b2a" },
+    { "type": "color", "id": "card_meta_color", "label": "Couleur meta", "default": "#6b8099" },
+    { "type": "color", "id": "card_text_color", "label": "Couleur temoignage", "default": "#1a2e42" },
+    { "type": "color", "id": "stars_color", "label": "Couleur etoiles", "default": "#f4a82e" },
+    { "type": "color", "id": "verifie_color", "label": "Couleur verifie", "default": "#388e3c" },
+    { "type": "header", "content": "Textes entete" },
+    { "type": "text", "id": "tag", "label": "Tag", "default": "Avant / Apres verifies" },
+    { "type": "text", "id": "titre", "label": "Titre", "default": "Elles ont ose." },
+    { "type": "text", "id": "titre_accent", "label": "Titre accent", "default": "Regarde les resultats." },
+    { "type": "text", "id": "sous_titre", "label": "Sous-titre", "default": "Photos verifiees · Achats confirmes" },
+    { "type": "header", "content": "Textes filtres" },
+    { "type": "text", "id": "filtre_toutes", "label": "Filtre toutes", "default": "Toutes" },
+    { "type": "text", "id": "filtre_poids", "label": "Filtre perte de poids", "default": "Perte de poids" },
+    { "type": "text", "id": "filtre_retention", "label": "Filtre retention", "default": "Retention d eau" },
+    { "type": "text", "id": "filtre_postpartum", "label": "Filtre post-partum", "default": "Post-partum" },
+    { "type": "header", "content": "Avis 1" },
+    { "type": "image_picker", "id": "a1_image", "label": "Photo avant/apres (2048x2048)" },
+    { "type": "select", "id": "a1_cat", "label": "Categorie", "options": [
+      { "value": "poids", "label": "Perte de poids" },
+      { "value": "retention", "label": "Retention d eau" },
+      { "value": "postpartum", "label": "Post-partum" }
+    ], "default": "postpartum" },
     { "type": "text", "id": "a1_nom", "label": "Prenom et age", "default": "Yasmine M., 28 ans" },
-    { "type": "text", "id": "a1_meta", "label": "Categorie et cure", "default": "Post-partum · Cure Detox Draineur" },
-    { "type": "textarea", "id": "a1_texte", "label": "Temoignage", "default": "Apres ma grossesse je ne reconnaissais plus mon ventre. En 14 jours avec le Detox Draineur, la retention a disparu. Je me sens enfin legere et je rentre dans mes jeans d avant grossesse !" },
+    { "type": "text", "id": "a1_meta", "label": "Meta (categorie · cure)", "default": "Post-partum · Detox Draineur" },
+    { "type": "textarea", "id": "a1_texte", "label": "Temoignage", "default": "Apres ma grossesse je ne reconnaissais plus mon ventre. En 14 jours avec le Detox Draineur, la retention a disparu. Je me sens enfin legere !" },
     { "type": "text", "id": "a1_resultats", "label": "Premiers resultats", "default": "semaine 2" },
-    { "type": "header", "content": "Avis 2 - Retention d eau" },
-    { "type": "image_picker", "id": "a2_avant", "label": "Photo avant" },
-    { "type": "image_picker", "id": "a2_apres", "label": "Photo apres" },
-    { "type": "text", "id": "a2_duree", "label": "Duree", "default": "14 jours" },
+    { "type": "header", "content": "Avis 2" },
+    { "type": "image_picker", "id": "a2_image", "label": "Photo avant/apres (2048x2048)" },
+    { "type": "select", "id": "a2_cat", "label": "Categorie", "options": [
+      { "value": "poids", "label": "Perte de poids" },
+      { "value": "retention", "label": "Retention d eau" },
+      { "value": "postpartum", "label": "Post-partum" }
+    ], "default": "retention" },
     { "type": "text", "id": "a2_nom", "label": "Prenom et age", "default": "Camnour L., 32 ans" },
-    { "type": "text", "id": "a2_meta", "label": "Categorie et cure", "default": "Retention d eau · Cure Detox Draineur" },
-    { "type": "textarea", "id": "a2_texte", "label": "Temoignage", "default": "Mon ventre etait toujours gonfle, peu importe ce que je mangeais. Des la premiere semaine j ai senti la difference. Moins de ballonnements, moins de lourdeur. Je recommande a 100%." },
+    { "type": "text", "id": "a2_meta", "label": "Meta", "default": "Retention d eau · Detox Draineur" },
+    { "type": "textarea", "id": "a2_texte", "label": "Temoignage", "default": "Mon ventre etait toujours gonfle. Des la premiere semaine j ai senti la difference. Moins de ballonnements, moins de lourdeur." },
     { "type": "text", "id": "a2_resultats", "label": "Premiers resultats", "default": "semaine 1" },
-    { "type": "header", "content": "Avis 3 - Perte de poids" },
-    { "type": "image_picker", "id": "a3_avant", "label": "Photo avant" },
-    { "type": "image_picker", "id": "a3_apres", "label": "Photo apres" },
-    { "type": "text", "id": "a3_duree", "label": "Duree", "default": "2 mois" },
+    { "type": "header", "content": "Avis 3" },
+    { "type": "image_picker", "id": "a3_image", "label": "Photo avant/apres (2048x2048)" },
+    { "type": "select", "id": "a3_cat", "label": "Categorie", "options": [
+      { "value": "poids", "label": "Perte de poids" },
+      { "value": "retention", "label": "Retention d eau" },
+      { "value": "postpartum", "label": "Post-partum" }
+    ], "default": "poids" },
     { "type": "text", "id": "a3_nom", "label": "Prenom et age", "default": "Lydie R., 35 ans" },
-    { "type": "text", "id": "a3_meta", "label": "Categorie et cure", "default": "Perte de poids · Cure Moro Fit 400" },
-    { "type": "textarea", "id": "a3_texte", "label": "Temoignage", "default": "J ai perdu 5 kg en 2 mois sans regime drastique. Le Moro Fit 400 a vraiment freine mes envies de sucre et j ai plus d energie. Je continue la cure !" },
+    { "type": "text", "id": "a3_meta", "label": "Meta", "default": "Perte de poids · Moro Fit 400" },
+    { "type": "textarea", "id": "a3_texte", "label": "Temoignage", "default": "J ai perdu 5 kg en 2 mois sans regime drastique. Le Moro Fit 400 a vraiment freine mes envies de sucre." },
     { "type": "text", "id": "a3_resultats", "label": "Premiers resultats", "default": "semaine 3" }
   ],
   "presets": [{ "name": "Avis Avant Apres" }]
