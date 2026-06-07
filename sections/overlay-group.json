@@ -388,50 +388,6 @@
         "heading": "Need help?",
         "description": ""
       }
-    },
-    "dv_hero_mAhkQw": {
-      "type": "dv-hero",
-      "name": "Hero Docteur V",
-      "settings": {
-        "image": "shopify://shop_images/Format_Banniere_-2.png",
-        "image_mobile": "shopify://shop_images/Banniere_mobile-7.png",
-        "image_position": "bottom center",
-        "overlay_opacity": "0.75",
-        "hero_height": 700,
-        "hero_height_mobile": 740,
-        "bg_color": "#0d1b2a",
-        "accent_color": "#5d9bd5",
-        "titre_font": "'DM Sans', sans-serif",
-        "titre_weight": "800",
-        "titre_size": 56,
-        "titre_size_mobile": 40,
-        "titre_color": "#ffffff",
-        "titre_ligne1": "Tu gonfles.",
-        "titre_ligne2": "Tu bloques.",
-        "titre_ligne3_accent": "On règle ça.",
-        "sub_size": 16,
-        "sub_color": "#171717",
-        "sous_titre": "Rétention d'eau, ventre gonflé, kilos qui ne partent pas. Notre cure 3-en-1 agit en 14 jours.",
-        "badge_text": "",
-        "badge_bg_color": "#1a3a52",
-        "badge_border_color": "#5d9bd5",
-        "badge_text_color": "#7dbde8",
-        "pill1": "Cliniquement validé",
-        "pill2": "100% naturel",
-        "pill3": "Fabrique en France 🇫🇷",
-        "pill_bg_color": "#5d9bd5",
-        "pill_border_color": "#5d9bd5",
-        "pill_text_color": "#171717",
-        "cta1_texte": "Je veux mes résultats →",
-        "cta1_lien": "shopify://products/detox-draineur",
-        "btn1_bg": "#5d9bd5",
-        "btn1_text": "#ffffff",
-        "cta2_texte": "Voir les cures",
-        "cta2_lien": "",
-        "btn2_bg": "rgba(0,0,0,0)",
-        "btn2_text": "#171717",
-        "btn2_border": "#171717"
-      }
     }
   },
   "order": [
@@ -441,7 +397,6 @@
     "age-verifier",
     "cookie-banner",
     "mobile-dock",
-    "help_drawer_gqghtX",
-    "dv_hero_mAhkQw"
+    "help_drawer_gqghtX"
   ]
 }

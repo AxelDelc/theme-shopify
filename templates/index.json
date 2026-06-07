@@ -1947,47 +1947,14 @@
         "rounded": false
       }
     },
-    "dv_hero_Ng4CAx": {
+    "dv_hero_9wfmHm": {
       "type": "dv-hero",
-      "disabled": true,
       "name": "Hero Docteur V",
       "settings": {
-        "image_position": "center center",
-        "overlay_opacity": "0.75",
-        "hero_height": 640,
-        "hero_height_mobile": 760,
-        "bg_color": "#0d1b2a",
-        "accent_color": "#5d9bd5",
-        "titre_font": "'Syne', sans-serif",
-        "titre_weight": "800",
-        "titre_size": 56,
-        "titre_size_mobile": 40,
-        "titre_color": "#ffffff",
-        "titre_ligne1": "Mince.",
-        "titre_ligne2": "Drain.",
-        "titre_ligne3_accent": "Recommence.",
-        "sub_size": 16,
-        "sub_color": "#aabbcc",
-        "sous_titre": "Deux formules pour se completer.",
-        "badge_text": "Nouveaute disponible",
-        "badge_bg_color": "#0d2035",
-        "badge_border_color": "#5d9bd5",
-        "badge_text_color": "#7dbde8",
-        "pill1": "Cliniquement valide",
-        "pill2": "100% naturel",
-        "pill3": "Fabrique en France",
-        "pill_bg_color": "#0d2035",
-        "pill_border_color": "#2a4a6a",
-        "pill_text_color": "#cce0f0",
-        "cta1_texte": "Decouvrir la cure complete",
+        "image": "shopify://shop_images/Format_Banniere_-2.png",
+        "image_mobile": "shopify://shop_images/Banniere_mobile-7.png",
         "cta1_lien": "",
-        "btn1_bg": "#5d9bd5",
-        "btn1_text": "#ffffff",
-        "cta2_texte": "Voir les produits",
-        "cta2_lien": "",
-        "btn2_bg": "rgba(0,0,0,0)",
-        "btn2_text": "#ffffff",
-        "btn2_border": "#ffffff"
+        "cta2_lien": ""
       }
     }
   },
@@ -2016,6 +1983,6 @@
     "ss_trust_badge_DDtKK8",
     "portfolio_g7mbz6",
     "multicolumn_with_icons_p4hztc",
-    "dv_hero_Ng4CAx"
+    "dv_hero_9wfmHm"
   ]
 }
