@@ -29,7 +29,7 @@
   gap: 24px;
 }
 .dv-card {
-  background: #ffffff;
+  background: {{ section.settings.card_bg }};
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #e8eef5;
@@ -51,7 +51,10 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: #e8f3fb;
+  background: {{ section.settings.img_bg_p1 }};
+}
+.dv-card__img--p2 {
+  background: {{ section.settings.img_bg_p2 }};
 }
 .dv-card__img img {
   width: 100%;
@@ -174,20 +177,20 @@
   cursor: pointer;
   font-family: inherit;
   transition: background .2s, transform .15s;
-  text-decoration: none;
   text-align: center;
   display: block;
+  text-decoration: none;
 }
-.dv-card__btn--blue {
-  background: {{ section.settings.accent_color }};
-  color: #ffffff;
+.dv-card__btn--p1 {
+  background: {{ section.settings.btn1_bg }};
+  color: {{ section.settings.btn1_text }};
 }
-.dv-card__btn--blue:hover { background: #3a7ab8; transform: translateY(-1px); color: #fff; }
-.dv-card__btn--dark {
-  background: #0d1b2a;
-  color: #ffffff;
+.dv-card__btn--p1:hover { opacity: .85; transform: translateY(-1px); color: {{ section.settings.btn1_text }}; }
+.dv-card__btn--p2 {
+  background: {{ section.settings.btn2_bg }};
+  color: {{ section.settings.btn2_text }};
 }
-.dv-card__btn--dark:hover { background: {{ section.settings.accent_color }}; transform: translateY(-1px); color: #fff; }
+.dv-card__btn--p2:hover { opacity: .85; transform: translateY(-1px); color: {{ section.settings.btn2_text }}; }
 
 @media screen and (max-width: 749px) {
   .dv-gamme { padding: 48px 20px; }
@@ -205,7 +208,7 @@
 
   <div class="dv-gamme__grid">
 
-    <!-- PRODUIT 1 — Détox Draineur -->
+    <!-- PRODUIT 1 -->
     <div class="dv-card dv-card--featured">
       <div class="dv-card__img">
         {% if section.settings.p1_nouveau %}
@@ -233,14 +236,23 @@
               <span class="dv-card__old">{{ section.settings.p1_ancien }}</span>
             {% endif %}
           </div>
-          <a href="{{ section.settings.p1_lien }}" class="dv-card__btn dv-card__btn--blue">{{ section.settings.p1_cta }}</a>
+          {% assign p1 = section.settings.p1_produit %}
+          {% if p1 != blank %}
+            <form action="/cart/add" method="post">
+              <input type="hidden" name="id" value="{{ p1.variants.first.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" class="dv-card__btn dv-card__btn--p1">{{ section.settings.p1_cta }}</button>
+            </form>
+          {% else %}
+            <a href="{{ section.settings.p1_lien }}" class="dv-card__btn dv-card__btn--p1">{{ section.settings.p1_cta }}</a>
+          {% endif %}
         </div>
       </div>
     </div>
 
-    <!-- PRODUIT 2 — Moro Fit -->
+    <!-- PRODUIT 2 -->
     <div class="dv-card">
-      <div class="dv-card__img">
+      <div class="dv-card__img dv-card__img--p2">
         {% if section.settings.p2_image != blank %}
           <img src="{{ section.settings.p2_image | img_url: '600x' }}" alt="{{ section.settings.p2_nom }}">
         {% endif %}
@@ -270,7 +282,16 @@
               <span>{{ section.settings.p2_avis }}</span>
             </div>
           {% endif %}
-          <a href="{{ section.settings.p2_lien }}" class="dv-card__btn dv-card__btn--dark">{{ section.settings.p2_cta }}</a>
+          {% assign p2 = section.settings.p2_produit %}
+          {% if p2 != blank %}
+            <form action="/cart/add" method="post">
+              <input type="hidden" name="id" value="{{ p2.variants.first.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" class="dv-card__btn dv-card__btn--p2">{{ section.settings.p2_cta }}</button>
+            </form>
+          {% else %}
+            <a href="{{ section.settings.p2_lien }}" class="dv-card__btn dv-card__btn--p2">{{ section.settings.p2_cta }}</a>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -283,39 +304,52 @@
   "name": "Gamme Docteur V",
   "tag": "section",
   "settings": [
-    { "type": "color", "id": "bg_color", "label": "Couleur de fond", "default": "#f7f9fc" },
+    { "type": "header", "content": "Couleurs generales" },
+    { "type": "color", "id": "bg_color", "label": "Fond de la section", "default": "#f7f9fc" },
+    { "type": "color", "id": "card_bg", "label": "Fond des cards", "default": "#ffffff" },
     { "type": "color", "id": "accent_color", "label": "Couleur accent", "default": "#5d9bd5" },
+    { "type": "header", "content": "Titres" },
     { "type": "text", "id": "tag", "label": "Tag section", "default": "Notre gamme" },
     { "type": "text", "id": "titre", "label": "Titre", "default": "La cure qui" },
-    { "type": "text", "id": "titre_accent", "label": "Titre accent (en bleu)", "default": "fonctionne." },
-    { "type": "header", "content": "Produit 1" },
+    { "type": "text", "id": "titre_accent", "label": "Titre accent en bleu", "default": "fonctionne." },
+    { "type": "header", "content": "Produit 1 - image et couleurs" },
     { "type": "image_picker", "id": "p1_image", "label": "Photo produit 1" },
+    { "type": "color", "id": "img_bg_p1", "label": "Fond image produit 1", "default": "#e8f3fb" },
+    { "type": "color", "id": "btn1_bg", "label": "Fond bouton produit 1", "default": "#5d9bd5" },
+    { "type": "color", "id": "btn1_text", "label": "Texte bouton produit 1", "default": "#ffffff" },
+    { "type": "header", "content": "Produit 1 - contenu" },
+    { "type": "product", "id": "p1_produit", "label": "Selectionner produit 1 (pour ajout panier)" },
     { "type": "checkbox", "id": "p1_nouveau", "label": "Afficher badge nouveaute", "default": true },
     { "type": "text", "id": "p1_badge", "label": "Texte badge", "default": "Nouveaute" },
     { "type": "text", "id": "p1_tag", "label": "Tag", "default": "Cure 14 jours" },
     { "type": "text", "id": "p1_nom", "label": "Nom produit", "default": "Detox Draineur Slim 3-en-1" },
-    { "type": "textarea", "id": "p1_desc", "label": "Description", "default": "Draine, elimine, detoxifie. Une formule ultra-concentree." },
+    { "type": "textarea", "id": "p1_desc", "label": "Description", "default": "Draine, elimine, detoxifie." },
     { "type": "text", "id": "p1_b1", "label": "Benefice 1", "default": "Anti-retention d'eau" },
     { "type": "text", "id": "p1_b2", "label": "Benefice 2", "default": "Detox foie et reins" },
     { "type": "text", "id": "p1_b3", "label": "Benefice 3", "default": "Resultats des J+7" },
-    { "type": "text", "id": "p1_prix", "label": "Prix", "default": "24,90" },
-    { "type": "text", "id": "p1_ancien", "label": "Prix barre (laisser vide si aucun)" },
-    { "type": "url", "id": "p1_lien", "label": "Lien bouton" },
-    { "type": "text", "id": "p1_cta", "label": "Texte bouton", "default": "Je veux mes resultats" },
-    { "type": "header", "content": "Produit 2" },
+    { "type": "text", "id": "p1_prix", "label": "Prix affiche", "default": "24,90€" },
+    { "type": "text", "id": "p1_ancien", "label": "Prix barre (vide si aucun)" },
+    { "type": "url", "id": "p1_lien", "label": "Lien si pas de produit selectionne" },
+    { "type": "text", "id": "p1_cta", "label": "Texte bouton", "default": "Ajouter au panier" },
+    { "type": "header", "content": "Produit 2 - image et couleurs" },
     { "type": "image_picker", "id": "p2_image", "label": "Photo produit 2" },
+    { "type": "color", "id": "img_bg_p2", "label": "Fond image produit 2", "default": "#0d1b2a" },
+    { "type": "color", "id": "btn2_bg", "label": "Fond bouton produit 2", "default": "#0d1b2a" },
+    { "type": "color", "id": "btn2_text", "label": "Texte bouton produit 2", "default": "#ffffff" },
+    { "type": "header", "content": "Produit 2 - contenu" },
+    { "type": "product", "id": "p2_produit", "label": "Selectionner produit 2 (pour ajout panier)" },
     { "type": "text", "id": "p2_tag", "label": "Tag", "default": "Cure 2 mois" },
     { "type": "text", "id": "p2_nom", "label": "Nom produit", "default": "Moro Fit 400" },
-    { "type": "textarea", "id": "p2_desc", "label": "Description", "default": "60 gelules au Morosil — l'ingredient cliniquement reconnu." },
+    { "type": "textarea", "id": "p2_desc", "label": "Description", "default": "60 gelules au Morosil." },
     { "type": "text", "id": "p2_b1", "label": "Benefice 1", "default": "400 mg Morosil par jour" },
     { "type": "text", "id": "p2_b2", "label": "Benefice 2", "default": "Brule-graisse naturel" },
     { "type": "text", "id": "p2_b3", "label": "Benefice 3", "default": "Developpe par des pros de sante" },
-    { "type": "text", "id": "p2_prix", "label": "Prix", "default": "39,90" },
-    { "type": "text", "id": "p2_ancien", "label": "Prix barre", "default": "89,90" },
+    { "type": "text", "id": "p2_prix", "label": "Prix affiche", "default": "39,90€" },
+    { "type": "text", "id": "p2_ancien", "label": "Prix barre", "default": "89,90€" },
     { "type": "text", "id": "p2_reduction", "label": "Badge reduction", "default": "-55%" },
     { "type": "text", "id": "p2_avis", "label": "Avis clients", "default": "4.4 (127 avis)" },
-    { "type": "url", "id": "p2_lien", "label": "Lien bouton" },
-    { "type": "text", "id": "p2_cta", "label": "Texte bouton", "default": "Je veux maigrir" }
+    { "type": "url", "id": "p2_lien", "label": "Lien si pas de produit selectionne" },
+    { "type": "text", "id": "p2_cta", "label": "Texte bouton", "default": "Ajouter au panier" }
   ],
   "presets": [{ "name": "Gamme Docteur V" }]
 }
