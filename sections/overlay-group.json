@@ -382,6 +382,7 @@
         "content_RAxmLc",
         "content_FWFbxK"
       ],
+      "disabled": true,
       "name": "Help Drawer",
       "settings": {
         "heading": "Need help?",
