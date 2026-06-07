@@ -154,217 +154,6 @@
         "p2_cta": "Je veux maigrir"
       }
     },
-    "featured_collection_hfL8P8": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "produits-minceurs",
-        "products": [],
-        "product_limit": 2,
-        "columns": 3,
-        "carousel_on_desktop": true,
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "heading": "Atteins ta meilleure silhouette",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
-    "custom_liquid_hDf6Mb": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "liquid": "<style>\n.dv-reels-header {\n  background: #ffffff;\n  padding: 60px 64px 0;\n  font-family: 'DM Sans', sans-serif;\n}\n.dv-reels-header__tag {\n  font-size: 11px;\n  font-weight: 700;\n  color: #5d9bd5;\n  letter-spacing: .12em;\n  text-transform: uppercase;\n  margin-bottom: 12px;\n}\n.dv-reels-header__titre {\n  font-size: clamp(26px, 3.5vw, 42px);\n  font-weight: 800;\n  color: #0d1b2a;\n  line-height: 1.1;\n  margin-bottom: 8px;\n}\n.dv-reels-header__titre em {\n  color: #5d9bd5;\n  font-style: normal;\n}\n.dv-reels-header__sub {\n  font-size: 15px;\n  color: #6b8099;\n  font-weight: 300;\n  margin-bottom: 0;\n}\n@media screen and (max-width: 749px) {\n  .dv-reels-header {\n    padding: 40px 20px 0;\n  }\n  .dv-reels-header__titre {\n    font-size: clamp(22px, 7vw, 32px);\n  }\n}\n</style>\n\n<div class=\"dv-reels-header\">\n  <div class=\"dv-reels-header__tag\">Témoignages & avant / après</div>\n  <div class=\"dv-reels-header__titre\">+10 000 femmes ne peuvent pas <em>avoir tort.</em></div>\n  <p class=\"dv-reels-header__sub\">Des vraies femmes. Des vrais résultats. Regarde par toi-même.</p>\n</div> <style>\n/* ===== REELS ROW ===== */\n.reels-row{\n  display:flex;\n  gap:18px;\n  padding:18px 12px;\n  overflow-x:auto;\n}\n.reels-row::-webkit-scrollbar{display:none;}\n\n.reel-card{\n  width:260px;\n  aspect-ratio:9/16;\n  border-radius:18px;\n  overflow:hidden;\n  background:#000;\n  cursor:pointer;\n  flex-shrink:0;\n}\n\n@media(max-width:520px){\n  .reel-card{width:210px;}\n}\n\n.reel-card video{\n  width:100%;\n  height:100%;\n  object-fit:cover;\n  pointer-events:none; /* IMPORTANT */\n}\n\n/* ===== POPUP ===== */\n.reel-modal{\n  position:fixed;\n  inset:0;\n  display:none;\n  align-items:center;\n  justify-content:center;\n  z-index:999999;\n  background:transparent;\n}\n\n.reel-modal-inner{\n  width:360px;\n  max-width:92vw;\n  aspect-ratio:9/16;\n  background:#000;\n  border-radius:22px;\n  overflow:hidden;\n  position:relative;\n  box-shadow:0 28px 70px rgba(0,0,0,.45);\n}\n\n/* VIDEO */\n.reel-modal-inner video{\n  width:100%;\n  height:100%;\n  object-fit:contain;\n}\n\n/* CLOSE (NO CIRCLE) */\n.reel-close{\n  position:absolute;\n  top:10px;\n  right:12px;\n  background:transparent;\n  border:none;\n  color:#fff;\n  font-size:28px;\n  cursor:pointer;\n  z-index:30;\n}\n\n/* ARROWS (NO CIRCLE) */\n.reel-nav{\n  position:absolute;\n  top:50%;\n  transform:translateY(-50%);\n  background:transparent;\n  border:none;\n  box-shadow:none;\n  color:#fff;\n  font-size:38px;\n  font-weight:700;\n  cursor:pointer;\n  z-index:30;\n  user-select:none;\n  padding:6px;\n}\n\n.reel-prev{left:6px;}\n.reel-next{right:6px;}\n\n/* CONTROLS */\n.reel-controls{\n  position:absolute;\n  bottom:70px;\n  left:0;\n  right:0;\n  display:flex;\n  justify-content:center;\n  gap:16px;\n  z-index:30;\n}\n\n.reel-btn{\n  min-width:70px;\n  padding:10px 14px;\n  border-radius:999px;\n  background:rgba(0,0,0,.75);\n  color:#fff;\n  border:1px solid rgba(255,255,255,.25);\n  font-weight:700;\n  font-size:20px;\n  cursor:pointer;\n}\n\n.reel-btn:hover{\n  background:#1e88e5;\n  border-color:#1e88e5;\n}\n</style>\n\n\n<!-- ===== PREVIEW ROW ===== -->\n<div class=\"reels-row\">\n\n  <div class=\"reel-card\" data-i=\"0\">\n    <video muted autoplay loop playsinline>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/57231e33532046b492411a8e8451f587.mp4\">\n    </video>\n  </div>\n\n  <div class=\"reel-card\" data-i=\"1\">\n    <video muted autoplay loop playsinline>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/b1e0c984e0c143b3a2f61d8c50136ee7.mov\">\n    </video>\n  </div>\n\n  <div class=\"reel-card\" data-i=\"2\">\n    <video muted autoplay loop playsinline>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/c6016b240fa246e093a8c9238e712979.mov\">\n    </video>\n  </div>\n\n  <div class=\"reel-card\" data-i=\"3\">\n    <video muted autoplay loop playsinline>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/3ba7d62681b04341acf2091dd8884beb.mov\">\n    </video>\n  </div>\n\n</div>\n\n\n<!-- ===== MODAL ===== -->\n<div class=\"reel-modal\" id=\"modal\">\n\n  <div class=\"reel-modal-inner\">\n\n    <button class=\"reel-close\" id=\"close\">✕</button>\n\n    <div class=\"reel-nav reel-prev\" id=\"prev\">‹</div>\n    <div class=\"reel-nav reel-next\" id=\"next\">›</div>\n\n    <video id=\"player\" playsinline></video>\n\n    <div class=\"reel-controls\">\n      <button class=\"reel-btn\" id=\"play\">⏸</button>\n      <button class=\"reel-btn\" id=\"sound\">🔊</button>\n    </div>\n\n  </div>\n\n</div>\n\n\n<script>\nconst reels=[\n \"https://cdn.shopify.com/videos/c/o/v/57231e33532046b492411a8e8451f587.mp4\",\n \"https://cdn.shopify.com/videos/c/o/v/b1e0c984e0c143b3a2f61d8c50136ee7.mov\",\n \"https://cdn.shopify.com/videos/c/o/v/c6016b240fa246e093a8c9238e712979.mov\",\n \"https://cdn.shopify.com/videos/c/o/v/3ba7d62681b04341acf2091dd8884beb.mov\"\n];\n\nlet i=0;\n\nconst modal=document.getElementById(\"modal\");\nconst player=document.getElementById(\"player\");\n\nconst playBtn=document.getElementById(\"play\");\nconst soundBtn=document.getElementById(\"sound\");\n\nfunction openReel(n){\n i=(n+reels.length)%reels.length;\n\n player.src=reels[i];\n player.muted=false;\n player.play();\n\n modal.style.display=\"flex\";\n\n playBtn.textContent=\"⏸\";\n soundBtn.textContent=\"🔊\";\n}\n\nfunction closeReel(){\n player.pause();\n player.src=\"\";\n modal.style.display=\"none\";\n}\n\ndocument.querySelectorAll(\".reel-card\").forEach(c=>{\n c.onclick=()=>openReel(+c.dataset.i);\n});\n\nplayBtn.onclick=()=>{\n if(player.paused){\n   player.play();\n   playBtn.textContent=\"⏸\";\n }else{\n   player.pause();\n   playBtn.textContent=\"⏯\";\n }\n};\n\nsoundBtn.onclick=()=>{\n player.muted=!player.muted;\n soundBtn.textContent=player.muted?\"🔇\":\"🔊\";\n};\n\ndocument.getElementById(\"prev\").onclick=()=>openReel(i-1);\ndocument.getElementById(\"next\").onclick=()=>openReel(i+1);\ndocument.getElementById(\"close\").onclick=closeReel;\n\n/* keyboard */\ndocument.addEventListener(\"keydown\",e=>{\n if(modal.style.display!==\"flex\")return;\n\n if(e.key===\"Escape\")closeReel();\n if(e.key===\"ArrowLeft\")openReel(i-1);\n if(e.key===\"ArrowRight\")openReel(i+1);\n});\n</script>",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "narrow": false,
-        "rounded": false
-      }
-    },
-    "hero_6_rbXhKP": {
-      "type": "hero-6",
-      "blocks": {
-        "feature_ACpYtr": {
-          "type": "feature",
-          "settings": {
-            "text": "Vegan, naturel"
-          }
-        },
-        "feature_9zM7Mz": {
-          "type": "feature",
-          "settings": {
-            "text": "Hautement dosé en actifs"
-          }
-        },
-        "feature_XAqThP": {
-          "type": "feature",
-          "settings": {
-            "text": "Favorise la perte de poids"
-          }
-        },
-        "feature_FAFxxf": {
-          "type": "feature",
-          "settings": {
-            "text": "Fabrication 100% française"
-          }
-        },
-        "feature_tabnA7": {
-          "type": "feature",
-          "settings": {
-            "text": "Morosil® / Vinaigre de cidre"
-          }
-        }
-      },
-      "block_order": [
-        "feature_ACpYtr",
-        "feature_9zM7Mz",
-        "feature_XAqThP",
-        "feature_FAFxxf",
-        "feature_tabnA7"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "<h2><strong>MORO FIT 400</strong></h2>",
-        "heading_custom": false,
-        "heading_font": "montserrat_n4",
-        "heading_size": 52,
-        "heading_size_mobile": 23,
-        "heading_height": 130,
-        "heading_mt": 10,
-        "heading_align": "left",
-        "heading_align_mobile": "left",
-        "text": "<p>Développées par des <strong>professionnels de santé</strong>, les cures Docteur V associent des actifs rigoureusement sélectionnés</p><p>Chaque boîte contient <strong>une cure de 2 mois</strong>, à base de <strong>400 mg de Morosil®  </strong>par jour — un actif reconnu cliniquement pour favoriser la perte de poids. Une formule innovante qui respecte votre corps.</p>",
-        "text_custom": false,
-        "text_font": "montserrat_n4",
-        "text_size": 18,
-        "text_size_mobile": 18,
-        "text_height": 160,
-        "text_mt": 12,
-        "text_align": "left",
-        "text_align_mobile": "left",
-        "feature_text_custom": true,
-        "feature_text_font": "montserrat_n4",
-        "feature_text_size": 20,
-        "feature_text_size_mobile": 18,
-        "feature_text_height": 160,
-        "feature_text_mt": 28,
-        "feature_text_space": 12,
-        "feature_text_align": "left",
-        "feature_text_align_mobile": "left",
-        "button": "<p><strong>Ma cure minceur </strong></p>",
-        "button_url": "shopify://products/morosil-400",
-        "button_custom": false,
-        "button_font": "montserrat_n4",
-        "button_size": 18,
-        "button_size_mobile": 18,
-        "button_height": 100,
-        "button_mt": 28,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 50,
-        "button_padding_horizontal_mobile": 50,
-        "button_radius": 68,
-        "button_border_thickness": 0,
-        "button_align": "left",
-        "button_align_mobile": "center",
-        "button_icon": true,
-        "button_gap": 28,
-        "button_shadow": true,
-        "stars_count": 4.5,
-        "stars_size": 20,
-        "stars_size_mobile": 20,
-        "stars_mt": 16,
-        "rate_text": "<p>Noté <strong>4.8/5 </strong>sur 5 avis</p>",
-        "rate_text_custom": false,
-        "rate_text_font": "montserrat_n4",
-        "rate_text_size": 14,
-        "rate_text_size_mobile": 14,
-        "rate_text_height": 100,
-        "rate_text_align": "start",
-        "rate_text_align_mobile": "center",
-        "badge_custom": false,
-        "badge_font": "josefin_sans_n4",
-        "badge_size": 14,
-        "badge_size_mobile": 14,
-        "badge_height": 100,
-        "badge_padding_vertical": 4,
-        "badge_padding_vertical_mobile": 4,
-        "badge_padding_horizontal": 24,
-        "badge_padding_horizontal_mobile": 24,
-        "badge_radius": 24,
-        "badge_border_thickness": 0,
-        "badge_align": "start",
-        "badge_align_mobile": "center",
-        "badge_mt_mobile": 0,
-        "image": "shopify://shop_images/PHOTO-2025-09-13-13-44-06_3.jpg",
-        "image_mobile": "shopify://shop_images/PHOTO-2025-09-13-13-44-06_3.jpg",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "image_blur_desktop": true,
-        "absolute_image_width": 320,
-        "absolute_image_radius": 0,
-        "absolute_image_border_thickness": 0,
-        "button_color": "#171717",
-        "button_hover_color": "#ffffff",
-        "button_other_color": "#171717",
-        "button_hover_other_color": "#ffffff",
-        "button_bg_color": "#dff2ff",
-        "button_bg_hover_color": "#5d9bd5",
-        "button_border_color": "#dff2ff",
-        "button_border_hover_color": "#000000",
-        "button_shadow_color": "#171717",
-        "heading_color": "#000000",
-        "text_color": "#000000",
-        "feature_text_color": "#000000",
-        "stars_color": "#000000",
-        "rate_text_color": "#000000",
-        "image_border_color": "#000000",
-        "image_blur_color": "#dff2ff",
-        "absolute_image_border_color": "#000000",
-        "background_color": "#fafafa",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 100,
-        "padding_top_mobile": 25,
-        "padding_bottom": 100,
-        "padding_bottom_mobile": 25,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "lazy": true
-      }
-    },
     "video_with_text_dpKQX9": {
       "type": "video-with-text",
       "blocks": {
@@ -681,246 +470,6 @@
         "divider": false,
         "narrow": true,
         "rounded": true
-      }
-    },
-    "ss_feature_13_ga68tn": {
-      "type": "ss-feature-13",
-      "blocks": {
-        "item_MxC9Kp": {
-          "type": "item",
-          "settings": {
-            "icon": "heart",
-            "title": "Hautement dosé",
-            "text": "400 mg de Morosil®, le dosage cliniquement prouvé. MORO FIT aide à réduire l’accumulation de graisses et favorise une silhouette affinée naturellement."
-          }
-        },
-        "item_7BYPjp": {
-          "type": "item",
-          "settings": {
-            "icon": "time",
-            "title": "ACTION MINCEUR CIBLEE",
-            "text": "Morosil®, guarana, cola et chrome: un coup de boost au métabolisme, même au repos"
-          }
-        },
-        "item_WTqTAp": {
-          "type": "item",
-          "settings": {
-            "icon": "shield",
-            "title": "GLYCEMIE REGULEE",
-            "text": "Le chrome régule le sucre, limite les fringales et soutient la perte de poids, naturellement."
-          }
-        },
-        "item_FxA9mh": {
-          "type": "item",
-          "settings": {
-            "icon": "plant",
-            "title": "Morosil® & vinaigre de cidre",
-            "text": "Morosil® et vinaigre de cidre : digestion saine, transit fluide, perte de poids facilitée."
-          }
-        },
-        "item_NfJe47": {
-          "type": "item",
-          "settings": {
-            "icon": "share",
-            "title": "Perte de poids",
-            "text": "Morosil®, guarana & cola : un activateur naturel pour éliminer les graisses stockées."
-          }
-        },
-        "item_hcAffK": {
-          "type": "item",
-          "settings": {
-            "icon": "love",
-            "title": "UTILISATION SIMPLE",
-            "text": "Une gélule minceur facile à intégrer dans ta routine : 1 par jour suffit pour des résultats visibles dès les premières semaines"
-          }
-        }
-      },
-      "block_order": [
-        "item_MxC9Kp",
-        "item_7BYPjp",
-        "item_WTqTAp",
-        "item_FxA9mh",
-        "item_NfJe47",
-        "item_hcAffK"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "<p><strong>MORO FIT 400 : Les bienfaits de nos gélules naturelles </strong></p>",
-        "heading_custom": false,
-        "heading_font": "montserrat_n4",
-        "heading_size": 40,
-        "heading_size_mobile": 32,
-        "heading_height": 150,
-        "heading_align": "center",
-        "heading_align_mobile": "center",
-        "body_gap": 80,
-        "items_gap": 50,
-        "items_gap_mobile": 30,
-        "items_mt": 24,
-        "items_mt_mobile": 22,
-        "image": "shopify://shop_images/6.webp",
-        "image_position": "center",
-        "image_position_mobile": "first",
-        "image_ratio": "square",
-        "image_ratio_mobile": "portrait",
-        "image_radius": 16,
-        "image_border_thickness": 0,
-        "content_align": "center",
-        "content_align_mobile": "center",
-        "icon_size": 50,
-        "icon_size_mobile": 40,
-        "title_custom": false,
-        "title_font": "josefin_sans_n4",
-        "title_size": 22,
-        "title_size_mobile": 16,
-        "title_height": 130,
-        "title_mt": 16,
-        "title_mt_mobile": 8,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 150,
-        "text_mt": 10,
-        "text_mt_mobile": 6,
-        "text_hide_mobile": true,
-        "button": "",
-        "button_url": "",
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_width": 200,
-        "button_width_mobile": 200,
-        "button_mt": 16,
-        "button_mt_mobile": 16,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 24,
-        "button_padding_horizontal_mobile": 24,
-        "button_radius": 4,
-        "button_border_thickness": 1,
-        "button_align": "left",
-        "button_align_mobile": "left",
-        "button_style": "non_outline",
-        "button_position": "bottom",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#000000",
-        "button_bg_hover_color": "#000000",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "icon_color": "#131313",
-        "title_color": "#131313",
-        "text_color": "#131313",
-        "heading_color": "#131313",
-        "image_border_color": "#000000",
-        "background_color": "#fafafa",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 160,
-        "section_radius": 0,
-        "border_thickness": 0,
-        "lazy": true
-      }
-    },
-    "ss_about_jLFatp": {
-      "type": "ss-about",
-      "blocks": {
-        "benefit_card_yBaxkC": {
-          "type": "benefit_card",
-          "settings": {
-            "title": "Une formule innovante",
-            "content": "<p><strong>Simplicité d'utilisation</strong> : 1 gélule par jour, facile à intégrer dans votre routine matinale.</p><p><strong>Efficacité prouvée</strong> : Grâce à des ingrédients ciblés comme le Morosil®, le guarana et le chrome.</p><p><strong>Formules développées en collaboration avec des professionnels de santé</strong></p>",
-            "icon": "award"
-          }
-        },
-        "benefit_card_PPLG8G": {
-          "type": "benefit_card",
-          "settings": {
-            "title": "Hautement dosé",
-            "content": "<p><strong>Dosages optimaux, sans ingrédients superflus</strong></p><ul><li><strong>Morosil® (400 mg) - </strong>Extrait sec d'orange rouge </li><li><strong>Vinaigre de cidre </strong>(52,5 mg)</li><li><strong>Extrait sec de guarana</strong> (30 mg) avec 3,3 mg de caféine</li><li><strong>Poudre de noix de cola</strong> (40 mg) apportant également 0,8 mg de caféine</li><li><strong>Chrome</strong> (39 µg)</li></ul>",
-            "icon": "star"
-          }
-        },
-        "benefit_card_tmLjzD": {
-          "type": "benefit_card",
-          "settings": {
-            "title": "Formulation d'expert",
-            "content": "<p><strong>Dosages optimaux, sans ingrédients superflus</strong></p><ul><li>Aucune substance controversée (sans OGM, sans gluten, sans sucre ajouté)</li><li>Fabrication française, dans le respect des normes pharmaceutiques</li></ul>",
-            "icon": "check_mark"
-          }
-        },
-        "benefit_card_i4qmEP": {
-          "type": "benefit_card",
-          "settings": {
-            "title": "Efficacité prouvée et  validée",
-            "content": "<p>Chaque formule est testée en condition réelles pour garantir des résultats.</p><p><strong>Nos engagements vont au-delà des promesses</strong> <strong>:</strong> <strong>on mesure, on ajuste, on valide</strong>. Parce que tu mérites des soins dont l'efficacité est scientifiquement prouvée</p>",
-            "icon": "heart"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_card_yBaxkC",
-        "benefit_card_PPLG8G",
-        "benefit_card_tmLjzD",
-        "benefit_card_i4qmEP"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "Les engagements scientifiques Docteur V",
-        "heading_size": "title-md",
-        "heading_tag": "h1",
-        "card_style": "shadow",
-        "icon_bg_color": "#dff2ff",
-        "color_headings": "#171717",
-        "color_text": "",
-        "color_background": "#fafafa",
-        "gradient_background": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "rounded": true
-      }
-    },
-    "175319881326c7ce0c": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_featured_carousel_H7HWH6": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_featured_carousel_H7HWH6"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
       }
     },
     "ss_tableau_HG4Pia": {
@@ -1956,6 +1505,25 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "dv_avis_CzrciM": {
+      "type": "dv-avis",
+      "disabled": true,
+      "name": "Avis Avant Apres",
+      "settings": {
+        "a1_nom": "Yasmine M., 25 ans",
+        "a1_meta": "Post-partum · Cure Detox Draineur",
+        "a1_texte": "Je ne reconnaissais plus mon ventre. En 14 jours avec le Detox Draineur, la retention a disparu. Je me sens enfin legere et je rentre dans mes jeans d avant grossesse !",
+        "a1_resultats": "semaine 2",
+        "a2_nom": "Camnour L., 23 ans",
+        "a2_meta": "Retention d eau · Cure Detox Draineur",
+        "a2_texte": "Mon ventre etait toujours gonfle, peu importe ce que je mangeais. Des la premiere semaine j ai senti la difference. Moins de ballonnements, moins de lourdeur. Je recommande a 100%.",
+        "a2_resultats": "semaine 1",
+        "a3_nom": "Lydie R., 35 ans",
+        "a3_meta": "Perte de poids · Cure Moro Fit 400",
+        "a3_texte": "J ai perdu 5 kg en 2 mois sans regime drastique. Le Moro Fit 400 a vraiment freine mes envies de sucre et j ai plus d energie. Je continue la cure !",
+        "a3_resultats": "semaine 3"
+      }
     }
   },
   "order": [
@@ -1963,16 +1531,10 @@
     "image_with_text_overlay_ALrkJP",
     "custom_liquid_EzpVYy",
     "dv_gamme_VyirAn",
-    "featured_collection_hfL8P8",
-    "custom_liquid_hDf6Mb",
-    "hero_6_rbXhKP",
     "video_with_text_dpKQX9",
     "shop_the_look_NWQh9Q",
     "multicolumn_aeLBhW",
     "faq_x7X86B",
-    "ss_feature_13_ga68tn",
-    "ss_about_jLFatp",
-    "175319881326c7ce0c",
     "ss_tableau_HG4Pia",
     "ss_feature_17_WNPCJg",
     "testimonials_banner_CG7YnM",
@@ -1983,6 +1545,7 @@
     "17463566359eaf5607",
     "ss_trust_badge_DDtKK8",
     "portfolio_g7mbz6",
-    "multicolumn_with_icons_p4hztc"
+    "multicolumn_with_icons_p4hztc",
+    "dv_avis_CzrciM"
   ]
 }
