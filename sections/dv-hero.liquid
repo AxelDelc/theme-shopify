@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@700;900&family=Montserrat:wght@600;700;800&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
 .dv-hero {
@@ -21,33 +21,31 @@
   object-fit: cover;
   object-position: {{ section.settings.image_position }};
 }
-.dv-hero__bg .dv-mobile {
-  display: none;
-}
+.dv-hero__bg .dv-mobile { display: none; }
 .dv-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,{{ section.settings.overlay_opacity }}) 45%, rgba(0,0,0,0.1) 100%);
   z-index: 1;
 }
 .dv-hero__content {
   position: relative;
   z-index: 2;
   padding: 64px;
-  max-width: 580px;
+  max-width: 600px;
 }
 .dv-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(93,155,213,.2);
-  border: 1px solid rgba(93,155,213,.4);
-  color: #7dbde8;
+  background: {{ section.settings.badge_bg_color }};
+  border: 1px solid {{ section.settings.badge_border_color }};
+  color: {{ section.settings.badge_text_color }};
   font-size: 12px;
   font-weight: 500;
   letter-spacing: .08em;
   text-transform: uppercase;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 100px;
   margin-bottom: 24px;
   width: fit-content;
@@ -60,20 +58,22 @@
   animation: dvPulse 2s infinite;
 }
 .dv-hero__title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(36px, 5vw, 62px);
+  font-family: {{ section.settings.titre_font }};
+  font-weight: {{ section.settings.titre_weight }};
+  font-size: {{ section.settings.titre_size }}px;
   line-height: 1.05;
-  color: #ffffff;
+  color: {{ section.settings.titre_color }};
   margin-bottom: 16px;
+  word-break: keep-all;
+  white-space: nowrap;
 }
 .dv-hero__title .dv-accent {
   color: {{ section.settings.accent_color }};
 }
 .dv-hero__sub {
-  font-size: 16px;
+  font-size: {{ section.settings.sub_size }}px;
   line-height: 1.65;
-  color: rgba(255,255,255,.6);
+  color: {{ section.settings.sub_color }};
   max-width: 440px;
   margin-bottom: 28px;
   font-weight: 300;
@@ -88,16 +88,14 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  color: rgba(255,255,255,.8);
+  background: {{ section.settings.pill_bg_color }};
+  border: 1px solid {{ section.settings.pill_border_color }};
+  color: {{ section.settings.pill_text_color }};
   font-size: 12px;
   padding: 6px 14px;
   border-radius: 100px;
 }
-.dv-hero__pill-check {
-  color: {{ section.settings.accent_color }};
-}
+.dv-hero__pill-check { color: {{ section.settings.accent_color }}; }
 .dv-hero__ctas {
   display: flex;
   gap: 12px;
@@ -105,8 +103,8 @@
   align-items: center;
 }
 .dv-btn-primary {
-  background: {{ section.settings.accent_color }};
-  color: #ffffff;
+  background: {{ section.settings.btn1_bg }};
+  color: {{ section.settings.btn1_text }};
   border: none;
   padding: 14px 28px;
   border-radius: 12px;
@@ -117,18 +115,13 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   transition: opacity .2s, transform .15s;
 }
-.dv-btn-primary:hover {
-  opacity: .85;
-  transform: translateY(-1px);
-  color: #fff;
-}
+.dv-btn-primary:hover { opacity: .85; transform: translateY(-1px); }
 .dv-btn-secondary {
-  background: transparent;
-  color: rgba(255,255,255,.7);
-  border: 1px solid rgba(255,255,255,.25);
+  background: {{ section.settings.btn2_bg }};
+  color: {{ section.settings.btn2_text }};
+  border: 1px solid {{ section.settings.btn2_border }};
   padding: 14px 28px;
   border-radius: 12px;
   font-size: 14px;
@@ -138,35 +131,34 @@
   align-items: center;
   transition: border-color .2s, color .2s;
 }
-.dv-btn-secondary:hover {
-  border-color: rgba(255,255,255,.5);
-  color: #fff;
-}
+.dv-btn-secondary:hover { opacity: .8; }
+
+/* Badge nouveauté haut droite */
 .dv-hero__nouveaute {
   position: absolute;
   top: 32px;
   right: 48px;
   z-index: 3;
-  background: white;
+  background: {{ section.settings.nouveaute_bg }};
+  border: 2px solid {{ section.settings.nouveaute_border }};
   border-radius: 16px;
   padding: 14px 20px;
   text-align: center;
-  min-width: 130px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  min-width: 140px;
 }
 .dv-hero__nouveaute-tag {
   font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .1em;
+  font-weight: 700;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: {{ section.settings.accent_color }};
   margin-bottom: 4px;
 }
 .dv-hero__nouveaute-title {
   font-family: 'Syne', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
-  color: #0d1b2a;
+  color: {{ section.settings.nouveaute_text }};
   line-height: 1.2;
 }
 
@@ -175,7 +167,6 @@
   50% { opacity: .3; }
 }
 
-/* ── MOBILE ── */
 @media screen and (max-width: 749px) {
   .dv-hero {
     min-height: {{ section.settings.hero_height_mobile }}px;
@@ -184,65 +175,43 @@
   .dv-hero__bg .dv-desktop { display: none; }
   .dv-hero__bg .dv-mobile { display: block; }
   .dv-hero__overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 45%, rgba(0,0,0,0.15) 100%);
   }
   .dv-hero__content {
     padding: 32px 24px 40px;
     max-width: 100%;
   }
   .dv-hero__title {
-    font-size: clamp(32px, 9vw, 48px);
+    font-size: {{ section.settings.titre_size_mobile }}px;
+    white-space: normal;
   }
-  .dv-hero__sub {
-    font-size: 14px;
-    max-width: 100%;
-  }
-  .dv-hero__nouveaute {
-    top: 16px;
-    right: 16px;
-    min-width: 100px;
-    padding: 10px 14px;
-  }
-  .dv-btn-primary,
-  .dv-btn-secondary {
+  .dv-hero__sub { font-size: 14px; max-width: 100%; }
+  .dv-hero__nouveaute { top: 16px; right: 16px; min-width: 110px; padding: 10px 14px; }
+  .dv-btn-primary, .dv-btn-secondary {
     padding: 12px 20px;
     font-size: 13px;
     width: 100%;
     justify-content: center;
   }
-  .dv-hero__ctas {
-    flex-direction: column;
-    gap: 10px;
-  }
+  .dv-hero__ctas { flex-direction: column; gap: 10px; }
 }
 </style>
 
 <section class="dv-hero">
-
   <div class="dv-hero__bg">
     {% if section.settings.image != blank %}
-      <img class="dv-desktop"
-           src="{{ section.settings.image | img_url: '2000x' }}"
-           alt="{{ section.settings.titre_ligne1 }}"
-           loading="eager">
+      <img class="dv-desktop" src="{{ section.settings.image | img_url: '2000x' }}" alt="Hero" loading="eager">
     {% endif %}
     {% if section.settings.image_mobile != blank %}
-      <img class="dv-mobile"
-           src="{{ section.settings.image_mobile | img_url: '800x' }}"
-           alt="{{ section.settings.titre_ligne1 }}"
-           loading="eager">
+      <img class="dv-mobile" src="{{ section.settings.image_mobile | img_url: '800x' }}" alt="Hero mobile" loading="eager">
     {% elsif section.settings.image != blank %}
-      <img class="dv-mobile"
-           src="{{ section.settings.image | img_url: '800x' }}"
-           alt="{{ section.settings.titre_ligne1 }}"
-           loading="eager">
+      <img class="dv-mobile" src="{{ section.settings.image | img_url: '800x' }}" alt="Hero mobile" loading="eager">
     {% endif %}
   </div>
 
   <div class="dv-hero__overlay"></div>
 
   <div class="dv-hero__content">
-
     {% if section.settings.badge_text != blank %}
       <div class="dv-hero__badge">
         <div class="dv-hero__badge-dot"></div>
@@ -274,17 +243,12 @@
 
     <div class="dv-hero__ctas">
       {% if section.settings.cta1_texte != blank %}
-        <a href="{{ section.settings.cta1_lien }}" class="dv-btn-primary">
-          {{ section.settings.cta1_texte }}
-        </a>
+        <a href="{{ section.settings.cta1_lien }}" class="dv-btn-primary">{{ section.settings.cta1_texte }}</a>
       {% endif %}
       {% if section.settings.cta2_texte != blank %}
-        <a href="{{ section.settings.cta2_lien }}" class="dv-btn-secondary">
-          {{ section.settings.cta2_texte }}
-        </a>
+        <a href="{{ section.settings.cta2_lien }}" class="dv-btn-secondary">{{ section.settings.cta2_texte }}</a>
       {% endif %}
     </div>
-
   </div>
 
   {% if section.settings.nouveaute_titre != blank %}
@@ -293,7 +257,6 @@
       <div class="dv-hero__nouveaute-title">{{ section.settings.nouveaute_titre }}</div>
     </div>
   {% endif %}
-
 </section>
 
 {% schema %}
@@ -301,164 +264,81 @@
   "name": "Hero Docteur V",
   "tag": "section",
   "settings": [
-    {
-      "type": "header",
-      "content": "Images"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Photo desktop (recommande 1920x800px)"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_mobile",
-      "label": "Photo mobile (recommande 800x1000px portrait)"
-    },
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Position de la photo",
-      "options": [
-        { "value": "center center", "label": "Centre" },
-        { "value": "top center", "label": "Haut" },
-        { "value": "bottom center", "label": "Bas" },
-        { "value": "center left", "label": "Gauche" },
-        { "value": "center right", "label": "Droite" }
-      ],
-      "default": "center center"
-    },
-    {
-      "type": "header",
-      "content": "Couleurs et hauteur"
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Couleur de fond si pas de photo",
-      "default": "#0d1b2a"
-    },
-    {
-      "type": "color",
-      "id": "accent_color",
-      "label": "Couleur accent",
-      "default": "#5d9bd5"
-    },
-    {
-      "type": "range",
-      "id": "hero_height",
-      "label": "Hauteur desktop (px)",
-      "min": 400,
-      "max": 800,
-      "step": 20,
-      "default": 580
-    },
-    {
-      "type": "range",
-      "id": "hero_height_mobile",
-      "label": "Hauteur mobile (px)",
-      "min": 500,
-      "max": 900,
-      "step": 20,
-      "default": 680
-    },
-    {
-      "type": "header",
-      "content": "Textes"
-    },
-    {
-      "type": "text",
-      "id": "badge_text",
-      "label": "Badge",
-      "default": "Nouveaute disponible"
-    },
-    {
-      "type": "text",
-      "id": "titre_ligne1",
-      "label": "Titre ligne 1",
-      "default": "Mince."
-    },
-    {
-      "type": "text",
-      "id": "titre_ligne2",
-      "label": "Titre ligne 2",
-      "default": "Drain."
-    },
-    {
-      "type": "text",
-      "id": "titre_ligne3_accent",
-      "label": "Titre ligne 3 en bleu",
-      "default": "Recommence."
-    },
-    {
-      "type": "textarea",
-      "id": "sous_titre",
-      "label": "Sous-titre",
-      "default": "Deux formules pour se completer. Le Moro Fit 400 brule. Le Detox Draineur elimine."
-    },
-    {
-      "type": "header",
-      "content": "Pills de reassurance"
-    },
-    {
-      "type": "text",
-      "id": "pill1",
-      "label": "Pill 1",
-      "default": "Cliniquement valide"
-    },
-    {
-      "type": "text",
-      "id": "pill2",
-      "label": "Pill 2",
-      "default": "100% naturel"
-    },
-    {
-      "type": "text",
-      "id": "pill3",
-      "label": "Pill 3",
-      "default": "Fabrique en France"
-    },
-    {
-      "type": "header",
-      "content": "Boutons"
-    },
-    {
-      "type": "text",
-      "id": "cta1_texte",
-      "label": "Bouton principal texte",
-      "default": "Decouvrir la cure complete"
-    },
-    {
-      "type": "url",
-      "id": "cta1_lien",
-      "label": "Bouton principal lien"
-    },
-    {
-      "type": "text",
-      "id": "cta2_texte",
-      "label": "Bouton secondaire texte",
-      "default": "Voir les produits"
-    },
-    {
-      "type": "url",
-      "id": "cta2_lien",
-      "label": "Bouton secondaire lien"
-    },
-    {
-      "type": "header",
-      "content": "Badge nouveaute"
-    },
-    {
-      "type": "text",
-      "id": "nouveaute_titre",
-      "label": "Texte badge nouveaute haut droite",
-      "default": "Detox 3-en-1"
-    }
+    { "type": "header", "content": "Images" },
+    { "type": "image_picker", "id": "image", "label": "Photo desktop (1920x800px)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Photo mobile portrait (800x1000px)" },
+    { "type": "select", "id": "image_position", "label": "Position photo", "options": [
+      { "value": "center center", "label": "Centre" },
+      { "value": "top center", "label": "Haut" },
+      { "value": "bottom center", "label": "Bas" },
+      { "value": "center left", "label": "Gauche" },
+      { "value": "center right", "label": "Droite" }
+    ], "default": "center center" },
+    { "type": "select", "id": "overlay_opacity", "label": "Intensite du voile sombre", "options": [
+      { "value": "0.4", "label": "Leger" },
+      { "value": "0.6", "label": "Moyen" },
+      { "value": "0.75", "label": "Fort" },
+      { "value": "0.88", "label": "Tres fort" }
+    ], "default": "0.75" },
+    { "type": "header", "content": "Hauteurs" },
+    { "type": "range", "id": "hero_height", "label": "Hauteur desktop (px)", "min": 400, "max": 800, "step": 20, "default": 580 },
+    { "type": "range", "id": "hero_height_mobile", "label": "Hauteur mobile (px)", "min": 500, "max": 900, "step": 20, "default": 680 },
+    { "type": "header", "content": "Couleur de fond et accent" },
+    { "type": "color", "id": "bg_color", "label": "Fond si pas de photo", "default": "#0d1b2a" },
+    { "type": "color", "id": "accent_color", "label": "Couleur accent (boutons, tirets, check)", "default": "#5d9bd5" },
+    { "type": "header", "content": "Titre principal" },
+    { "type": "select", "id": "titre_font", "label": "Police du titre", "options": [
+      { "value": "'Syne', sans-serif", "label": "Syne (moderne bold)" },
+      { "value": "'Playfair Display', serif", "label": "Playfair (elegant serif)" },
+      { "value": "'Montserrat', sans-serif", "label": "Montserrat (geometrique)" },
+      { "value": "'Raleway', sans-serif", "label": "Raleway (fin elegant)" },
+      { "value": "'DM Sans', sans-serif", "label": "DM Sans (clean simple)" }
+    ], "default": "'Syne', sans-serif" },
+    { "type": "select", "id": "titre_weight", "label": "Epaisseur titre", "options": [
+      { "value": "400", "label": "Normal" },
+      { "value": "700", "label": "Bold" },
+      { "value": "800", "label": "Extra bold" },
+      { "value": "900", "label": "Black" }
+    ], "default": "800" },
+    { "type": "range", "id": "titre_size", "label": "Taille titre desktop (px)", "min": 32, "max": 80, "step": 2, "default": 56 },
+    { "type": "range", "id": "titre_size_mobile", "label": "Taille titre mobile (px)", "min": 28, "max": 60, "step": 2, "default": 40 },
+    { "type": "color", "id": "titre_color", "label": "Couleur titre", "default": "#ffffff" },
+    { "type": "text", "id": "titre_ligne1", "label": "Titre ligne 1", "default": "Mince." },
+    { "type": "text", "id": "titre_ligne2", "label": "Titre ligne 2", "default": "Drain." },
+    { "type": "text", "id": "titre_ligne3_accent", "label": "Titre ligne 3 couleur accent", "default": "Recommence." },
+    { "type": "header", "content": "Sous-titre" },
+    { "type": "range", "id": "sub_size", "label": "Taille sous-titre (px)", "min": 12, "max": 20, "step": 1, "default": 16 },
+    { "type": "color", "id": "sub_color", "label": "Couleur sous-titre", "default": "#999999" },
+    { "type": "textarea", "id": "sous_titre", "label": "Texte sous-titre", "default": "Deux formules pour se completer. Le Moro Fit 400 brule. Le Detox Draineur elimine." },
+    { "type": "header", "content": "Badge nouveaute disponible" },
+    { "type": "text", "id": "badge_text", "label": "Texte badge", "default": "Nouveaute disponible" },
+    { "type": "color", "id": "badge_bg_color", "label": "Fond badge", "default": "#1a3a52" },
+    { "type": "color", "id": "badge_border_color", "label": "Bordure badge", "default": "#5d9bd5" },
+    { "type": "color", "id": "badge_text_color", "label": "Couleur texte badge", "default": "#7dbde8" },
+    { "type": "header", "content": "Pills reassurance" },
+    { "type": "text", "id": "pill1", "label": "Pill 1", "default": "Cliniquement valide" },
+    { "type": "text", "id": "pill2", "label": "Pill 2", "default": "100% naturel" },
+    { "type": "text", "id": "pill3", "label": "Pill 3", "default": "Fabrique en France" },
+    { "type": "color", "id": "pill_bg_color", "label": "Fond pills", "default": "#1a2a3a" },
+    { "type": "color", "id": "pill_border_color", "label": "Bordure pills", "default": "#3a5a7a" },
+    { "type": "color", "id": "pill_text_color", "label": "Texte pills", "default": "#ccddee" },
+    { "type": "header", "content": "Bouton principal" },
+    { "type": "text", "id": "cta1_texte", "label": "Texte", "default": "Decouvrir la cure complete" },
+    { "type": "url", "id": "cta1_lien", "label": "Lien" },
+    { "type": "color", "id": "btn1_bg", "label": "Fond bouton principal", "default": "#5d9bd5" },
+    { "type": "color", "id": "btn1_text", "label": "Texte bouton principal", "default": "#ffffff" },
+    { "type": "header", "content": "Bouton secondaire" },
+    { "type": "text", "id": "cta2_texte", "label": "Texte", "default": "Voir les produits" },
+    { "type": "url", "id": "cta2_lien", "label": "Lien" },
+    { "type": "color", "id": "btn2_bg", "label": "Fond bouton secondaire", "default": "#00000000" },
+    { "type": "color", "id": "btn2_text", "label": "Texte bouton secondaire", "default": "#ffffff" },
+    { "type": "color", "id": "btn2_border", "label": "Bordure bouton secondaire", "default": "#ffffff" },
+    { "type": "header", "content": "Badge nouveaute haut droite" },
+    { "type": "text", "id": "nouveaute_titre", "label": "Texte badge", "default": "Detox 3-en-1" },
+    { "type": "color", "id": "nouveaute_bg", "label": "Fond badge nouveaute", "default": "#ffffff" },
+    { "type": "color", "id": "nouveaute_border", "label": "Bordure badge nouveaute", "default": "#5d9bd5" },
+    { "type": "color", "id": "nouveaute_text", "label": "Texte badge nouveaute", "default": "#0d1b2a" }
   ],
-  "presets": [
-    {
-      "name": "Hero Docteur V"
-    }
-  ]
+  "presets": [{ "name": "Hero Docteur V" }]
 }
 {% endschema %}
