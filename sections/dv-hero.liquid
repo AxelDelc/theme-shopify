@@ -1,0 +1,39 @@
+{% schema %}
+{
+  "name": "Hero Docteur V",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Couleurs" },
+    { "type": "color", "id": "bg_color", "label": "Couleur de fond", "default": "#0d1b2a" },
+    { "type": "color", "id": "accent_color", "label": "Couleur accent", "default": "#5d9bd5" },
+    { "type": "range", "id": "hero_height", "label": "Hauteur (px)", "min": 400, "max": 800, "step": 20, "default": 580 },
+    { "type": "header", "content": "Textes" },
+    { "type": "text", "id": "badge_text", "label": "Badge", "default": "Nouveaute disponible" },
+    { "type": "text", "id": "titre_ligne1", "label": "Titre ligne 1", "default": "Mince." },
+    { "type": "text", "id": "titre_ligne2", "label": "Titre ligne 2", "default": "Drain." },
+    { "type": "text", "id": "titre_ligne3_accent", "label": "Titre ligne 3 (en bleu)", "default": "Recommence." },
+    { "type": "textarea", "id": "sous_titre", "label": "Sous-titre", "default": "Deux formules concues pour se completer." },
+    { "type": "header", "content": "Pills" },
+    { "type": "text", "id": "pill1", "label": "Pill 1", "default": "Cliniquement valide" },
+    { "type": "text", "id": "pill2", "label": "Pill 2", "default": "100% naturel" },
+    { "type": "text", "id": "pill3", "label": "Pill 3", "default": "Fabrique en France" },
+    { "type": "header", "content": "Boutons" },
+    { "type": "text", "id": "cta1_texte", "label": "Bouton principal - texte", "default": "Decouvrir la cure complete" },
+    { "type": "url", "id": "cta1_lien", "label": "Bouton principal - lien" },
+    { "type": "text", "id": "cta2_texte", "label": "Bouton secondaire - texte", "default": "Voir les produits" },
+    { "type": "url", "id": "cta2_lien", "label": "Bouton secondaire - lien" },
+    { "type": "header", "content": "Produit 1 gauche" },
+    { "type": "product", "id": "produit1", "label": "Produit 1" },
+    { "type": "text", "id": "p1_nom_fallback", "label": "Nom si pas de produit", "default": "Moro Fit 400" },
+    { "type": "text", "id": "p1_sous", "label": "Sous-titre carte", "default": "60 gelules - cure 2 mois" },
+    { "type": "text", "id": "p1_prix", "label": "Prix si pas de produit", "default": "39,90" },
+    { "type": "header", "content": "Produit 2 nouveaute droite" },
+    { "type": "product", "id": "produit2", "label": "Produit 2 nouveaute" },
+    { "type": "text", "id": "p2_badge", "label": "Badge nouveaute", "default": "Nouveaute" },
+    { "type": "text", "id": "p2_nom_fallback", "label": "Nom si pas de produit", "default": "Detox Draineur 3-en-1" },
+    { "type": "text", "id": "p2_sous", "label": "Sous-titre carte", "default": "Cure express 14 jours" },
+    { "type": "text", "id": "p2_prix", "label": "Prix si pas de produit", "default": "24,90" }
+  ],
+  "presets": [{ "name": "Hero Docteur V" }]
+}
+{% endschema %}
