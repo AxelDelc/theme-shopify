@@ -98,6 +98,42 @@
         "rounded": false
       }
     },
+    "dv_gamme_VyirAn": {
+      "type": "dv-gamme",
+      "name": "Gamme Docteur V",
+      "settings": {
+        "bg_color": "#f7f9fc",
+        "accent_color": "#5d9bd5",
+        "tag": "Notre gamme",
+        "titre": "La cure qui",
+        "titre_accent": "fonctionne.",
+        "p1_image": "shopify://shop_images/3-7_a06f9df7-3059-4b70-b686-dc6cd10d1fbb.webp",
+        "p1_nouveau": true,
+        "p1_badge": "Nouveaute",
+        "p1_tag": "Cure 14 jours",
+        "p1_nom": "Detox Draineur Slim 3-en-1",
+        "p1_desc": "Draine, elimine, detoxifie. Une formule ultra-concentree.",
+        "p1_b1": "Anti-retention d'eau",
+        "p1_b2": "Detox foie, reins & intestins !",
+        "p1_b3": "Cure express 14 jours",
+        "p1_prix": "24,90",
+        "p1_ancien": "",
+        "p1_lien": "shopify://products/detox-draineur",
+        "p1_cta": "Je veux mes resultats",
+        "p2_tag": "Cure 1 mois",
+        "p2_nom": "Moro Fit 400",
+        "p2_desc": "60 gélules au Morosil — l'ingredient cliniquement reconnu.",
+        "p2_b1": "400 mg Morosil par jour",
+        "p2_b2": "Brule-graisse naturel",
+        "p2_b3": "Developpé par des médecins.",
+        "p2_prix": "39,90",
+        "p2_ancien": "89,90",
+        "p2_reduction": "-55%",
+        "p2_avis": "4.4 (127 avis)",
+        "p2_lien": "shopify://products/morosil-400",
+        "p2_cta": "Je veux maigrir"
+      }
+    },
     "featured_collection_hfL8P8": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -1904,6 +1940,7 @@
   "order": [
     "image_with_text_overlay_ALrkJP",
     "custom_liquid_EzpVYy",
+    "dv_gamme_VyirAn",
     "featured_collection_hfL8P8",
     "custom_liquid_hDf6Mb",
     "hero_6_rbXhKP",
