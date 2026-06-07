@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "dv_hero_9wfmHm": {
+      "type": "dv-hero",
+      "name": "Hero Docteur V",
+      "settings": {
+        "image": "shopify://shop_images/Format_Banniere_-2.png",
+        "image_mobile": "shopify://shop_images/Banniere_mobile-7.png",
+        "cta1_lien": "",
+        "cta2_lien": ""
+      }
+    },
     "image_with_text_overlay_ALrkJP": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -1946,19 +1956,10 @@
         "full_width": false,
         "rounded": false
       }
-    },
-    "dv_hero_9wfmHm": {
-      "type": "dv-hero",
-      "name": "Hero Docteur V",
-      "settings": {
-        "image": "shopify://shop_images/Format_Banniere_-2.png",
-        "image_mobile": "shopify://shop_images/Banniere_mobile-7.png",
-        "cta1_lien": "",
-        "cta2_lien": ""
-      }
     }
   },
   "order": [
+    "dv_hero_9wfmHm",
     "image_with_text_overlay_ALrkJP",
     "custom_liquid_EzpVYy",
     "dv_gamme_VyirAn",
@@ -1982,7 +1983,6 @@
     "17463566359eaf5607",
     "ss_trust_badge_DDtKK8",
     "portfolio_g7mbz6",
-    "multicolumn_with_icons_p4hztc",
-    "dv_hero_9wfmHm"
+    "multicolumn_with_icons_p4hztc"
   ]
 }
