@@ -397,7 +397,7 @@
         "image_position": "center center",
         "overlay_opacity": "0.75",
         "hero_height": 700,
-        "hero_height_mobile": 680,
+        "hero_height_mobile": 740,
         "bg_color": "#0d1b2a",
         "accent_color": "#5d9bd5",
         "titre_font": "'DM Sans', sans-serif",
