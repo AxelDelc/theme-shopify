@@ -58,7 +58,7 @@
         "content_width": "small",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
-        "image_mobile": "shopify://shop_images/banniere_Publication_Instagram_45_1.png",
+        "image_mobile": "shopify://shop_images/Banniere_mobile-6.png",
         "image_height_mobile": "500px",
         "content_position_mobile": "items-center justify-start",
         "text_alignment_mobile": "left",
@@ -428,7 +428,7 @@
         "product_cqLgUG": {
           "type": "product",
           "settings": {
-            "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
+            "product": "detox-draineur",
             "color_text": "#ffffff",
             "vertical": 25,
             "horizontal": 25,
@@ -439,7 +439,7 @@
         "product_k6cfiA": {
           "type": "product",
           "settings": {
-            "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
+            "product": "detox-draineur",
             "color_text": "#ffffff",
             "vertical": 75,
             "horizontal": 65,
@@ -454,8 +454,8 @@
       ],
       "name": "t:sections.shop-the-look.name",
       "settings": {
-        "image": "shopify://shop_images/7_0d41297c-5dea-48b2-b20b-384197955925.webp",
-        "image_mobile": "shopify://shop_images/BIOLOGIST-001.jpg",
+        "image": "shopify://shop_images/ChatGPT_Image_5_juin_2026_16_15_32.jpg",
+        "image_mobile": "shopify://shop_images/ChatGPT_Image_5_juin_2026_16_15_32.jpg",
         "heading": "",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
@@ -478,94 +478,6 @@
         "color_button_gradient": "",
         "color_overlay": "#171717",
         "overlay_opacity": 0,
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
-    "featured_product_L3qkWV": {
-      "type": "featured-product",
-      "blocks": {
-        "title_qTzLDt": {
-          "type": "title",
-          "settings": {
-            "title_size": "product-title-md",
-            "title_size_mobile": "product-title-md",
-            "show_price": true,
-            "show_rating": true
-          }
-        },
-        "description_HGFiTH": {
-          "type": "description",
-          "settings": {
-            "text_size": "text-base"
-          }
-        },
-        "variant_picker_GGj9za": {
-          "type": "variant_picker",
-          "settings": {
-            "show_variant_labels": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "color_swatch_type": "color",
-            "size_chart": ""
-          }
-        },
-        "buy_buttons_XhaQfQ": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": false,
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true,
-            "enable_back_in_stock": false,
-            "show_back_in_stock_name": false,
-            "show_back_in_stock_phone": false
-          }
-        },
-        "pickup_availability_G7hxxx": {
-          "type": "pickup_availability",
-          "settings": {}
-        },
-        "read_more_RdKrN6": {
-          "type": "read_more",
-          "settings": {
-            "button_text": "Cure 2 + 1 offerte, 0,77 par jour  !",
-            "content": ""
-          }
-        },
-        "spinning_text_QLW3by": {
-          "type": "spinning_text",
-          "settings": {
-            "text": "Featured product"
-          }
-        }
-      },
-      "block_order": [
-        "title_qTzLDt",
-        "description_HGFiTH",
-        "variant_picker_GGj9za",
-        "buy_buttons_XhaQfQ",
-        "pickup_availability_G7hxxx",
-        "read_more_RdKrN6",
-        "spinning_text_QLW3by"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "moro-fit-400-gelules-minceur-au-morosil-copie",
-        "enable_sticky_info": false,
-        "media_size": 66,
-        "gallery_layout": "columns",
-        "thumbnail_position": "beside",
-        "image_ratio": "adapt_first",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_autoplay": false,
-        "enable_video_looping": false,
-        "mobile_layout": "partial",
-        "image_ratio_mobile": "adapt_first",
-        "mobile_thumbnail": false,
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,
@@ -2047,7 +1959,6 @@
     "hero_6_rbXhKP",
     "video_with_text_dpKQX9",
     "shop_the_look_NWQh9Q",
-    "featured_product_L3qkWV",
     "multicolumn_aeLBhW",
     "faq_x7X86B",
     "ss_feature_13_ga68tn",
