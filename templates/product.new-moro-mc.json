@@ -838,6 +838,7 @@
         "heading_kVECkz",
         "text_bNYnXx"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/PHOTO-2025-09-13-13-44-06_4.jpg",
