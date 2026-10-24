@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "icon": "sale",
-            "text": "SOLDES -30% sur tous les produits !",
+            "text": "OFFRE : &nbsp;-40% sur tous les produits ! Code : DETOX40",
             "link": "",
             "hide_icon_mobile": true,
             "text_mobile": "",
